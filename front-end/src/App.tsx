@@ -10,7 +10,7 @@ import { AppRouter } from 'AppRouter';
 
 function App() {
   // Init
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(localStorage.getItem('isDark'));
 
   // LifeCycle
   useEffect(() => {
