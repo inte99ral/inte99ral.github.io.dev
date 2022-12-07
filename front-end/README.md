@@ -308,6 +308,9 @@
 <br />
 
 - ### react 디자인 준비
-  - 스타일 컴포넌트 적용 `npm i --save-dev @types/styled-components`
 
-<br />
+  - 스타일 컴포넌트 적용 `npm install --save styled-components`
+  - 스타일 컴포넌트 타입스크립트 명세서 `npm i --save-dev @types/styled-components`
+
+  - sass 적용 `npm install node-sass`
+    <br />
