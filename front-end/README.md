@@ -317,7 +317,14 @@
     - ㄴㅇ
     - ㄴㅇ
 
+  <br />
+
   - sass 적용 `npm install node-sass`
-    <br />
+
+  <br />
+
+  - react-icon 적용 `npm install react-icons --save`
+
+  <br />
 
 <br />

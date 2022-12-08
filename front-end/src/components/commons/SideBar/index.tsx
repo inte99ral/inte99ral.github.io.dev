@@ -1,8 +1,14 @@
 // API & Library
 import React, { useState } from 'react';
+import { AiFillGithub } from 'react-icons/ai';
 
 // Styles
-import { StyledSideBarBackground, StyledSideBar } from './style';
+import {
+  StyledSideBarBackground,
+  StyledSideBar,
+  StyledSideBarProfile,
+  StyledSideBarItem,
+} from './style';
 
 export const SideBar = () => {
   // Init
@@ -10,8 +16,9 @@ export const SideBar = () => {
 
   // Return
   return (
-    <StyledSideBarBackground isActive={isActive} className="side-bar">
+    <StyledSideBarBackground isActive={isActive} className="side-bar-background">
       <StyledSideBar
+        className="side-bar"
         isActive={isActive}
         onMouseOver={() => {
           setIsActive(true);
@@ -19,9 +26,12 @@ export const SideBar = () => {
         onMouseLeave={() => {
           setIsActive(false);
         }}
-        className="side-bar-item-container"
       >
-        사이드바
+        <StyledSideBarProfile className="side-bar-profile" isActive={isActive} />
+        <StyledSideBarItem className="side-bar-item">
+          <AiFillGithub />
+          <div>사이드바</div>
+        </StyledSideBarItem>
       </StyledSideBar>
     </StyledSideBarBackground>
   );
