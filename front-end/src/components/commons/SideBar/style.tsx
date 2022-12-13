@@ -32,6 +32,9 @@ export const StyledSideBar = styled.div<{ isActive: boolean }>`
   box-shadow: 4px 4px 10px -1px rgba(0, 0, 0, 0.25), -4px -4px 10px -1px rgba(255, 255, 255, 0.25);
 `;
 
+/**
+ * @description 프로필 사진
+ */
 export const StyledSideBarProfile = styled.div<{ isActive: boolean }>`
   height: ${({ isActive }) => (!isActive ? '2.4rem' : '11.2rem')};
   width: ${({ isActive }) => (!isActive ? '2.4rem' : '11.2rem')};
@@ -45,6 +48,18 @@ export const StyledSideBarProfile = styled.div<{ isActive: boolean }>`
   transition: all 0.2s ease-in-out;
   background-color: red;
   border-radius: 50%;
+`;
+
+/**
+ * @description 가로 라인
+ */
+export const StyledSideBarLine = styled.div`
+  margin-left: 0.6rem;
+  height: 2px;
+  width: 2rem;
+
+  border-radius: 1px;
+  background-color: gray;
 `;
 
 export const StyledSideBarItem = styled.div`

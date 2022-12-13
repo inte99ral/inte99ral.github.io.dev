@@ -261,47 +261,51 @@
 
     1. 404.html 의 현 주소를 그대로 쿼리스트링에 집어넣고 index.html 로 연결되는 '/' 주소로 가는 javascript 코드를 넣는다
 
-    ```html
-    // front-end/public/404.html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8" />
-        <title>Integral Blog</title>
-        <script type="text/javascript">
-          window.location.replace(`/?url=${window.location.href}`);
-        </script>
-      </head>
-      <body></body>
-    </html>
-    ```
+        ```html
+        // front-end/public/404.html
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8" />
+            <title>Integral Blog</title>
+            <script type="text/javascript">
+              window.location.replace(`/?url=${window.location.href}`);
+            </script>
+          </head>
+          <body></body>
+        </html>
+        ```
+
+    <br />
 
     2. index.html 에서 받아온 주소를 window.history.replaceState를 통해 처리한다.
 
-    ```html
-    // front-end/public/index.html
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="utf-8" />
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="Web site created using create-react-app" />
-        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        ```html
+        // front-end/public/index.html
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="utf-8" />
+            <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="theme-color" content="#000000" />
+            <meta name="description" content="Web site created using create-react-app" />
+            <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+            <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-        <title>Integral Blog</title>
-      </head>
-      <body>
-        <div id="root"></div>
-        <script type="text/javascript">
-          if (window.location.search.slice(1, 4) == 'url')
-            window.history.replaceState(null, null, `${window.location.search.slice(5)}`);
-        </script>
-      </body>
-    </html>
-    ```
+            <title>Integral Blog</title>
+          </head>
+          <body>
+            <div id="root"></div>
+            <script type="text/javascript">
+              if (window.location.search.slice(1, 4) == 'url')
+                window.history.replaceState(null, null, `${window.location.search.slice(5)}`);
+            </script>
+          </body>
+        </html>
+        ```
+
+    <br />
 
     3. 빌드 후, 깃 페이지 링크에서 잘 작동하는 지 확인해보자. 그 외에도 직접 분해해서 필요한 데이터만 가져오는 방법, localstorage 를 쓰는 방법 등 본인에게 적합한 방법을 사용하자.
 
@@ -313,9 +317,44 @@
 
     - 스타일 컴포넌트 `npm install --save styled-components`
     - 스타일 컴포넌트 타입스크립트 명세서 `npm i --save-dev @types/styled-components`
-    - ㄴㅇ
-    - ㄴㅇ
-    - ㄴㅇ
+    - 개발 편의성을 위하여 각 컴포넌트의 디렉토리 구조를 데이터 정보를 담은 `index.tsx` 와 스타일을 적용한 `style.tsx` 로 분리하려고 한다.
+    -
+      ```typescript
+      // API & Library
+      import styled from 'styled-components';
+
+      // Asset
+      import test from 'asset/image/test.png';
+
+      export const StyledPage = styled.div`
+        height: 100vh;
+        width: 100vw;
+
+        overflow-y: scroll;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(${test});
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #000000;
+          background-clip: padding-box;
+          border-radius: 100px;
+
+          border: 2px solid transparent;
+        }
+      `;
+      ```
+    -
+      ```typescript
+      ```
 
   <br />
 
@@ -328,3 +367,6 @@
   <br />
 
 <br />
+
+
+https://www.notion.so/my-integrations 

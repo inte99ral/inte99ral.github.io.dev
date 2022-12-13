@@ -7,6 +7,7 @@ import {
   StyledSideBarBackground,
   StyledSideBar,
   StyledSideBarProfile,
+  StyledSideBarLine,
   StyledSideBarItem,
 } from './style';
 
@@ -28,6 +29,7 @@ export const SideBar = () => {
         }}
       >
         <StyledSideBarProfile className="side-bar-profile" isActive={isActive} />
+        <StyledSideBarLine className="side-bar-line" />
         <StyledSideBarItem className="side-bar-item">
           <AiFillGithub />
           <div>사이드바</div>
