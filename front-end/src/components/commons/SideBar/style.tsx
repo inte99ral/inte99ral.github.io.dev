@@ -25,6 +25,11 @@ export const StyledSideBar = styled.div<{ isActive: boolean }>`
   height: 100vh;
   width: ${({ isActive }) => (!isActive ? '3.2rem' : '12rem')};
 
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.4rem;
+
   overflow: hidden;
 
   transition: all 0.2s ease-in-out;
@@ -36,10 +41,10 @@ export const StyledSideBar = styled.div<{ isActive: boolean }>`
  * @description 프로필 사진
  */
 export const StyledSideBarProfile = styled.div<{ isActive: boolean }>`
-  height: ${({ isActive }) => (!isActive ? '2.4rem' : '11.2rem')};
-  width: ${({ isActive }) => (!isActive ? '2.4rem' : '11.2rem')};
+  height: ${({ isActive }) => (!isActive ? '2rem' : '10.8rem')};
+  width: ${({ isActive }) => (!isActive ? '2rem' : '10.8rem')};
 
-  margin: 0.4rem;
+  margin: 0.6rem;
 
   background-image: url(${character});
   background-repeat: no-repeat;
@@ -53,11 +58,12 @@ export const StyledSideBarProfile = styled.div<{ isActive: boolean }>`
 /**
  * @description 가로 라인
  */
-export const StyledSideBarLine = styled.div`
+export const StyledSideBarLine = styled.div<{ isActive: boolean }>`
   margin-left: 0.6rem;
   height: 2px;
-  width: 2rem;
+  width: ${({ isActive }) => (!isActive ? '2rem' : '10.8rem')};
 
+  transition: all 0.2s ease-in-out;
   border-radius: 1px;
   background-color: gray;
 `;
@@ -65,6 +71,8 @@ export const StyledSideBarLine = styled.div`
 export const StyledSideBarItem = styled.div`
   padding-left: 0.6rem;
   width: 50vw;
+
+  gap: 0.5rem;
 
   display: flex;
   align-items: center;
