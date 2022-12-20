@@ -1,5 +1,6 @@
 // API & Library
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { AiFillGithub } from 'react-icons/ai';
 
 // Styles
@@ -34,6 +35,8 @@ export const SideBar = () => {
           <AiFillGithub />
           <div>사이드바</div>
         </StyledSideBarItem>
+        {/* <NavLink to="/blog" activeStyle={{ color: 'red' }}></NavLink> */}
+        <NavLink to="/blog" className={({ isActive }) => (isActive ? '' : '')}></NavLink>
       </StyledSideBar>
     </StyledSideBarBackground>
   );

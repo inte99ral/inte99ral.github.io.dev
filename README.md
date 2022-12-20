@@ -535,6 +535,21 @@
 
 <br />
 
+- ### 네비게이션 바
+
+  <hr />
+
+  - 사이트에 네비게이션 바는 필수이다. 본 예시에서는 사이드 바를 네비게이션 바 역할로 사용할 것 이다.
+
+  <br />
+
+  - Vue Router 에서 `<router-link>` 를 지원하 듯이 React Router 에서는 `<NavLink>` 를 지원한다.
+  - React Router v6 이전에는 activeClassName 으로 클릭된 태그에 클래스 적용이 가능했다.
+  - React Router v6 이후로는 isActive 로 클릭 된 태그의 정보를 조작할 수 있다.
+    ```html
+    <NavLink to="/blog" className={({ isActive }) => (isActive ? 'style-class' : '')}></NavLink>
+    ```
+
 - ### Notion API 를 Blog Database 로 쓰기
 
   <hr />
