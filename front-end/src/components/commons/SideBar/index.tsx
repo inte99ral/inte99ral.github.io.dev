@@ -8,9 +8,14 @@ import {
   StyledSideBarBackground,
   StyledSideBar,
   StyledSideBarProfile,
+  StyledSideBarProfilePhoto,
   StyledSideBarLine,
   StyledSideBarItem,
+  StyledSideBarBlank,
 } from './style';
+
+// Components
+import { SideBarItemFrame } from 'components/commons/SideBarItemFrame';
 
 export const SideBar = () => {
   // Init
@@ -18,9 +23,9 @@ export const SideBar = () => {
 
   // Return
   return (
-    <StyledSideBarBackground isActive={isActive} className="side-bar-background">
+    <StyledSideBarBackground isActive={isActive} className="side-bar-background outer">
       <StyledSideBar
-        className="side-bar"
+        className="side-bar outer"
         isActive={isActive}
         onMouseOver={() => {
           setIsActive(true);
@@ -29,14 +34,44 @@ export const SideBar = () => {
           setIsActive(false);
         }}
       >
-        <StyledSideBarProfile className="side-bar-profile" isActive={isActive} />
-        <StyledSideBarLine className="side-bar-line" isActive={isActive} />
-        <StyledSideBarItem className="side-bar-item">
+        <NavLink
+          to="/home"
+          style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
+        >
+          <StyledSideBarProfile className="side-bar-profile">
+            <SideBarItemFrame />
+            <StyledSideBarProfilePhoto isActive={isActive}></StyledSideBarProfilePhoto>
+          </StyledSideBarProfile>
+        </NavLink>
+
+        <StyledSideBarLine className="side-bar-line" isActive={isActive}>
           <AiFillGithub />
-          <div>사이드바</div>
-        </StyledSideBarItem>
-        {/* <NavLink to="/blog" activeStyle={{ color: 'red' }}></NavLink> */}
-        <NavLink to="/blog" className={({ isActive }) => (isActive ? '' : '')}></NavLink>
+          <AiFillGithub />
+          <AiFillGithub />
+        </StyledSideBarLine>
+
+        <NavLink
+          to="/blog"
+          style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
+        >
+          <StyledSideBarItem className="side-bar-item">
+            <SideBarItemFrame />
+            <AiFillGithub />
+            <div>사이드바</div>
+          </StyledSideBarItem>
+        </NavLink>
+
+        <NavLink
+          to="/error"
+          style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
+        >
+          <StyledSideBarItem className="side-bar-item">
+            <AiFillGithub />
+            <div>사이드바</div>
+          </StyledSideBarItem>
+        </NavLink>
+
+        <StyledSideBarBlank />
       </StyledSideBar>
     </StyledSideBarBackground>
   );

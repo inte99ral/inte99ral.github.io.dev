@@ -5,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 import './theme.scss';
 
 // Components
-import { SideBar } from 'components/commons/SideBar';
 import { AppRouter } from 'AppRouter';
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
   // Return
   return (
     <div className={`App ${isDark ? 'dark' : 'light'}`}>
-      <SideBar />
       <AppRouter />
     </div>
   );

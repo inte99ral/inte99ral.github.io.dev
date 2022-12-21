@@ -4,10 +4,6 @@ import styled from 'styled-components';
 // Asset
 import character from 'asset/image/character.png';
 
-export interface styleType {
-  isActive: boolean;
-}
-
 export const StyledSideBarBackground = styled.div<{ isActive: boolean }>`
   position: fixed;
   height: 100vh;
@@ -18,7 +14,6 @@ export const StyledSideBarBackground = styled.div<{ isActive: boolean }>`
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-blend-mode: overlay;
-  box-shadow: 4px 4px 10px -1px rgba(0, 0, 0, 0.25), -4px -4px 10px -1px rgba(255, 255, 255, 0.25);
 `;
 
 export const StyledSideBar = styled.div<{ isActive: boolean }>`
@@ -28,30 +23,27 @@ export const StyledSideBar = styled.div<{ isActive: boolean }>`
   display: flex;
   flex-direction: column;
 
-  gap: 0.4rem;
-
   overflow: hidden;
 
   transition: all 0.2s ease-in-out;
-  background-color: #ffffff;
-  box-shadow: 4px 4px 10px -1px rgba(0, 0, 0, 0.25), -4px -4px 10px -1px rgba(255, 255, 255, 0.25);
 `;
 
 /**
  * @description 프로필 사진
  */
-export const StyledSideBarProfile = styled.div<{ isActive: boolean }>`
+export const StyledSideBarProfile = styled.div`
+  position: relative;
+  padding: 0.6rem;
+`;
+
+export const StyledSideBarProfilePhoto = styled.div<{ isActive: boolean }>`
   height: ${({ isActive }) => (!isActive ? '2rem' : '10.8rem')};
   width: ${({ isActive }) => (!isActive ? '2rem' : '10.8rem')};
-
-  margin: 0.6rem;
-
   background-image: url(${character});
   background-repeat: no-repeat;
   background-size: cover;
 
   transition: all 0.2s ease-in-out;
-  background-color: red;
   border-radius: 50%;
 `;
 
@@ -59,17 +51,29 @@ export const StyledSideBarProfile = styled.div<{ isActive: boolean }>`
  * @description 가로 라인
  */
 export const StyledSideBarLine = styled.div<{ isActive: boolean }>`
-  margin-left: 0.6rem;
-  height: 2px;
-  width: ${({ isActive }) => (!isActive ? '2rem' : '10.8rem')};
+  height: ${({ isActive }) => (!isActive ? '0.1rem' : '2.4rem')};
+  width: 100%;
+  padding-top: 0.4rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+
+  box-shadow: inset 4px 4px 10px -1px rgba(0, 0, 0, 0.25),
+    inset -4px -4px 10px -1px rgba(255, 255, 255, 0.25);
+
+  overflow: hidden;
+  font-size: 2rem;
 
   transition: all 0.2s ease-in-out;
   border-radius: 1px;
-  background-color: gray;
+  background-color: #fafafa;
 `;
 
 export const StyledSideBarItem = styled.div`
+  position: relative;
   padding-left: 0.6rem;
+  height: 3.2rem;
   width: 50vw;
 
   gap: 0.5rem;
@@ -77,4 +81,9 @@ export const StyledSideBarItem = styled.div`
   display: flex;
   align-items: center;
   font-size: 2rem;
+`;
+
+export const StyledSideBarBlank = styled.div`
+  flex-grow: 1;
+  background-color: #ffffff;
 `;
