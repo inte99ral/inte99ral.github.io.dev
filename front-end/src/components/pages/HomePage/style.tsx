@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 // Asset
-import test from 'asset/image/test.png';
+import test from 'assets/images/test.png';
 
 export const StyledPage = styled.div`
   height: 100vh;

@@ -1,9 +1,8 @@
 // API & Library
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 // Styles
 import {
-  styleType,
   StyledSideBarItemFrame,
   StyledSideBarItemFrameLeft,
   StyledSideBarItemFrameLeftLine,
@@ -11,12 +10,7 @@ import {
   StyledSideBarItemFrameRightLine,
 } from './style';
 
-// Init
-interface propsType extends styleType {
-  children?: ReactNode;
-}
-
-export const SideBarItemFrame = ({ isActive }: propsType) => {
+export const SideBarProfileFrame = () => {
   return (
     <StyledSideBarItemFrame>
       <StyledSideBarItemFrameLeft>

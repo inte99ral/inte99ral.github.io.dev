@@ -1,10 +1,6 @@
 // API & Library
 import styled from 'styled-components';
 
-export interface styleType {
-  isActive?: boolean;
-}
-
 export const StyledSideBarItemFrame = styled.div`
   position: absolute;
   top: 0;
@@ -25,12 +21,12 @@ export const StyledSideBarItemFrameLeft = styled.div`
 
 export const StyledSideBarItemFrameLeftLine = styled.div`
   position: absolute;
-  top: -1.4rem;
-  left: -1.4rem;
-  height: 2.8rem;
-  width: 2.8rem;
+  top: -1.2rem;
+  left: -1.2rem;
+  height: 2.4rem;
+  width: 2.4rem;
   border-radius: 50%;
-  border: 1.6rem solid #ffffff;
+  border: 1.6rem solid red;
 `;
 
 export const StyledSideBarItemFrameRight = styled.div`
@@ -43,10 +39,10 @@ export const StyledSideBarItemFrameRight = styled.div`
 
 export const StyledSideBarItemFrameRightLine = styled.div`
   position: absolute;
-  top: -1.4rem;
+  top: -1.2rem;
   left: -1.6rem;
 
-  height: 2.8rem;
+  height: 2.4rem;
   width: 100%;
-  border: 1.6rem solid #ffffff;
+  border: 1.6rem solid red;
 `;

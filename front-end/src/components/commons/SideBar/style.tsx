@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 // Asset
-import character from 'asset/image/character.png';
+import character from 'assets/images/character.png';
 
 export const StyledSideBarBackground = styled.div<{ isActive: boolean }>`
   position: fixed;
@@ -70,11 +70,13 @@ export const StyledSideBarLine = styled.div<{ isActive: boolean }>`
   background-color: #fafafa;
 `;
 
-export const StyledSideBarItem = styled.div`
+export const StyledSideBarItem = styled.div<{ isActive: boolean }>`
   position: relative;
   padding-left: 0.6rem;
   height: 3.2rem;
   width: 50vw;
+
+  overflow: hidden;
 
   gap: 0.5rem;
 

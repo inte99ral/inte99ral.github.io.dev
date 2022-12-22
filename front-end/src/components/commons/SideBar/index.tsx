@@ -54,10 +54,10 @@ export const SideBar = () => {
           to="/blog"
           style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
         >
-          <StyledSideBarItem className="side-bar-item">
+          <StyledSideBarItem className="side-bar-item" isActive={isActive}>
             <SideBarItemFrame />
             <AiFillGithub />
-            <div>사이드바</div>
+            <div>블로그</div>
           </StyledSideBarItem>
         </NavLink>
 
@@ -65,9 +65,10 @@ export const SideBar = () => {
           to="/error"
           style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
         >
-          <StyledSideBarItem className="side-bar-item">
+          <StyledSideBarItem className="side-bar-item" isActive={isActive}>
+            <SideBarItemFrame />
             <AiFillGithub />
-            <div>사이드바</div>
+            <div>에러페이지</div>
           </StyledSideBarItem>
         </NavLink>
 

@@ -1,3 +1,18 @@
+@font-face {
+  font-family: NanumSquareNeo;
+  src: url(assets/fonts/NanumSquareNeo.woff) format('woff');
+}
+
+@font-face {
+  font-family: NanumSquareRound;
+  src: url(assets/fonts/NanumSquareRound.woff) format('woff');
+}
+
+@font-face {
+  font-family: Koverwatch;
+  src: url(assets/fonts/koverwatch.ttf);
+}
+
 :root {
   --color-theme: #009e73;
 }
@@ -15,6 +30,7 @@
 }
 
 .App * {
+  font-family: NanumSquareNeo;
   color: #000000;
   text-decoration: none;
 }
