@@ -29,7 +29,11 @@
   --color-reverse: #a80000;
 }
 
-.App * {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
   font-family: NanumSquareNeo;
   color: #000000;
   text-decoration: none;

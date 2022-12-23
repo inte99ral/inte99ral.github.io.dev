@@ -2,7 +2,9 @@
 import styled from 'styled-components';
 
 export interface styleType {
-  isActive?: boolean;
+  isActive: boolean;
+  widthActive: string;
+  widthInactive: string;
 }
 
 export const StyledSideBarItemFrame = styled.div`
@@ -15,22 +17,27 @@ export const StyledSideBarItemFrame = styled.div`
   display: flex;
 `;
 
-export const StyledSideBarItemFrameLeft = styled.div`
+export const StyledSideBarItemFrameLeft = styled.div<styleType>`
   position: relative;
-  height: 3.2rem;
+  height: ${({ isActive, widthActive, widthInactive }) => (isActive ? widthActive : widthInactive)};
+
   width: 1.6rem;
+  width: ${({ isActive, widthActive, widthInactive }) => (isActive ? widthActive : widthInactive)};
+
+  border: 1px solid red;
 
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
 `;
 
 export const StyledSideBarItemFrameLeftLine = styled.div`
   position: absolute;
-  top: -1.4rem;
-  left: -1.4rem;
-  height: 2.8rem;
-  width: 2.8rem;
+  top: -0;
+  left: -0;
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
-  border: 1.6rem solid #ffffff;
+  border: 10px solid #ffffff;
 `;
 
 export const StyledSideBarItemFrameRight = styled.div`

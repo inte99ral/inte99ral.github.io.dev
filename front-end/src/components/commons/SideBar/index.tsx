@@ -39,7 +39,7 @@ export const SideBar = () => {
           style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
         >
           <StyledSideBarProfile className="side-bar-profile">
-            <SideBarItemFrame />
+            <SideBarItemFrame isActive={isActive} widthActive="12rem" widthInactive="3.2rem" />
             <StyledSideBarProfilePhoto isActive={isActive}></StyledSideBarProfilePhoto>
           </StyledSideBarProfile>
         </NavLink>
@@ -55,7 +55,7 @@ export const SideBar = () => {
           style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
         >
           <StyledSideBarItem className="side-bar-item" isActive={isActive}>
-            <SideBarItemFrame />
+            <SideBarItemFrame isActive={isActive} widthActive="2rem" widthInactive="2rem" />
             <AiFillGithub />
             <div>블로그</div>
           </StyledSideBarItem>
@@ -66,7 +66,7 @@ export const SideBar = () => {
           style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
         >
           <StyledSideBarItem className="side-bar-item" isActive={isActive}>
-            <SideBarItemFrame />
+            <SideBarItemFrame isActive={isActive} widthActive="2rem" widthInactive="2rem" />
             <AiFillGithub />
             <div>에러페이지</div>
           </StyledSideBarItem>

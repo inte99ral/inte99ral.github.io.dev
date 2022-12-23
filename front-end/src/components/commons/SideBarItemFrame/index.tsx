@@ -16,10 +16,14 @@ interface propsType extends styleType {
   children?: ReactNode;
 }
 
-export const SideBarItemFrame = ({ isActive }: propsType) => {
+export const SideBarItemFrame = ({ isActive, widthActive, widthInactive }: propsType) => {
   return (
     <StyledSideBarItemFrame>
-      <StyledSideBarItemFrameLeft>
+      <StyledSideBarItemFrameLeft
+        isActive={isActive}
+        widthActive={widthActive}
+        widthInactive={widthInactive}
+      >
         <StyledSideBarItemFrameLeftLine />
       </StyledSideBarItemFrameLeft>
       <StyledSideBarItemFrameRight>
