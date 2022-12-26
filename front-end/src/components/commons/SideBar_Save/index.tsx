@@ -39,18 +39,23 @@ export const SideBar = () => {
           style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
         >
           <StyledSideBarProfile className="side-bar-profile">
-            {/* <SideBarItemFrame isActive={isActive} widthActive="12rem" widthInactive="3.2rem" /> */}
+            <SideBarItemFrame isActive={isActive} widthActive="12rem" widthInactive="3.2rem" />
             <StyledSideBarProfilePhoto isActive={isActive}></StyledSideBarProfilePhoto>
           </StyledSideBarProfile>
         </NavLink>
 
-        <StyledSideBarLine className="side-bar-line" isActive={isActive}></StyledSideBarLine>
+        <StyledSideBarLine className="side-bar-line" isActive={isActive}>
+          <AiFillGithub />
+          <AiFillGithub />
+          <AiFillGithub />
+        </StyledSideBarLine>
 
         <NavLink
           to="/blog"
           style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
         >
           <StyledSideBarItem className="side-bar-item" isActive={isActive}>
+            <SideBarItemFrame isActive={isActive} widthActive="2rem" widthInactive="2rem" />
             <AiFillGithub />
             <div>블로그</div>
           </StyledSideBarItem>
@@ -61,6 +66,7 @@ export const SideBar = () => {
           style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
         >
           <StyledSideBarItem className="side-bar-item" isActive={isActive}>
+            <SideBarItemFrame isActive={isActive} widthActive="2rem" widthInactive="2rem" />
             <AiFillGithub />
             <div>에러페이지</div>
           </StyledSideBarItem>
