@@ -26,9 +26,6 @@ export const SideBarItemFrame = ({ isActive, widthActive, widthInactive }: props
       >
         <StyledSideBarItemFrameLeftLine />
       </StyledSideBarItemFrameLeft>
-      <StyledSideBarItemFrameRight>
-        <StyledSideBarItemFrameRightLine />
-      </StyledSideBarItemFrameRight>
     </StyledSideBarItemFrame>
   );
 };

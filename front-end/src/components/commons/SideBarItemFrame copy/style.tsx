@@ -1,6 +1,12 @@
 // API & Library
 import styled from 'styled-components';
 
+export interface styleType {
+  isActive: boolean;
+  widthActive: string;
+  widthInactive: string;
+}
+
 export const StyledSideBarItemFrame = styled.div`
   position: absolute;
   top: 0;
@@ -11,22 +17,27 @@ export const StyledSideBarItemFrame = styled.div`
   display: flex;
 `;
 
-export const StyledSideBarItemFrameLeft = styled.div`
+export const StyledSideBarItemFrameLeft = styled.div<styleType>`
   position: relative;
-  height: 3.2rem;
+  height: ${({ isActive, widthActive, widthInactive }) => (isActive ? widthActive : widthInactive)};
+
   width: 1.6rem;
+  width: ${({ isActive, widthActive, widthInactive }) => (isActive ? widthActive : widthInactive)};
+
+  border: 1px solid red;
 
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
 `;
 
 export const StyledSideBarItemFrameLeftLine = styled.div`
   position: absolute;
-  top: -1.2rem;
-  left: -1.2rem;
-  height: 2.4rem;
-  width: 2.4rem;
+  top: -0;
+  left: -0;
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
-  border: 1.6rem solid red;
+  border: 10px solid #ffffff;
 `;
 
 export const StyledSideBarItemFrameRight = styled.div`
@@ -39,10 +50,10 @@ export const StyledSideBarItemFrameRight = styled.div`
 
 export const StyledSideBarItemFrameRightLine = styled.div`
   position: absolute;
-  top: -1.2rem;
+  top: -1.4rem;
   left: -1.6rem;
 
-  height: 2.4rem;
+  height: 2.8rem;
   width: 100%;
-  border: 1.6rem solid red;
+  border: 1.6rem solid #ffffff;
 `;

@@ -39,18 +39,19 @@ export const SideBar = () => {
           style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
         >
           <StyledSideBarProfile className="side-bar-profile">
-            {/* <SideBarItemFrame isActive={isActive} widthActive="12rem" widthInactive="3.2rem" /> */}
+            <SideBarItemFrame isActive={isActive} widthActive="12rem" widthInactive="3.2rem" />
             <StyledSideBarProfilePhoto isActive={isActive}></StyledSideBarProfilePhoto>
           </StyledSideBarProfile>
         </NavLink>
 
-        <StyledSideBarLine className="side-bar-line" isActive={isActive}></StyledSideBarLine>
+        <StyledSideBarLine className="side-bar-line" isActive={false}></StyledSideBarLine>
 
         <NavLink
           to="/blog"
           style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
         >
-          <StyledSideBarItem className="side-bar-item" isActive={isActive}>
+          <StyledSideBarItem className="side-bar-item" isActive={false}>
+            <SideBarItemFrame isActive={true} widthActive="12rem" widthInactive="3.2rem" />
             <AiFillGithub />
             <div>블로그</div>
           </StyledSideBarItem>
