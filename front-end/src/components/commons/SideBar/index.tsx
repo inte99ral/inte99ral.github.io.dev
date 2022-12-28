@@ -39,7 +39,7 @@ export const SideBar = () => {
           style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
         >
           <StyledSideBarProfile className="side-bar-profile">
-            <SideBarItemFrame isActive={isActive} widthActive="12rem" widthInactive="3.2rem" />
+            {/* <SideBarItemFrame isActive={isActive} widthActive="12rem" widthInactive="3.2rem" /> */}
             <StyledSideBarProfilePhoto isActive={isActive}></StyledSideBarProfilePhoto>
           </StyledSideBarProfile>
         </NavLink>
