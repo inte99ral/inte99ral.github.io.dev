@@ -53,6 +53,17 @@ export const SideBar = () => {
           <StyledSideBarItem className="side-bar-item" isActive={false}>
             <SideBarItemFrame isActive={true} widthActive="12rem" widthInactive="3.2rem" />
             <AiFillGithub />
+            <div>예제들</div>
+          </StyledSideBarItem>
+        </NavLink>
+
+        <NavLink
+          to="/blog"
+          style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
+        >
+          <StyledSideBarItem className="side-bar-item" isActive={false}>
+            <SideBarItemFrame isActive={true} widthActive="12rem" widthInactive="3.2rem" />
+            <AiFillGithub />
             <div>블로그</div>
           </StyledSideBarItem>
         </NavLink>
