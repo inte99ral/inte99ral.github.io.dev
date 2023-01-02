@@ -4,82 +4,26 @@ import { NavLink } from 'react-router-dom';
 import { AiFillGithub } from 'react-icons/ai';
 
 // Styles
-import {
-  StyledSideBarBackground,
-  StyledSideBar,
-  StyledSideBarProfile,
-  StyledSideBarProfilePhoto,
-  StyledSideBarLine,
-  StyledSideBarItem,
-  StyledSideBarBlank,
-} from './style';
+import { Styled_SidebarBackground, Styled_Sidebar } from './style';
 
-// Components
-import { SideBarItemFrame } from 'components/commons/SideBarItemFrame';
-
-export const SideBar = () => {
+export const Sidebar = () => {
   // Init
   const [isActive, setIsActive] = useState(false);
 
-  // Return
   return (
-    <StyledSideBarBackground isActive={isActive} className="side-bar-background outer">
-      <StyledSideBar
-        className="side-bar outer"
-        isActive={isActive}
-        onMouseOver={() => {
-          setIsActive(true);
-        }}
-        onMouseLeave={() => {
-          setIsActive(false);
-        }}
-      >
-        <NavLink
-          to="/home"
-          style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
+    <>
+      <Styled_SidebarBackground className="sidebar-background blur outer" isActive={isActive}>
+        <Styled_Sidebar
+          className="sidebar"
+          isActive={isActive}
+          onMouseOver={() => setIsActive(true)}
+          onMouseLeave={() => setIsActive(false)}
         >
-          <StyledSideBarProfile className="side-bar-profile">
-            <SideBarItemFrame isActive={isActive} widthActive="12rem" widthInactive="3.2rem" />
-            <StyledSideBarProfilePhoto isActive={isActive}></StyledSideBarProfilePhoto>
-          </StyledSideBarProfile>
-        </NavLink>
-
-        <StyledSideBarLine className="side-bar-line" isActive={false}></StyledSideBarLine>
-
-        <NavLink
-          to="/blog"
-          style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
-        >
-          <StyledSideBarItem className="side-bar-item" isActive={false}>
-            <SideBarItemFrame isActive={true} widthActive="12rem" widthInactive="3.2rem" />
-            <AiFillGithub />
-            <div>예제들</div>
-          </StyledSideBarItem>
-        </NavLink>
-
-        <NavLink
-          to="/blog"
-          style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
-        >
-          <StyledSideBarItem className="side-bar-item" isActive={false}>
-            <SideBarItemFrame isActive={true} widthActive="12rem" widthInactive="3.2rem" />
-            <AiFillGithub />
-            <div>블로그</div>
-          </StyledSideBarItem>
-        </NavLink>
-
-        <NavLink
-          to="/error"
-          style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
-        >
-          <StyledSideBarItem className="side-bar-item" isActive={isActive}>
-            <AiFillGithub />
-            <div>에러페이지</div>
-          </StyledSideBarItem>
-        </NavLink>
-
-        <StyledSideBarBlank />
-      </StyledSideBar>
-    </StyledSideBarBackground>
+          <div>아이콘</div>
+          <div>아이콘</div>
+          <div>아이콘</div>
+        </Styled_Sidebar>
+      </Styled_SidebarBackground>
+    </>
   );
 };

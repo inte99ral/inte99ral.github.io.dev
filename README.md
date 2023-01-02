@@ -6,6 +6,7 @@
 - ES7+ React/Redux/React-Native snippets
 - ESLint
 - Prettier
+- vscode-styled-components
 
 <br />
 
