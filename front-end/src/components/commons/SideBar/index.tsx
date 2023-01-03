@@ -6,6 +6,9 @@ import { AiFillGithub } from 'react-icons/ai';
 // Styles
 import { Styled_SidebarBackground, Styled_Sidebar } from './style';
 
+// Components
+import { SidebarItem } from './SidebarItem';
+
 export const Sidebar = () => {
   // Init
   const [isActive, setIsActive] = useState(false);
@@ -19,6 +22,7 @@ export const Sidebar = () => {
           onMouseOver={() => setIsActive(true)}
           onMouseLeave={() => setIsActive(false)}
         >
+          <SidebarItem isActive={isActive}>sd</SidebarItem>
           <div>아이콘</div>
           <div>아이콘</div>
           <div>아이콘</div>
