@@ -28,11 +28,11 @@ export const Sidebar = () => {
         onMouseLeave={() => setIsActive(false)}
       >
         <SidebarProfile isActive={isActive}>sd</SidebarProfile>
-        <Styled_SidebarLine className="sidebar-line inner"></Styled_SidebarLine>
-        <SidebarMenu isActive={isActive}>sd</SidebarMenu>
-        <div>아이콘</div>
-        <div>아이콘</div>
-        <div>아이콘</div>
+        <Styled_SidebarLine className="sidebar-line inner" />
+
+        <SidebarMenu isActive={isActive} icon={<AiFillGithub />} title="Come On Max" />
+        <SidebarMenu isActive={isActive} icon={<AiFillGithub />} title="Oriental Hold'em" />
+
         <Styled_SidebarBlank></Styled_SidebarBlank>
       </Styled_Sidebar>
     </Styled_SidebarBackground>
