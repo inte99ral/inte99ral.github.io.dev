@@ -14,14 +14,33 @@ export const Styled_SidebarMenu = styled.div<{ isActive: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+
+  overflow-x: hidden;
+
+  background-color: lightblue;
 `;
 
-export const Styled_SidebarMenuFrame = styled.div`
-  position: fixed;
+export const Styled_SidebarMenuFrameLeft = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1.6rem;
+  /* background-color: yellow; */
+`;
+
+export const Styled_SidebarMenuFrameRight = styled.div`
+  position: absolute;
+  top: 0;
+  left: 1.6rem;
+
   height: 100%;
   width: 100%;
-  background-color: yellow;
+
+  border-top: 0.4rem solid red;
+  border-bottom: 0.4rem solid red;
+
+  /* background-color: blue; */
 `;
 
 export const Styled_SidebarMenuItem = styled.div`
