@@ -1,7 +1,7 @@
 // API & Library
-import styled from 'styled-components';
+import Styled from 'styled-components';
 
-export const Styled_SidebarMenu = styled.div`
+export const Styled_SidebarMenu = Styled.div`
   position: relative;
   height: 3.2rem;
   padding: 0.6rem;
@@ -16,7 +16,7 @@ export const Styled_SidebarMenu = styled.div`
   /* background-color: lightblue; */
 `;
 
-export const Styled_SidebarMenuFrameLeft = styled.div`
+export const Styled_SidebarMenuFrameLeft = Styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -25,7 +25,7 @@ export const Styled_SidebarMenuFrameLeft = styled.div`
   /* background-color: yellow; */
 `;
 
-export const Styled_SidebarMenuFrameRight = styled.div`
+export const Styled_SidebarMenuFrameRight = Styled.div`
   position: absolute;
   top: 0;
   left: 1.6rem;
@@ -39,12 +39,12 @@ export const Styled_SidebarMenuFrameRight = styled.div`
   /* background-color: blue; */
 `;
 
-export const Styled_SidebarMenuIcon = styled.div`
+export const Styled_SidebarMenuIcon = Styled.div`
   height: 100%;
   font-size: 2rem;
 `;
 
-export const Styled_SidebarMenuTitle = styled.div`
+export const Styled_SidebarMenuTitle = Styled.div`
   height: 2rem;
   width: 11.2rem;
 

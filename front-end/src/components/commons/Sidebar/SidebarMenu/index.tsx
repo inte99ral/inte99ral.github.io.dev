@@ -2,7 +2,7 @@
 import React, { ReactElement } from 'react';
 import { NavLink } from 'react-router-dom';
 
-// Styled
+// Styles
 import { Styled_SidebarMenu, Styled_SidebarMenuIcon, Styled_SidebarMenuTitle } from './style';
 
 // Type
@@ -13,6 +13,7 @@ interface propsType {
 }
 
 export const SidebarMenu = ({ link, icon, title }: propsType) => {
+  // Return
   return (
     <NavLink to={link} style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}>
       <Styled_SidebarMenu className="sidebar-menu">

@@ -18,6 +18,7 @@ export const Sidebar = () => {
   // Init
   const [isActive, setIsActive] = useState(false);
 
+  // Return
   return (
     <Styled_SidebarBackground className="sidebar-background blur outer" isActive={isActive}>
       <Styled_Sidebar
