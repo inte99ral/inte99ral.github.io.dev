@@ -12,7 +12,6 @@ import {
 } from './style';
 
 // Components
-import { SidebarProfile } from './SidebarProfile';
 import { SidebarMenu } from './SidebarMenu';
 
 export const Sidebar = () => {
@@ -27,11 +26,12 @@ export const Sidebar = () => {
         onMouseOver={() => setIsActive(true)}
         onMouseLeave={() => setIsActive(false)}
       >
-        <SidebarProfile isActive={isActive}>sd</SidebarProfile>
+        <SidebarMenu link="/home" icon={<AiFillGithub />} title="Come On Max" />
+
         <Styled_SidebarLine className="sidebar-line inner" />
 
-        <SidebarMenu isActive={isActive} icon={<AiFillGithub />} title="Come On Max" />
-        <SidebarMenu isActive={isActive} icon={<AiFillGithub />} title="Oriental Hold'em" />
+        <SidebarMenu link="/blog" icon={<AiFillGithub />} title="Come On Max" />
+        <SidebarMenu link="/error" icon={<AiFillGithub />} title="Oriental Hold'em" />
 
         <Styled_SidebarBlank></Styled_SidebarBlank>
       </Styled_Sidebar>

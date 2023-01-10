@@ -37,6 +37,16 @@
   font-family: NanumSquareNeo;
   color: #000000;
   text-decoration: none;
+
+  &::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: red;
+    background-clip: padding-box;
+    border-radius: 100px;
+    border: 2px solid transparent;
+  }
 }
 
 .outer {

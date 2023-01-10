@@ -14,7 +14,83 @@ export const HomePage = () => {
       <StyledPage className="home-page">
         <h1>홈페이지</h1>
         <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
         <TestCircle></TestCircle>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
+        <div>테스트 해볼까</div>
       </StyledPage>
     </>
   );
