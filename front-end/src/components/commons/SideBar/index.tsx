@@ -1,6 +1,5 @@
 // API & Library
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import { AiFillGithub } from 'react-icons/ai';
 
 // Styles
