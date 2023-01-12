@@ -26,7 +26,7 @@ export const Sidebar = () => {
         onMouseOver={() => setIsActive(true)}
         onMouseLeave={() => setIsActive(false)}
       >
-        <SidebarMenu link="/home" icon={<AiFillGithub />} title="Come On Max" />
+        <SidebarMenu link="/home" icon={<div>2</div>} title="Come On Max" />
 
         <Styled_SidebarLine className="sidebar-line inner" />
 

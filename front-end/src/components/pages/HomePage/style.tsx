@@ -16,16 +16,4 @@ export const StyledPage = styled.div`
   background-image: url(${test});
   background-repeat: no-repeat;
   background-size: cover;
-
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #000000;
-    background-clip: padding-box;
-    border-radius: 100px;
-
-    border: 2px solid transparent;
-  }
 `;

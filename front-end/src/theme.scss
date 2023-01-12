@@ -13,6 +13,7 @@
   src: url(assets/fonts/koverwatch.ttf);
 }
 
+// Variable
 :root {
   --color-theme: #009e73;
 }
@@ -40,9 +41,10 @@
 
   &::-webkit-scrollbar {
     height: 0.5rem;
+    width: 0.5rem;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: red;
+    background-color: #000000;
     background-clip: padding-box;
     border-radius: 100px;
     border: 2px solid transparent;
