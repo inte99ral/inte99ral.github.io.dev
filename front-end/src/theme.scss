@@ -19,15 +19,15 @@
 }
 
 .light {
-  --color-main: #a80000;
+  --color-main: #ffffff;
   --color-sub: #a80000;
-  --color-reverse: #a80000;
+  --color-reverse: #000000;
 }
 
 .dark {
-  --color-main: #a80000;
+  --color-main: #000000;
   --color-sub: #a80000;
-  --color-reverse: #a80000;
+  --color-reverse: #ffffff;
 }
 
 * {
@@ -36,7 +36,7 @@
   margin: 0;
 
   font-family: NanumSquareNeo;
-  color: #000000;
+  color: var(--color-reverse);
   text-decoration: none;
 
   &::-webkit-scrollbar {
