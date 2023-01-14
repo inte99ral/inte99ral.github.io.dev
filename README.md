@@ -540,9 +540,14 @@
 
   <hr />
 
-  - 사이트에 네비게이션 바는 필수이다. 본 예시에서는 사이드 바를 네비게이션 바 역할로 사용할 것 이다.
+  - 사이트에 네비게이션 바는 필수이다.<br />
+    본 예시에서는 사이드 바를 네비게이션 바 역할로 사용할 것 이다.
 
-  <br />
+  - 사이트에 사용될 icon 들을 위하여 [react-icon 라이브러리](https://react-icons.github.io/react-icons/)를 인스톨한다.<br />
+
+    ```
+    npm install react-icons --save
+    ```
 
   - Vue Router 에서 `<router-link>` 를 지원하 듯이 React Router 에서는 `<NavLink>` 를 지원한다.
   - React Router v6 이전에는 activeClassName 으로 클릭된 태그에 클래스 적용이 가능했다.

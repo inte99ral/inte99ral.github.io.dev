@@ -1,6 +1,6 @@
 // API & Library
 import React, { useState } from 'react';
-import { AiFillGithub } from 'react-icons/ai';
+import { AiFillHome, AiFillGithub } from 'react-icons/ai';
 
 // Styles
 import {
@@ -30,6 +30,7 @@ export const Sidebar = () => {
 
         <Styled_SidebarLine className="sidebar-line inner" />
 
+        <SidebarMenu link="/blog" icon={<AiFillHome />} title="홈페이지" />
         <SidebarMenu link="/blog" icon={<AiFillGithub />} title="Come On Max" />
         <SidebarMenu link="/error" icon={<AiFillGithub />} title="Oriental Hold'em" />
 
