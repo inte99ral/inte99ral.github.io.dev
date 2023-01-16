@@ -31,8 +31,14 @@ export const Sidebar = () => {
         <Styled_SidebarLine className="sidebar-line inner" />
 
         <SidebarMenu link="/blog" icon={<AiFillHome />} title="홈페이지" />
+        <SidebarMenu link="/error" icon={<AiFillGithub />} title="Oriental Hold'em" />
         <SidebarMenu link="/blog" icon={<AiFillGithub />} title="Come On Max" />
         <SidebarMenu link="/error" icon={<AiFillGithub />} title="Oriental Hold'em" />
+        <SidebarMenu link="/blog" icon={<AiFillGithub />} title="Come On Max" />
+        <SidebarMenu link="/error" icon={<AiFillGithub />} title="Oriental Hold'em" />
+        <SidebarMenu link="/blog" icon={<AiFillGithub />} title="Come On Max" />
+        <SidebarMenu link="/error" icon={<AiFillGithub />} title="Oriental Hold'em" />
+        <SidebarMenu link="/blog" icon={<AiFillGithub />} title="Come On Max" />
 
         <Styled_SidebarBlank></Styled_SidebarBlank>
       </Styled_Sidebar>

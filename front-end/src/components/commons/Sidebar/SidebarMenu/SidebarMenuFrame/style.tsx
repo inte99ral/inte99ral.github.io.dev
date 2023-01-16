@@ -32,7 +32,8 @@ export const Styled_SidebarMenuFrameLeft = Styled.div`
     height: 4.8rem;
     width: 4.8rem;
 
-    border: 1.2rem solid var(--color-main);
+    /* border: 1.2rem solid var(--color-main); */
+    border: 1.2rem solid red;
     border-radius: 50%;
   }
 `;
@@ -40,8 +41,24 @@ export const Styled_SidebarMenuFrameLeft = Styled.div`
 export const Styled_SidebarMenuFrameMiddle = Styled.div`
   flex-grow: 1;
 
-  border-top: 0.4rem solid var(--color-main);
-  border-bottom: 0.4rem solid var(--color-main);
+  /* border-top: 0.4rem solid var(--color-main);
+  border-bottom: 0.4rem solid var(--color-main); */
+
+  &::before {
+    content: '';
+    box-sizing: border-box;
+    
+    /* position: absolute;
+    top: -0.8rem;
+    left: -0.8rem;
+
+    display: inline-block;
+    height: 4.8rem;
+    width: 4.8rem;
+
+    border: 1.2rem solid red;
+    border-radius: 50%; */
+  }
 `;
 
 export const Styled_SidebarMenuFrameRight = Styled.div`
@@ -63,7 +80,8 @@ export const Styled_SidebarMenuFrameRight = Styled.div`
     width: 0.8rem;
 
     border-radius: 50%;
-    background-color: var(--color-main);
+    /* background-color: var(--color-main); */
+    background-color: red;
   }
 
   &::after {
@@ -79,6 +97,7 @@ export const Styled_SidebarMenuFrameRight = Styled.div`
     width: 0.8rem;
 
     border-radius: 50%;
-    background-color: var(--color-main);
+    /* background-color: var(--color-main); */
+    background-color: red;
   }
 `;
