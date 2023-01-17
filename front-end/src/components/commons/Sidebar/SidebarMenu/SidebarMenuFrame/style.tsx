@@ -39,7 +39,9 @@ export const Styled_SidebarMenuFrameLeft = Styled.div`
 `;
 
 export const Styled_SidebarMenuFrameMiddle = Styled.div`
+  position: relative;
   flex-grow: 1;
+  overflow: hidden;
 
   /* border-top: 0.4rem solid var(--color-main);
   border-bottom: 0.4rem solid var(--color-main); */
@@ -47,6 +49,15 @@ export const Styled_SidebarMenuFrameMiddle = Styled.div`
   &::before {
     content: '';
     box-sizing: border-box;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 1rem;
+    width: 1rem;
+
+    background-color: red;
     
     /* position: absolute;
     top: -0.8rem;
