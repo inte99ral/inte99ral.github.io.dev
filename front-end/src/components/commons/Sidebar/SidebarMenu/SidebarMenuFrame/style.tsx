@@ -15,22 +15,19 @@ export const Styled_SidebarMenuFrameLeft = Styled.div`
   position: relative;
   height: 100%;
   width: 1.6rem;
-
   overflow: hidden;
-
-  /* background-color: red; */
 
   &::before {
     content: '';
     box-sizing: border-box;
     
     position: absolute;
-    top: -0.8rem;
-    left: -0.8rem;
+    top: -0.9rem;
+    left: -0.9rem;
 
     display: inline-block;
-    height: 4.8rem;
-    width: 4.8rem;
+    height: 5rem;
+    width: 5rem;
 
     /* border: 1.2rem solid var(--color-main); */
     border: 1.2rem solid red;
@@ -40,42 +37,30 @@ export const Styled_SidebarMenuFrameLeft = Styled.div`
 
 export const Styled_SidebarMenuFrameMiddle = Styled.div`
   position: relative;
+  height: 100%;
   flex-grow: 1;
   overflow: hidden;
-
-  /* border-top: 0.4rem solid var(--color-main);
-  border-bottom: 0.4rem solid var(--color-main); */
 
   &::before {
     content: '';
     box-sizing: border-box;
 
     position: absolute;
-    top: 0;
-    left: 0;
-
-    height: 1rem;
-    width: 1rem;
-
-    background-color: red;
-    
-    /* position: absolute;
-    top: -0.8rem;
-    left: -0.8rem;
+    top: -0.9rem;
 
     display: inline-block;
-    height: 4.8rem;
-    width: 4.8rem;
+    height: 5rem;
+    width: 100%;
 
-    border: 1.2rem solid red;
-    border-radius: 50%; */
+    border-top: 1.2rem solid red;
+    border-bottom: 1.2rem solid red;
   }
 `;
 
 export const Styled_SidebarMenuFrameRight = Styled.div`
   position: relative;
+  height: 100%;
   width: 0.4rem;
-
   overflow: hidden;
 
   &::before {
@@ -83,12 +68,11 @@ export const Styled_SidebarMenuFrameRight = Styled.div`
     box-sizing: border-box;
     
     position: absolute;
-    top: -0.42rem;
-    left: -0.42rem;
+    top: -0.9rem;
 
     display: inline-block;
-    height: 0.8rem;
-    width: 0.8rem;
+    height: 100%;
+    width: 100%;
 
     border-radius: 50%;
     /* background-color: var(--color-main); */
@@ -100,15 +84,15 @@ export const Styled_SidebarMenuFrameRight = Styled.div`
     box-sizing: border-box;
     
     position: absolute;
-    bottom: -0.42rem;
-    left: -0.42rem;
+    bottom: -0.31rem;
+    left: -0.3rem;
 
     display: inline-block;
-    height: 0.8rem;
-    width: 0.8rem;
+    height: 0.6rem;
+    width: 0.6rem;
 
     border-radius: 50%;
     /* background-color: var(--color-main); */
-    background-color: red;
+    /* background-color: red; */
   }
 `;
