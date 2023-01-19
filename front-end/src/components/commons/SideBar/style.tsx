@@ -8,14 +8,14 @@ export const Styled_SidebarBackground = Styled.div<{ isActive: boolean }>`
   position: fixed;
 
   height: 100vh;
-  width: ${({ isActive }) => (!isActive ? '3.6rem' : '100vw')};
+  width: ${({ isActive }) => (!isActive ? '3.2rem' : '100vw')};
 
   transition: all 0.2s ease-in-out;
 `;
 
 export const Styled_Sidebar = Styled.div<{ isActive: boolean }>`
   height: 100vh;
-  width: ${({ isActive }) => (!isActive ? '3.2rem' : '14.4rem')};
+  width: ${({ isActive }) => (!isActive ? '3rem' : '14.4rem')};
 
   display: flex;
   flex-direction: column;

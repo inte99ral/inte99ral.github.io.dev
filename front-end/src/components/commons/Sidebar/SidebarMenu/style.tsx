@@ -3,13 +3,13 @@ import Styled from 'styled-components';
 
 export const Styled_SidebarMenu = Styled.div`
   position: relative;
-  height: 3.2rem;
-  padding: 0.6rem;
+  height: 3rem;
+  padding: 0.5rem;
 
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
 
   overflow: hidden;
 `;

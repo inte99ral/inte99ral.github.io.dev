@@ -7,14 +7,14 @@ export const Styled_SidebarMenuFrame = Styled.div`
   left: 0;
 
   display: flex;
-  height: 3.2rem;
+  height: 3rem;
   width: 100%;
 `;
 
 export const Styled_SidebarMenuFrameLeft = Styled.div`
   position: relative;
   height: 100%;
-  width: 1.6rem;
+  width: 1.5rem;
   overflow: hidden;
 
   &::before {
@@ -30,7 +30,7 @@ export const Styled_SidebarMenuFrameLeft = Styled.div`
     width: 5rem;
 
     /* border: 1.2rem solid var(--color-main); */
-    border: 1.2rem solid red;
+    border: 1.15rem solid red;
     border-radius: 50%;
   }
 `;
@@ -52,15 +52,15 @@ export const Styled_SidebarMenuFrameMiddle = Styled.div`
     height: 5rem;
     width: 100%;
 
-    border-top: 1.2rem solid red;
-    border-bottom: 1.2rem solid red;
+    border-top: 1.15rem solid red;
+    border-bottom: 1.15rem solid red;
   }
 `;
 
 export const Styled_SidebarMenuFrameRight = Styled.div`
   position: relative;
   height: 100%;
-  width: 0.4rem;
+  width: 0.25rem;
   overflow: hidden;
 
   &::before {
@@ -68,15 +68,15 @@ export const Styled_SidebarMenuFrameRight = Styled.div`
     box-sizing: border-box;
     
     position: absolute;
-    top: -0.9rem;
+    top: -0.25rem;
+    left: -0.25rem;
 
     display: inline-block;
-    height: 100%;
-    width: 100%;
+    height: 0.5rem;
+    width: 0.5rem;
 
     border-radius: 50%;
-    /* background-color: var(--color-main); */
-    background-color: red;
+    border: 0.25rem solid red;
   }
 
   &::after {
@@ -84,15 +84,14 @@ export const Styled_SidebarMenuFrameRight = Styled.div`
     box-sizing: border-box;
     
     position: absolute;
-    bottom: -0.31rem;
-    left: -0.3rem;
+    bottom: -0.25rem;
+    left: -0.25rem;
 
     display: inline-block;
-    height: 0.6rem;
-    width: 0.6rem;
+    height: 0.5rem;
+    width: 0.5rem;
 
     border-radius: 50%;
-    /* background-color: var(--color-main); */
-    /* background-color: red; */
+    border: 0.25rem solid red;
   }
 `;
