@@ -24,7 +24,7 @@ export const Styled_SidebarMenuIcon = Styled.div`
   justify-content: center;
   align-items: center;
   
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 `;
 
 export const Styled_SidebarMenuTitle = Styled.div`
@@ -37,6 +37,4 @@ export const Styled_SidebarMenuTitle = Styled.div`
   font-weight: bold;
   white-space: nowrap;
   font-size: 1rem;
-
-  /* background-color: blue; */
 `;
