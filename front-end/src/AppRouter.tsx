@@ -16,6 +16,7 @@ export const AppRouter = () => {
         <Sidebar />
         <Routes>
           <Route path="/" element={<Navigate replace to="/home" />} />
+          <Route path="/profile/*" element={<HomePage />} />
           <Route path="/home/*" element={<HomePage />} />
           <Route path="/blog/*" element={<BlogPage />} />
           <Route path="/error/*" element={<ErrorPage />} />

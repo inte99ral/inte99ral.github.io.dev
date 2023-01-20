@@ -8,7 +8,7 @@ export const Styled_SidebarBackground = Styled.div<{ isActive: boolean }>`
   position: fixed;
 
   height: 100vh;
-  width: ${({ isActive }) => (!isActive ? '3.2rem' : '100vw')};
+  width: ${({ isActive }) => (!isActive ? '3.4rem' : '100vw')};
 
   transition: all 0.2s ease-in-out;
 `;
@@ -37,4 +37,11 @@ export const Styled_SidebarBlank = Styled.div`
   flex-grow: 1;
 
   background-color: white;
+`;
+
+export const Styled_Logo = Styled.div`
+  height: 1rem;
+  width: 1rem;
+
+  background-color: red;
 `;

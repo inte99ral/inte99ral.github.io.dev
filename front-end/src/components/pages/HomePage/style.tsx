@@ -1,10 +1,10 @@
 // API & Library
-import styled from 'styled-components';
+import Styled from 'styled-components';
 
 // Asset
 import test from 'assets/images/test.png';
 
-export const StyledPage = styled.div`
+export const Styled_Page = Styled.div`
   height: 100vh;
   width: 100vw;
 
