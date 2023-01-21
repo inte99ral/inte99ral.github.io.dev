@@ -40,8 +40,11 @@ export const Styled_SidebarBlank = Styled.div`
 `;
 
 export const Styled_Logo = Styled.div`
-  height: 1rem;
-  width: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
 
-  background-color: red;
+  border-radius: 50%;
+  background-image: url(${character});
+  background-repeat: no-repeat;
+  background-size: cover;
 `;

@@ -12,16 +12,19 @@ import { SidebarMenuFrame } from './SidebarMenuFrame';
 interface propsType {
   link: string;
   icon: ReactElement;
-  title: string;
+  title: ReactElement;
 }
 
 export const SidebarMenu = ({ link, icon, title }: propsType) => {
   // Return
   return (
-    <NavLink to={link} style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}>
+    <NavLink
+      to={link}
+      className={({ isActive }) => (isActive ? 'active' : '')}
+      style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
+    >
       <Styled_SidebarMenu className="sidebar-menu">
         <SidebarMenuFrame />
-
         <Styled_SidebarMenuIcon className="sidebar-menu-icon">{icon}</Styled_SidebarMenuIcon>
         <Styled_SidebarMenuTitle className="sidebar-menu-title">{title}</Styled_SidebarMenuTitle>
       </Styled_SidebarMenu>

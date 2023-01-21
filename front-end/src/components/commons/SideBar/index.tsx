@@ -8,6 +8,7 @@ import {
   Styled_Sidebar,
   Styled_SidebarLine,
   Styled_SidebarBlank,
+  Styled_Logo,
 } from './style';
 
 // Components
@@ -26,19 +27,13 @@ export const Sidebar = () => {
         onMouseOver={() => setIsActive(true)}
         onMouseLeave={() => setIsActive(false)}
       >
-        <SidebarMenu link="/home" icon={<div>2</div>} title="Come On Max" />
+        <SidebarMenu link="/home" icon={<Styled_Logo />} title={<div>Integral</div>} />
 
         <Styled_SidebarLine className="sidebar-line inner" />
 
-        <SidebarMenu link="/blog" icon={<AiFillHome />} title="홈페이지" />
-        <SidebarMenu link="/error" icon={<AiFillGithub />} title="Oriental Hold'em" />
-        <SidebarMenu link="/blog" icon={<AiFillGithub />} title="Come On Max" />
-        <SidebarMenu link="/error" icon={<AiFillGithub />} title="Oriental Hold'em" />
-        <SidebarMenu link="/blog" icon={<AiFillGithub />} title="Come On Max" />
-        <SidebarMenu link="/error" icon={<AiFillGithub />} title="Oriental Hold'em" />
-        <SidebarMenu link="/blog" icon={<AiFillGithub />} title="Come On Max" />
-        <SidebarMenu link="/error" icon={<AiFillGithub />} title="Oriental Hold'em" />
-        <SidebarMenu link="/blog" icon={<AiFillGithub />} title="Come On Max" />
+        <SidebarMenu link="/home" icon={<AiFillHome />} title={<div>Come On Max</div>} />
+        <SidebarMenu link="/blog" icon={<AiFillHome />} title={<div>Come On Max</div>} />
+        <SidebarMenu link="/error" icon={<AiFillGithub />} title={<div>Come On Max</div>} />
 
         <Styled_SidebarBlank></Styled_SidebarBlank>
       </Styled_Sidebar>
