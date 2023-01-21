@@ -1,7 +1,7 @@
 // API & Library
-import styled from 'styled-components';
+import Styled from 'styled-components';
 
-export const StyledPage = styled.div`
+export const Styled_Page = Styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -2,15 +2,15 @@
 import React from 'react';
 
 // Styles
-import { StyledPage } from './style';
+import { Styled_Page } from './style';
 
 export const ErrorPage = () => {
   // Return
   return (
     <>
-      <StyledPage>
+      <Styled_Page>
         <div>에러 페이지</div>
-      </StyledPage>
+      </Styled_Page>
     </>
   );
 };

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 // Components
 import { Sidebar } from 'components/commons/Sidebar';
+import { ProfilePage } from 'components/pages/ProfilePage';
 import { HomePage } from 'components/pages/HomePage';
 import { BlogPage } from 'components/pages/BlogPage';
 import { ErrorPage } from 'components/pages/ErrorPage';
@@ -16,7 +17,7 @@ export const AppRouter = () => {
         <Sidebar />
         <Routes>
           <Route path="/" element={<Navigate replace to="/home" />} />
-          <Route path="/profile/*" element={<HomePage />} />
+          <Route path="/profile/*" element={<ProfilePage />} />
           <Route path="/home/*" element={<HomePage />} />
           <Route path="/blog/*" element={<BlogPage />} />
           <Route path="/error/*" element={<ErrorPage />} />

@@ -8,7 +8,7 @@ import {
   Styled_Sidebar,
   Styled_SidebarLine,
   Styled_SidebarBlank,
-  Styled_Logo,
+  Styled_Icon,
 } from './style';
 
 // Components
@@ -27,7 +27,7 @@ export const Sidebar = () => {
         onMouseOver={() => setIsActive(true)}
         onMouseLeave={() => setIsActive(false)}
       >
-        <SidebarMenu link="/home" icon={<Styled_Logo />} title={<div>Integral</div>} />
+        <SidebarMenu link="/profile" icon={<Styled_Icon />} title={<div>INTEGRAL</div>} />
 
         <Styled_SidebarLine className="sidebar-line inner" />
 

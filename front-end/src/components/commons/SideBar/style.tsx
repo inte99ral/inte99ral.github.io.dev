@@ -39,7 +39,7 @@ export const Styled_SidebarBlank = Styled.div`
   background-color: white;
 `;
 
-export const Styled_Logo = Styled.div`
+export const Styled_Icon = Styled.div`
   height: 1.5rem;
   width: 1.5rem;
 

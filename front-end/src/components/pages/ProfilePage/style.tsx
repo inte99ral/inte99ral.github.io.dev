@@ -1,4 +1,15 @@
 // API & Library
-import styled from 'styled-components';
+import Styled from 'styled-components';
 
-export const ProfilePage = styled.div``;
+export const Styled_Page = Styled.div`
+  height: 100vh;
+  width: 100vw;
+
+  overflow-y: scroll;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: red;
+`;
