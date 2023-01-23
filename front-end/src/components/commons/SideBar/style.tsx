@@ -6,6 +6,7 @@ import character from 'assets/images/character.png';
 
 export const Styled_SidebarBackground = Styled.div<{ isActive: boolean }>`
   position: fixed;
+  z-index: 9999;
 
   height: 100vh;
   width: ${({ isActive }) => (!isActive ? '3.4rem' : '100vw')};

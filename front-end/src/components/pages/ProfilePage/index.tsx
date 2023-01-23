@@ -2,12 +2,20 @@
 import React from 'react';
 
 // Styles
-import { Styled_Page } from './style';
+import { Styled_Page, Styled_Profile_Background } from './style';
+
+// Components
+import { ProfileBanner } from './ProfileBanner';
+import { ProfileMain } from './ProfileMain';
 
 export const ProfilePage = () => {
   return (
     <Styled_Page className="profile-page">
-      <div>프론트페이지 입니다</div>
+      <ProfileBanner />
+      <ProfileMain />
+      {/* <Styled_Profile_Background className="profile-page-background outer">
+        <ProfileMain />
+      </Styled_Profile_Background> */}
     </Styled_Page>
   );
 };
