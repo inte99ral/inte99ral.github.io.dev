@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Styles
-import { Styled_Page, Styled_Profile_Background } from './style';
+import { Styled_Page } from './style';
 
 // Components
 import { ProfileBanner } from './ProfileBanner';
@@ -13,9 +13,6 @@ export const ProfilePage = () => {
     <Styled_Page className="profile-page">
       <ProfileBanner />
       <ProfileMain />
-      {/* <Styled_Profile_Background className="profile-page-background outer">
-        <ProfileMain />
-      </Styled_Profile_Background> */}
     </Styled_Page>
   );
 };

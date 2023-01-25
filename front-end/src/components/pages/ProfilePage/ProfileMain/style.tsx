@@ -1,14 +1,15 @@
 // API & Library
 import Styled from 'styled-components';
 
+// Assets
+import Character from 'assets/images/character.png';
+
 export const Styled_ProfileMain = Styled.div`
   position: relative;
 
   margin-top: 1rem;
   padding: 1rem;
-  width: 92%;
-
-  border-radius: 1rem;
+  width: calc(100% - 8rem);
 
   display: flex;
   flex-direction: column;
@@ -21,7 +22,7 @@ export const Styled_ProfileMain = Styled.div`
   transition: 0.2s;
 
   &:hover {
-    scale: 1.02;
+    scale: 1.01;
   }
 
   &::before {
@@ -36,6 +37,17 @@ export const Styled_ProfileMain = Styled.div`
     width: 4rem;
 
     transform: rotate(45deg);
-    background-color: #e4e5e6;
+    background-color: #a91101;
   }
+`;
+
+export const Styled_ProfileMainPhoto = Styled.div`
+  height: 10rem;
+  width: 10rem;
+
+  border-radius: 50%;
+
+  background-image: url(${Character});
+  background-repeat: no-repeat;
+  background-size: cover;
 `;

@@ -2,7 +2,7 @@
 import Styled from 'styled-components';
 
 // Asset
-import character from 'assets/images/character.png';
+import logo from 'assets/images/logo.png';
 
 export const Styled_SidebarBackground = Styled.div<{ isActive: boolean }>`
   position: fixed;
@@ -26,9 +26,9 @@ export const Styled_Sidebar = Styled.div<{ isActive: boolean }>`
 
 export const Styled_SidebarLine = Styled.div`
   height: 0.3rem;
-  width: 100%;
+  width: calc(100% - 1px);
 
-  background-color: #d4d4d4;
+  background-color: var(--color-main);
 `;
 
 export const Styled_SidebarBlank = Styled.div`
@@ -37,7 +37,7 @@ export const Styled_SidebarBlank = Styled.div`
 
   flex-grow: 1;
 
-  background-color: white;
+  background-color: var(--color-main);
 `;
 
 export const Styled_Icon = Styled.div`
@@ -45,7 +45,11 @@ export const Styled_Icon = Styled.div`
   width: 1.5rem;
 
   border-radius: 50%;
-  background-image: url(${character});
+  border-top: 2px solid #7a7a7a;
+  border-left: 2px solid #7a7a7a;
+  border-right: 2px solid #080808;
+  border-bottom: 2px solid #080808;
+  background-image: url(${logo});
   background-repeat: no-repeat;
   background-size: cover;
 `;
