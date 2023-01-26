@@ -11,8 +11,7 @@ export const Styled_ProfileMain = Styled.div`
   padding: 1rem;
   width: calc(100% - 8rem);
 
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
 
   overflow: hidden;
 
@@ -41,8 +40,8 @@ export const Styled_ProfileMain = Styled.div`
 `;
 
 export const Styled_ProfileMainPhoto = Styled.div`
-  height: 100%;
-  width: 100%;
+  height: 10rem;
+  width: 10rem;
 
   border-radius: 50%;
 

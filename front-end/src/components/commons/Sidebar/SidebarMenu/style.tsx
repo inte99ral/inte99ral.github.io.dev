@@ -36,5 +36,6 @@ export const Styled_SidebarMenuTitle = Styled.div`
 
   font-weight: bold;
   white-space: nowrap;
+  font-family: eurof;
   font-size: 1rem;
 `;
