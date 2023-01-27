@@ -2,7 +2,7 @@
 import Styled from 'styled-components';
 
 // Asset
-import logo from 'assets/images/logo.png';
+import logo from './assets/images/logo.png';
 
 export const Styled_SidebarBackground = Styled.div<{ isActive: boolean }>`
   position: fixed;
@@ -16,7 +16,7 @@ export const Styled_SidebarBackground = Styled.div<{ isActive: boolean }>`
 
 export const Styled_Sidebar = Styled.div<{ isActive: boolean }>`
   height: 100vh;
-  width: ${({ isActive }) => (!isActive ? '3rem' : '14.4rem')};
+  width: ${({ isActive }) => (!isActive ? '3rem' : '12rem')};
 
   display: flex;
   flex-direction: column;

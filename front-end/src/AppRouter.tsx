@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 // Components
-import { Sidebar } from 'components/commons/Sidebar';
+import { Sidebar } from 'components/Sidebar';
 import { ProfilePage } from 'components/pages/ProfilePage';
 import { HomePage } from 'components/pages/HomePage';
 import { BlogPage } from 'components/pages/BlogPage';

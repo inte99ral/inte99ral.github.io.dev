@@ -13,7 +13,7 @@ import {
 } from './style';
 
 // Components
-import { SidebarMenu } from './SidebarMenu';
+import { SidebarMenu } from './components/SidebarMenu';
 
 export const Sidebar = () => {
   // Init

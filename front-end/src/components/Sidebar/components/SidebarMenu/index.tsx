@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import { Styled_SidebarMenu, Styled_SidebarMenuIcon, Styled_SidebarMenuTitle } from './style';
 
 // Components
-import { SidebarMenuFrame } from './SidebarMenuFrame';
+import { SidebarMenuFrame } from './components/SidebarMenuFrame';
 
 // Type
 interface propsType {

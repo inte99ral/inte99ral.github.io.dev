@@ -13,7 +13,6 @@ export const Styled_Page = Styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(${test});
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  background-color: #f4f5f7;
 `;
