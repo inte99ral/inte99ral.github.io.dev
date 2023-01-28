@@ -1,10 +1,10 @@
 // API & Library
-import styled from 'styled-components';
+import Styled from 'styled-components';
 
 // Asset
 import Banner from './assets/images/Banner.png';
 
-export const Styled_BlogBanner = styled.div`
+export const Styled_BlogBanner = Styled.div`
   height: 20rem;
   width: 100%;
 

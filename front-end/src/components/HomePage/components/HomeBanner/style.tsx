@@ -1,7 +1,7 @@
 // API & Library
 import Styled from 'styled-components';
 
-export const Styled_ProfileBanner = Styled.div`
+export const Styled_HomeBanner = Styled.div`
   width: 100%;
   height: 20rem;
 
@@ -9,5 +9,5 @@ export const Styled_ProfileBanner = Styled.div`
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient( -45deg, #F078C8, #E1C8FA, #506EC8 );
+  background: linear-gradient(-45deg, #f078c8, #e1c8fa, #506ec8);
 `;

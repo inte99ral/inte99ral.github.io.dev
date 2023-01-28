@@ -11,7 +11,7 @@ export const HomePage = () => {
   // Return
   return (
     <Styled_Page className="home-page">
-      <HomeBanner></HomeBanner>
+      <HomeBanner />
     </Styled_Page>
   );
 };

@@ -17,12 +17,6 @@ export const Styled_ProfileMain = Styled.div`
 
   background-color: white;
 
-  transition: 0.2s;
-
-  &:hover {
-    scale: 1.01;
-  }
-
   &::before {
     content: '';
     box-sizing: border-box;
