@@ -4,10 +4,10 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 // Components
 import { Sidebar } from 'components/Sidebar';
-import { ProfilePage } from 'components/pages/ProfilePage';
-import { HomePage } from 'components/pages/HomePage';
-import { BlogPage } from 'components/pages/BlogPage';
-import { ErrorPage } from 'components/pages/ErrorPage';
+import { ProfilePage } from 'components/ProfilePage';
+import { HomePage } from 'components/HomePage';
+import { BlogPage } from 'components/BlogPage';
+import { ErrorPage } from 'components/ErrorPage';
 
 export const AppRouter = () => {
   // Return

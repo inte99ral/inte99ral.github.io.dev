@@ -16,7 +16,7 @@ export const Styled_SidebarBackground = Styled.div<{ isActive: boolean }>`
 
 export const Styled_Sidebar = Styled.div<{ isActive: boolean }>`
   height: 100vh;
-  width: ${({ isActive }) => (!isActive ? '3rem' : '12rem')};
+  width: ${({ isActive }) => (!isActive ? '3rem' : '10rem')};
 
   display: flex;
   flex-direction: column;

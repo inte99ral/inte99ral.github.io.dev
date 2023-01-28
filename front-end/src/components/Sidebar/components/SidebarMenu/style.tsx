@@ -9,7 +9,7 @@ export const Styled_SidebarMenu = Styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
 
   overflow: hidden;
 `;

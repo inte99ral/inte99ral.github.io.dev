@@ -1,12 +1,12 @@
 // API & Library
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-export const Styled_Page = Styled.div`
+export const Styled_BlogPage = styled.div`
   height: 100vh;
   width: 100vw;
 
   overflow-y: scroll;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;

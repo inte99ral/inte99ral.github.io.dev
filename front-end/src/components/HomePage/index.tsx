@@ -5,7 +5,7 @@ import React from 'react';
 import { Styled_Page } from './style';
 
 // Components
-import { HomeBanner } from './HomeBanner';
+import { HomeBanner } from './components/HomeBanner';
 
 export const HomePage = () => {
   // Return
