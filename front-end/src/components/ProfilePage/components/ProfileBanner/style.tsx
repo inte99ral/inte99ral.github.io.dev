@@ -9,5 +9,5 @@ export const Styled_ProfileBanner = Styled.div`
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient( -45deg, #F078C8, #E1C8FA, #506EC8 );
+  background: linear-gradient( -45deg, #506EC8, #E1C8FA, #F078C8);
 `;
