@@ -2,12 +2,11 @@
 import React from 'react';
 
 // Styles
-import { Styled_ProfileMain, Styled_ProfileMainPhoto } from './style';
+import { Styled_ProfileMain } from './style';
 
 export const ProfileMain = () => {
   return (
-    <Styled_ProfileMain className="outer">
-      <Styled_ProfileMainPhoto></Styled_ProfileMainPhoto>
+    <Styled_ProfileMain className="profile-main">
       <div>프로필이란말이다</div>
     </Styled_ProfileMain>
   );
