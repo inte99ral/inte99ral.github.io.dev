@@ -1,7 +1,7 @@
 // API & Library
 import Styled from 'styled-components';
 
-export const Styled_ProfileRow1 = Styled.div`
+export const Styled_ProfileRow2 = Styled.div`
   position: relative;
   height: 1000px;
   width: 100%;

@@ -2,12 +2,12 @@
 import React from 'react';
 
 // Styles
-import {} from './style';
+import { Styled_ProfileRow1 } from './style';
 
 export const ProfileRow1 = () => {
   return (
-    <>
-      <div></div>
-    </>
+    <Styled_ProfileRow1 className="profile-row-1 outer">
+      <div>프로필1</div>
+    </Styled_ProfileRow1>
   );
 };

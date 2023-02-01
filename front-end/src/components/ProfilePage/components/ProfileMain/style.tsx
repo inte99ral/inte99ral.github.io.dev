@@ -12,6 +12,4 @@ export const Styled_ProfileMain = Styled.div`
   flex-direction: column;
 
   align-items: center;
-
-  background-color: red;
 `;
