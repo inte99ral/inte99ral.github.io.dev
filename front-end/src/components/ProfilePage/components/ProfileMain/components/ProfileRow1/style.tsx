@@ -28,6 +28,8 @@ export const Styled_ProfileRow1Container = Styled.div`
 export const Styled_ProfileRow1ContainerPicture = Styled.div`
   height: 18rem;
   width: 18rem;
+  min-height: 18rem;
+  min-width: 18rem;
 
   border-radius: 9rem;
   background-image: url(${character});

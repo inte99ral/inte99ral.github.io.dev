@@ -11,8 +11,8 @@ import { ProfileRow2 } from './components/ProfileRow2';
 export const ProfileMain = () => {
   return (
     <Styled_ProfileMain className="profile-main">
-      <ProfileRow1 />
       <ProfileRow2 />
+      <ProfileRow1 />
     </Styled_ProfileMain>
   );
 };
