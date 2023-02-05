@@ -1,9 +1,6 @@
 // API & Library
 import Styled from 'styled-components';
 
-// Asset
-import Banner from './assets/images/Banner.png';
-
 export const Styled_BlogBanner = Styled.div`
   height: 20rem;
   width: 100%;
@@ -15,7 +12,12 @@ export const Styled_BlogBanner = Styled.div`
   justify-content: center;
   align-items: center;
 
-  background-image: url(${Banner});
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient( -45deg, #506EC8, #E1C8FA, #F078C8);
+`;
+
+export const Styled_BlogBannerPhoto = Styled.div`
+  height: 10rem;
+  width: 10rem;
+
+  background-color: red;
 `;

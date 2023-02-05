@@ -3,6 +3,7 @@ import Styled from 'styled-components';
 
 // Asset
 import logo from './assets/images/logo.png';
+import Icon from './assets/images/Icon.png';
 
 export const Styled_SidebarBackground = Styled.div<{ isActive: boolean }>`
   position: fixed;
@@ -44,12 +45,7 @@ export const Styled_Icon = Styled.div`
   height: 1.5rem;
   width: 1.5rem;
 
-  border-radius: 50%;
-  border-top: 2px solid #7a7a7a;
-  border-left: 2px solid #7a7a7a;
-  border-right: 2px solid #080808;
-  border-bottom: 2px solid #080808;
-  background-image: url(${logo});
+  background-image: url(${Icon});
   background-repeat: no-repeat;
   background-size: cover;
 `;
