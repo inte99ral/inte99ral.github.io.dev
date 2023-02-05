@@ -2,7 +2,6 @@
 import Styled from 'styled-components';
 
 // Asset
-import logo from './assets/images/logo.png';
 import Icon from './assets/images/Icon.png';
 
 export const Styled_SidebarBackground = Styled.div<{ isActive: boolean }>`
