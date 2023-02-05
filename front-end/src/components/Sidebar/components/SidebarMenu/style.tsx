@@ -38,4 +38,8 @@ export const Styled_SidebarMenuTitle = Styled.div`
   white-space: nowrap;
   font-family: eurof;
   font-size: 1rem;
+
+  & * {
+    font-family: Eurof;
+  }
 `;
