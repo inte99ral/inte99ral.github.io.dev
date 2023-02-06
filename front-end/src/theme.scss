@@ -1,3 +1,4 @@
+// Fonts
 @font-face {
   font-family: NanumSquareNeo;
   src: url(assets/fonts/NanumSquareNeo.woff) format('woff');
@@ -18,6 +19,16 @@
   src: url(assets/fonts/eurof35.ttf);
 }
 
+@font-face {
+  font-family: Spinnaker;
+  src: url(assets/fonts/Spinnaker.ttf);
+}
+
+@font-face {
+  font-family: CopperplateGothicBoldRegular;
+  src: url(assets/fonts/CopperplateGothicBoldRegular.ttf);
+}
+
 // Variable
 :root {
   --color-theme: #009e73;
@@ -35,13 +46,13 @@
   --color-reverse: #ffffff;
 }
 
+// Styles
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 
   font-family: NanumSquareNeo;
-  // font-family: Eurof;
   color: var(--color-reverse);
   text-decoration: none;
 
