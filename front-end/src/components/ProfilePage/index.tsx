@@ -10,25 +10,25 @@ import { ProfileMain } from './components/ProfileMain';
 
 export const ProfilePage = () => {
   // Init
-  const ProfileBannerPhoto = useRef<HTMLDivElement>(null);
+  const ProfilePage = useRef<HTMLDivElement>(null);
 
   // Methods
   const handleScroll = () => {
     // console.log('scrolled');
-    console.log(ProfileBannerPhoto.current?.scrollTop);
+    console.log(ProfilePage.current?.scrollTop);
   };
 
   // LifeCycle
   useEffect(() => {
-    console.log('걍때워넣음');
-    // window.addEventListener('keypress', handleScroll);
+    // console.log('걍때워넣1음');
+    window.addEventListener('keypress', handleScroll);
     // return () => {
     //   window.removeEventListener('scroll', handleScroll);
     // };
   }, []);
 
   return (
-    <Styled_ProfilePage className="profile-page">
+    <Styled_ProfilePage className="profile-page" ref={ProfilePage}>
       <ProfileBanner />
       <ProfileMain />
     </Styled_ProfilePage>
