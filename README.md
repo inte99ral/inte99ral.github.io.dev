@@ -36,10 +36,12 @@
     - 경고하자면 `npm audit fix --force` 로는 해결할 수 없다. 오히려 다른 패키지들이 깨질 수 있으니 주의
     - npm 으로 패키지를 다운로드 받고 있다면 원래 나와야 하는 게 맞다.
     - 문제의 원인은 package.json 안에 있는 `"react-scripts"` 이다.
-    - npm은 해당 코드로 Node.js 앱을 돌릴 때 생기는 취약점을 경고한다. 하지만 CRA(create-react-app)는 정적 빌드 툴이고, Node.js와 같은 방식으로 작동하지 않으며. npm audit은 CRA의 몇몇 부분을 취약점으로 오탐지한다.
+    - npm은 해당 코드로 Node.js 앱을 돌릴 때 생기는 취약점을 경고한다.
+      하지만 CRA(create-react-app)는 정적 빌드 툴이고, Node.js와 같은 방식으로 작동하지 않으며.
+      npm audit은 CRA의 몇몇 부분을 취약점으로 오탐지한다.
     - 따라서 문제되는 의존성이 npm에 탐지되지 않게하기 위하여 다음의 방법을 사용한다.
     - package.json 안의 "dependencies" 안에 있는 "react-scripts" 을 "devDependencies" 로 이동시킨다.
-    - 그 후, npm audit 대신 npm audit --production 을 사용하면된다.
+    - 그 후, npm audit 대신 `npm audit --production` 을 사용하면된다.
 
 <br/>
 
@@ -71,8 +73,8 @@
 
     <br />
 
-    - `npm install eslint prettier eslint-config-prettier eslint-plugin-prettier --save-dev`
-      - 다음의 명령어로 위에서 언급한 패키지들을 내려 받는다.
+    - `npm install eslint prettier eslint-config-prettier eslint-plugin-prettier --save-dev`<br/>
+      다음의 명령어로 위에서 언급한 패키지들을 내려 받는다.
 
   <br />
 
@@ -574,7 +576,14 @@
     여러 컴포넌트에서 데이터를 공유할 수 있도록 중앙 관리하는 방식이라고 대강 이해하면 충분하다.
     <br />
 
-    Vue 에서는 Vuex, Pinia 를 주로 사용하며 React 에서는 Recoil, Redux 가 주로 사용된다.<br />
+    많은 개발자들이 사용하며 어느 정도 신뢰가 쌓인 Vue의 Vuex,
+    Pinia 그리고 React의 Recoil, Redux 가 주로 사용된다.
+    React 에서 자체적으로 지원하는 전역 상태 관리 인터페이스 Context API 나,
+    Mobx 등 여러 방법들이 있으니 입맛에 맞게 선택하면 된다.
+    여기서는 데이터 비동기화 처리가 간편한 recoil 을 채택했다.<br />
+
+  - `npm install recoil`<br/>
+    다음의 명령어로 위에서 언급한 패키지들을 내려 받는다.
 
 <br />
 
