@@ -1,5 +1,6 @@
 // API & Library
 import React, { useState, useEffect } from 'react';
+import { RecoilRoot } from 'recoil';
 
 // Styles
 import './theme.scss';
@@ -19,7 +20,9 @@ function App() {
   // Return
   return (
     <div className={`App ${isDark ? 'dark' : 'light'}`}>
-      <AppRouter />
+      <RecoilRoot>
+        <AppRouter />
+      </RecoilRoot>
     </div>
   );
 }

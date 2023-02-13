@@ -1,5 +1,5 @@
 // API & Library
-import React, { ReactElement } from 'react';
+import React from 'react';
 
 // Styles
 import {
