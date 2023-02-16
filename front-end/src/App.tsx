@@ -1,30 +1,40 @@
-// API & Library
+//>> API & Library
 import React, { useState, useEffect } from 'react';
-import { RecoilRoot } from 'recoil';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
-// Styles
+//>> Styles
 import './theme.scss';
 
-// Components
-import { AppRouter } from 'AppRouter';
+//>> Components
+import { Sidebar } from 'components/Sidebar';
+import { ProfilePage } from 'components/ProfilePage';
+import { HomePage } from 'components/HomePage';
+import { BlogPage } from 'components/BlogPage';
+import { ErrorPage } from 'components/ErrorPage';
 
-function App() {
-  // Init
+const App = () => {
+  //>> Init
   const [isDark, setIsDark] = useState(localStorage.getItem('isDark'));
 
-  // LifeCycle
+  //>> Hooks
   useEffect(() => {
     console.log('[VERSION]: ', process.env.REACT_APP_VERSION);
   }, []);
 
-  // Return
+  //>> Return
   return (
     <div className={`App ${isDark ? 'dark' : 'light'}`}>
-      <RecoilRoot>
-        <AppRouter />
-      </RecoilRoot>
+      <Sidebar />
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/home" />} />
+        <Route path="/profile/*" element={<ProfilePage />} />
+        <Route path="/home/*" element={<HomePage />} />
+        <Route path="/blog/*" element={<BlogPage />} />
+        <Route path="/error/*" element={<ErrorPage />} />
+        <Route path="/*" element={<Navigate replace to="/error" />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

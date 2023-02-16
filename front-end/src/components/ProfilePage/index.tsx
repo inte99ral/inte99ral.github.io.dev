@@ -1,7 +1,5 @@
 //>> API & Library
 import React, { useRef, useEffect } from 'react';
-import { useRecoilState } from 'recoil';
-import { count } from 'store';
 
 //>> Styles
 import { Styled_ProfilePage } from './style';
@@ -13,33 +11,22 @@ import { ProfileMain } from './components/ProfileMain';
 export const ProfilePage = () => {
   //>> Init
   const ProfilePage = useRef<HTMLDivElement>(null);
-  const [counter, setCounter] = useRecoilState(count);
 
   //>> Methods
-  const handleScroll = () => {
-    console.log('scrolled');
-    // console.log(ProfilePage.current?.scroll({ top: 0, behavior: 'smooth' }));
-  };
-
-  const countUp = () => {
-    // console.log('scrolled');
-    setCounter((x) => x + 1);
+  const test = () => {
+    // setScroll((x) => x + 1);
   };
 
   //>> LifeCycle
   useEffect(() => {
-    ProfilePage.current?.addEventListener('scroll', handleScroll);
-    return () => ProfilePage.current?.removeEventListener('scroll', handleScroll);
+    ProfilePage.current?.addEventListener('scroll', test);
+    return () => ProfilePage.current?.removeEventListener('scroll', test);
   }, []);
 
   //>> Return
   return (
     <Styled_ProfilePage className="profile-page" ref={ProfilePage}>
-      <div>테스트용: {counter}</div>
-      <div>테스트용: {ProfilePage.current?.scrollTop}</div>
-      <button onClick={countUp} style={{ height: 100, width: 100 }}>
-        카운터
-      </button>
+      {/* <div>테스트용: {getScroll}</div> */}
       <ProfileBanner />
       <ProfileMain />
     </Styled_ProfilePage>
