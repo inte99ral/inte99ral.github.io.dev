@@ -12,8 +12,9 @@ export const HomePage = () => {
   // Return
   return (
     <Styled_HomePage className="home-page">
-      <HomeBanner />
-      <HomeMain />
+      <div>테스트 문구</div>
+      {/* <HomeBanner />
+      <HomeMain /> */}
     </Styled_HomePage>
   );
 };

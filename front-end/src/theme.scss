@@ -68,6 +68,10 @@
   }
 }
 
+.app {
+  background-color: blue;
+}
+
 .active * {
   color: var(--color-main);
 }

@@ -2,8 +2,8 @@
 import Styled from 'styled-components';
 
 export const Styled_HomeBanner = Styled.div`
+  min-height: 20rem;
   width: 100%;
-  height: 20rem;
 
   display: flex;
   justify-content: center;

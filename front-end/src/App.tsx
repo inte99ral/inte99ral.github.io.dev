@@ -23,16 +23,17 @@ const App = () => {
 
   //>> Return
   return (
-    <div className={`App ${isDark ? 'dark' : 'light'}`}>
+    <div className={`app ${isDark ? 'dark' : 'light'}`}>
       <Sidebar />
-      <Routes>
+      <div>테스트 로그</div>
+      {/* <Routes>
         <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/profile/*" element={<ProfilePage />} />
         <Route path="/home/*" element={<HomePage />} />
         <Route path="/blog/*" element={<BlogPage />} />
         <Route path="/error/*" element={<ErrorPage />} />
         <Route path="/*" element={<Navigate replace to="/error" />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 };

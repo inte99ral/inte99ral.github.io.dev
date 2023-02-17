@@ -2,10 +2,7 @@
 import Styled from 'styled-components';
 
 export const Styled_HomePage = Styled.div`
-  height: 100vh;
   width: 100vw;
-
-  overflow-y: scroll;
 
   display: flex;
   flex-direction: column;
