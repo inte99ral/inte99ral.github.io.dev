@@ -48,6 +48,7 @@
 
 // Styles
 * {
+  position: relative;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -57,8 +58,11 @@
   text-decoration: none;
 
   &::-webkit-scrollbar {
-    height: 0.5rem;
-    width: 0.5rem;
+    height: 0.6rem;
+    width: 0.6rem;
+    background-color: var(--color-main);
+    box-shadow: inset 4px 4px 10px -1px rgba(0, 0, 0, 0.25),
+      inset -4px -4px 10px -1px rgba(255, 255, 255, 0.25);
   }
   &::-webkit-scrollbar-thumb {
     background-color: #44546a;
@@ -69,7 +73,12 @@
 }
 
 .app {
-  background-color: blue;
+  height: 100vh;
+  width: 100vw;
+
+  overflow-y: scroll;
+
+  background-color: lawngreen;
 }
 
 .active * {

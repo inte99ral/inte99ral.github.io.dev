@@ -12,7 +12,7 @@ export const HomePage = () => {
   // Return
   return (
     <Styled_HomePage className="home-page">
-      <div>테스트 문구</div>
+      <div style={{ height: 1000, display: 'flex', alignItems: 'center' }}>테스트 문구</div>
       {/* <HomeBanner />
       <HomeMain /> */}
     </Styled_HomePage>
