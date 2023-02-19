@@ -11,5 +11,5 @@ export const Styled_BlogPage = styled.div`
   flex-direction: column;
   align-items: center;
 
-  background-color: #f4f5f7;
+  background-color: var(--color-sub);
 `;

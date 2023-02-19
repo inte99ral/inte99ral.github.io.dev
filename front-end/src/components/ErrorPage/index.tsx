@@ -1,11 +1,11 @@
-// API & Library
+//-- API & Library
 import React from 'react';
 
-// Styles
+//-- Styles
 import { Styled_ErrorPage, Styled_ErrorPic } from './style';
 
 export const ErrorPage = () => {
-  // Return
+  //-- Return
   return (
     <>
       <Styled_ErrorPage>

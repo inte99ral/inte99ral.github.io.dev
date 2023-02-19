@@ -1,8 +1,8 @@
 //-- API & Library
 import React, { useState, useEffect, useRef } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { useSetRecoilState } from 'recoil';
-import { scroll } from 'api/recoil/store';
+import { useRecoilState, useSetRecoilState } from 'recoil';
+import { scroll, isDark } from 'api/recoil/store';
 
 //-- Styles
 import './theme.scss';
@@ -16,9 +16,9 @@ import { ErrorPage } from 'components/ErrorPage';
 
 const App = () => {
   //-- Init
-  const [isDark, setIsDark] = useState(localStorage.getItem('isDark'));
   const app = useRef<HTMLDivElement>(null);
   const setScroll = useSetRecoilState(scroll);
+  const [getIsDark, setIsDark] = useRecoilState(isDark);
 
   //-- Methods
   const handleScroll = (e: Event) => {
@@ -30,13 +30,14 @@ const App = () => {
   //-- Hooks
   useEffect(() => {
     console.log('[VERSION]: ', process.env.REACT_APP_VERSION);
+    setIsDark(!!localStorage.getItem('isDark'));
     app.current?.addEventListener('scroll', handleScroll, true);
     return () => app.current?.removeEventListener('scroll', handleScroll, true);
   }, []);
 
   //-- Return
   return (
-    <div className={`app ${isDark ? 'dark' : 'light'}`} ref={app}>
+    <div className={`app ${getIsDark ? 'dark' : 'light'}`} ref={app}>
       <Sidebar />
       <Routes>
         <Route path="/" element={<Navigate replace to="/home" />} />

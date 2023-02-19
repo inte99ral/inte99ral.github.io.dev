@@ -21,7 +21,7 @@ export const SidebarMenu = ({ link, icon, title }: propsType) => {
     <NavLink
       to={link}
       className={({ isActive }) => (isActive ? 'active' : '')}
-      style={({ isActive }) => ({ background: isActive ? 'none' : '#ffffff' })}
+      style={({ isActive }) => ({ background: isActive ? 'none' : 'var(--color-main)' })}
     >
       <Styled_SidebarMenu className="sidebar-menu">
         <SidebarMenuFrame />

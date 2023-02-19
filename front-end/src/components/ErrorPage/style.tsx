@@ -11,7 +11,7 @@ export const Styled_ErrorPage = Styled.div`
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: var(--color-main);
+  background-color: var(--color-sub);
 `;
 
 export const Styled_ErrorPic = Styled.div`
