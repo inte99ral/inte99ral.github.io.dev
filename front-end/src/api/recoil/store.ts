@@ -1,3 +1,4 @@
 import { atom } from 'recoil';
 
-export const scroll = atom<number>({ key: 'scroll', default: 0 });
+export const isDark = atom<boolean>({ key: 'IsDark', default: false });
+export const scroll = atom<number>({ key: 'Scroll', default: 0 });

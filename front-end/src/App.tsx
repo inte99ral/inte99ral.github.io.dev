@@ -1,13 +1,13 @@
-//>> API & Library
+//-- API & Library
 import React, { useState, useEffect, useRef } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 import { scroll } from 'api/recoil/store';
 
-//>> Styles
+//-- Styles
 import './theme.scss';
 
-//>> Components
+//-- Components
 import { Sidebar } from 'components/Sidebar';
 import { ProfilePage } from 'components/ProfilePage';
 import { HomePage } from 'components/HomePage';
@@ -15,25 +15,26 @@ import { BlogPage } from 'components/BlogPage';
 import { ErrorPage } from 'components/ErrorPage';
 
 const App = () => {
-  //>> Init
+  //-- Init
   const [isDark, setIsDark] = useState(localStorage.getItem('isDark'));
   const app = useRef<HTMLDivElement>(null);
   const setScroll = useSetRecoilState(scroll);
 
-  //>> Hooks
+  //-- Methods
+  const handleScroll = (e: Event) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setScroll(app.current ? app.current.scrollTop : 0);
+  };
+
+  //-- Hooks
   useEffect(() => {
     console.log('[VERSION]: ', process.env.REACT_APP_VERSION);
-    app.current?.addEventListener(
-      'scroll',
-      (e) => {
-        e.stopPropagation();
-        console.log('클릭');
-      },
-      true,
-    );
+    app.current?.addEventListener('scroll', handleScroll, true);
+    return () => app.current?.removeEventListener('scroll', handleScroll, true);
   }, []);
 
-  //>> Return
+  //-- Return
   return (
     <div className={`app ${isDark ? 'dark' : 'light'}`} ref={app}>
       <Sidebar />
