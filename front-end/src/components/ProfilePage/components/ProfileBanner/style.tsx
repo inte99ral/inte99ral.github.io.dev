@@ -1,10 +1,5 @@
-// API & Library
+// -- API & Library
 import Styled from 'styled-components';
-
-// Assets
-// import Photo from './assets/images/Photo.png';
-// import Photo from './assets/images/Personal.png';
-import Photo from './assets/images/PersonalDJ.png';
 
 export const Styled_ProfileBanner = Styled.div`
   width: 100%;
@@ -18,7 +13,6 @@ export const Styled_ProfileBanner = Styled.div`
   justify-content: center;
   align-items: center;
 
-  /* background: linear-gradient( -45deg, #506EC8, #E1C8FA, #F078C8); */
   background-color: #44546A;
 `;
 
@@ -30,9 +24,7 @@ export const Styled_ProfileBannerPhoto = Styled.div`
   border-radius: 50%;
   border: 0.5rem solid #e4e5e7;
 
-  background-image: url(${Photo});
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #ffffff;
 `;
 
 export const Styled_ProfileBannerTitle = Styled.div`

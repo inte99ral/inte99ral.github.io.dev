@@ -1,7 +1,7 @@
-// API & Library
+// -- API & Library
 import Styled from 'styled-components';
 
-// Asset
+// -- Assets
 import Icon from './assets/images/Icon.png';
 
 export const Styled_SidebarBackground = Styled.div<{ isActive: boolean }>`

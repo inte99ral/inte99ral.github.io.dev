@@ -1,4 +1,4 @@
-//-- API & Library
+// -- API & Library
 import Styled from 'styled-components';
 
 export const Styled_SidebarMenu = Styled.div`

@@ -1,9 +1,9 @@
-// API & Library
+// -- API & Library
 import React, { useState } from 'react';
 import { AiFillHome, AiFillGithub, AiFillFolder } from 'react-icons/ai';
 import { BsPersonCircle, BsFillPersonFill } from 'react-icons/bs';
 
-// Styles
+// -- Styles
 import {
   Styled_SidebarBackground,
   Styled_Sidebar,
@@ -12,14 +12,14 @@ import {
   Styled_Icon,
 } from './style';
 
-// Components
+// -- Components
 import { SidebarMenu } from './components/SidebarMenu';
 
 export const Sidebar = () => {
-  // Init
+  // -- Init
   const [isActive, setIsActive] = useState(false);
 
-  // Return
+  // -- Return
   return (
     <Styled_SidebarBackground className="sidebar-background blur outer" isActive={isActive}>
       <Styled_Sidebar

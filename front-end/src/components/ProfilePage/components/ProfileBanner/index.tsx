@@ -1,7 +1,7 @@
-// API & Library
+// -- API & Library
 import React from 'react';
 
-// Styles
+// -- Styles
 import {
   Styled_ProfileBanner,
   Styled_ProfileBannerPhoto,

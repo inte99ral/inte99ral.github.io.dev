@@ -1,7 +1,7 @@
-// API & Library
+// -- API & Library
 import React from 'react';
 
-// Styles
+// -- Styles
 import {
   Styled_SidebarMenuFrame,
   Styled_SidebarMenuFrameLeft,
@@ -10,7 +10,7 @@ import {
 } from './style';
 
 export const SidebarMenuFrame = () => {
-  // Return
+  // -- Return
   return (
     <Styled_SidebarMenuFrame className="sidebar-menu-frame">
       <Styled_SidebarMenuFrameLeft className="sidebar-menu-frame-left" />

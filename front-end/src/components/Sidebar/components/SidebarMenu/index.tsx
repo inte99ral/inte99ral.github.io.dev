@@ -1,14 +1,14 @@
-// API & Library
+// -- API & Library
 import React, { ReactElement } from 'react';
 import { NavLink } from 'react-router-dom';
 
-// Styles
+// -- Styles
 import { Styled_SidebarMenu, Styled_SidebarMenuIcon, Styled_SidebarMenuTitle } from './style';
 
-// Components
+// -- Components
 import { SidebarMenuFrame } from './components/SidebarMenuFrame';
 
-// Type
+// -- Types
 interface propsType {
   link: string;
   icon: ReactElement;
@@ -16,7 +16,7 @@ interface propsType {
 }
 
 export const SidebarMenu = ({ link, icon, title }: propsType) => {
-  // Return
+  // -- Return
   return (
     <NavLink
       to={link}
