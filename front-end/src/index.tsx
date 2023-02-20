@@ -1,11 +1,11 @@
-//>> API & Library
+// -- API & Library
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import { reportWebVitals } from 'api/webVitals';
 
-//>> Components
+// -- Components
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);

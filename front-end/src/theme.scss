@@ -1,4 +1,4 @@
-// Fonts
+// -- Fonts
 @font-face {
   font-family: NanumSquareNeo;
   src: url(assets/fonts/NanumSquareNeo.woff) format('woff');
@@ -29,7 +29,7 @@
   src: url(assets/fonts/CopperplateGothicBoldRegular.ttf);
 }
 
-// Variable
+// -- Variable
 :root {
   --color-theme: #44546a;
 }
@@ -48,7 +48,7 @@
   --color-blur: #ffffff4d;
 }
 
-// Styles
+// -- Styles
 * {
   position: relative;
   box-sizing: border-box;
