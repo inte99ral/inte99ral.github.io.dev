@@ -17,10 +17,11 @@ export const Styled_ProfileBanner = Styled.div`
 `;
 
 export const Styled_ProfileBannerPhoto = Styled.div`
-  width: 12rem;
   height: 12rem;
+  width: 12rem;
   margin: 1rem;
 
+  overflow: hidden;
   border-radius: 50%;
   border: 0.5rem solid #e4e5e7;
 

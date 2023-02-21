@@ -4,7 +4,7 @@ import React from 'react';
 // -- Styles
 import { Styled_ProfileBannerPhoto } from './style';
 
-export const ProfileBanner = () => {
+export const ProfileBannerPhoto = () => {
   return (
     <Styled_ProfileBannerPhoto>
       <div>이욥</div>
