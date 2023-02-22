@@ -1,6 +1,6 @@
 // -- API & Library
 import React, { useState } from 'react';
-import { AiFillHome, AiFillGithub, AiFillFolder } from 'react-icons/ai';
+import { AiFillHome, AiFillGithub, AiFillFolder, AiFillSetting } from 'react-icons/ai';
 import { BsPersonCircle, BsFillPersonFill } from 'react-icons/bs';
 
 // -- Styles
@@ -37,7 +37,9 @@ export const Sidebar = () => {
         <SidebarMenu link="/project" icon={<AiFillFolder />} title={<div>Project</div>} />
         <SidebarMenu link="/error" icon={<AiFillGithub />} title={<div>Come On Max</div>} />
 
-        <Styled_SidebarBlank></Styled_SidebarBlank>
+        <Styled_SidebarBlank />
+
+        <SidebarMenu link="/option" icon={<AiFillSetting />} title={<div>Settings</div>} />
       </Styled_Sidebar>
     </Styled_SidebarBackground>
   );

@@ -15,27 +15,3 @@ export const Styled_ProfileBanner = Styled.div`
 
   background-color: #44546A;
 `;
-
-export const Styled_ProfileBannerPhoto = Styled.div`
-  height: 12rem;
-  width: 12rem;
-  margin: 1rem;
-
-  overflow: hidden;
-  border-radius: 50%;
-  border: 0.5rem solid #e4e5e7;
-
-  background-color: #ffffff;
-`;
-
-export const Styled_ProfileBannerTitle = Styled.div`
-  font-family: CopperplateGothicBoldRegular;
-  font-size: 1.5rem;
-  color: #e4e5e7;
-`;
-
-export const Styled_ProfileBannerSubtitle = Styled.div`
-  font-family: CopperplateGothicBoldRegular;
-  font-size: 1rem;
-  color: #333F50;
-`;
