@@ -8,14 +8,14 @@ import { Styled_SidebarMenu, Styled_SidebarMenuIcon, Styled_SidebarMenuTitle } f
 // -- Components
 import { SidebarMenuFrame } from './components/SidebarMenuFrame';
 
-// -- Types
-interface propsType {
+// -- Interfaces & Types
+interface props {
   link: string;
   icon: ReactElement;
   title: ReactElement;
 }
 
-export const SidebarMenu = ({ link, icon, title }: propsType) => {
+export const SidebarMenu = ({ link, icon, title }: props) => {
   // -- Return
   return (
     <NavLink
