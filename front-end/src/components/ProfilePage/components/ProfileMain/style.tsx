@@ -1,8 +1,5 @@
-// API & Library
+// -- API & Library
 import Styled from 'styled-components';
-
-// Assets
-import Character from 'assets/images/character.png';
 
 export const Styled_ProfileMain = Styled.div`
   position: relative;
