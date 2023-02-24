@@ -1,6 +1,6 @@
 // -- API & Library
-import React, { useRef, useEffect } from 'react';
-import { useRecoilStateLoadable } from 'recoil';
+import React, { useRef, useState, useEffect } from 'react';
+import { useRecoilState } from 'recoil';
 import { scroll } from 'api/recoil/store';
 
 // -- Styles
@@ -12,26 +12,30 @@ import {
 
 export const ProfileBannerPhoto = () => {
   // -- init
-  const right = 11; // 0 ~ 11
-  const [getScroll, setScroll] = useRecoilStateLoadable(scroll);
+  const [getScroll, setScroll] = useRecoilState(scroll);
+  const [getRight, setRight] = useState<number>(12);
   const profileBannerPhoto = useRef<HTMLDivElement>(null);
 
   // -- Methods
-  const printScroll = () => {
-    console.log(getScroll);
+  const handleClick = () => {
+    return console.log(getRight);
   };
 
   // -- Hooks
-  const handleClick = useEffect(() => {
-    profileBannerPhoto.current?.addEventListener('click', printScroll);
-    return () => profileBannerPhoto.current?.removeEventListener('click', printScroll);
+  useEffect(() => {
+    profileBannerPhoto.current?.addEventListener('click', handleClick);
+    return () => profileBannerPhoto.current?.removeEventListener('click', handleClick);
   }, []);
+
+  useEffect(() => {
+    setRight(getScroll > 66 ? 11 : getScroll / 6);
+  }, [getScroll]);
 
   // -- return
   return (
     <Styled_ProfileBannerPhoto className="profile-banner-photo inner" ref={profileBannerPhoto}>
-      <Styled_ProfileBannerPhoto1 right={right} />
-      <Styled_ProfileBannerPhoto2 right={right} />
+      <Styled_ProfileBannerPhoto1 right={getRight} />
+      <Styled_ProfileBannerPhoto2 right={getRight} />
     </Styled_ProfileBannerPhoto>
   );
 };
