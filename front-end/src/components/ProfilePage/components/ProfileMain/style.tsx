@@ -6,6 +6,7 @@ export const Styled_ProfileMain = Styled.div`
   width: 100%;
 
   padding-left: 4rem;
+  padding-bottom: 4rem;
   padding-right: 1rem;
 
   display: flex;

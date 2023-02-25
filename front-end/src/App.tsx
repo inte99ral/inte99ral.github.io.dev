@@ -9,6 +9,8 @@ import './theme.scss';
 
 // -- Components
 import { Sidebar } from 'components/Sidebar';
+import { Footer } from 'components/Footer';
+
 import { ProfilePage } from 'components/ProfilePage';
 import { HomePage } from 'components/HomePage';
 import { BlogPage } from 'components/BlogPage';
@@ -47,6 +49,7 @@ const App = () => {
         <Route path="/error/*" element={<ErrorPage />} />
         <Route path="/*" element={<Navigate replace to="/error" />} />
       </Routes>
+      <Footer></Footer>
     </div>
   );
 };
