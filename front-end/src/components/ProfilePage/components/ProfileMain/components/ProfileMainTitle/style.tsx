@@ -8,22 +8,27 @@ export const Styled_ProfileMainTitle = Styled.div`
 
   min-width: 18rem;
   margin-top: 4rem;
-  padding: 1rem;
 
   display: flex;
+  align-items: end;
+
 
   background-color: red;
 `;
 
 export const Styled_ProfileMainTitleL = Styled.div`
-  height: 20px;
-  width: 20px;
+  height: 100%;
+  width: 20%;
+
+  text-align: center;
+  line-height: 3rem;
 
   background-color: #44546A;
 `;
 export const Styled_ProfileMainTitleR = Styled.div`
-  height: 10px;
-  width: 10px;
+  height: 0.25rem;
+
+  flex-grow: 1;
 
   background-color: #44546A;
 `;
