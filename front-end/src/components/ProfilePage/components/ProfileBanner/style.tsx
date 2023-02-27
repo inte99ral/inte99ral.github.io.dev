@@ -3,7 +3,7 @@ import Styled from 'styled-components';
 
 export const Styled_ProfileBanner = Styled.div`
   width: 100%;
-  height: 20rem;
+  height: 30rem;
 
   flex-grow: 0;
   flex-shrink: 0;

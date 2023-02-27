@@ -20,6 +20,8 @@ export const Styled_ProfileMainTitleL = Styled.div`
   height: 100%;
   width: 20%;
 
+  border-radius: 1rem 0 1rem 0;
+
   text-align: center;
   line-height: 3rem;
 
