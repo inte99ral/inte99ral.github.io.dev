@@ -9,7 +9,7 @@ export const Styled_SidebarBackground = Styled.div<{ isActive: boolean }>`
   z-index: 9999;
 
   height: 100vh;
-  width: ${({ isActive }) => (!isActive ? '3.4rem' : '100vw')};
+  width: ${({ isActive }) => (!isActive ? '3.25rem' : '100vw')};
 
   transition: all 0.2s ease-in-out;
 `;

@@ -1,2 +1,2 @@
 // -- Work Point
-import {} from 'components/ProfilePage/components/ProfileMain/components/ProfileMainContent';
+import {} from 'components/ProfilePage';

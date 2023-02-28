@@ -23,7 +23,7 @@ export const Sidebar = () => {
   return (
     <Styled_SidebarBackground className="sidebar-background blur outer" isActive={isActive}>
       <Styled_Sidebar
-        className="sidebar outer"
+        className="sidebar"
         isActive={isActive}
         onMouseOver={() => setIsActive(true)}
         onMouseLeave={() => setIsActive(false)}

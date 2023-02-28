@@ -1,18 +1,22 @@
 // -- API & Library
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 // -- Styles
 import { Styled_ProfilePage } from './style';
 
 // -- Components
 import { ProfileBanner } from './components/ProfileBanner';
+import { ProfileMain } from './components/ProfileMain';
 
 export const ProfilePage = () => {
+  // -- Init
+  const ProfilePage = useRef<HTMLDivElement>(null);
+
   // -- Return
   return (
-    <Styled_ProfilePage className="profile-page">
+    <Styled_ProfilePage className="profile-page" ref={ProfilePage}>
       <ProfileBanner />
-      {/* <ProfileMain /> */}
+      <ProfileMain />
     </Styled_ProfilePage>
   );
 };

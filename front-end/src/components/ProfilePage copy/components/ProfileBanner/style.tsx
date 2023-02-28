@@ -1,15 +1,17 @@
 // -- API & Library
 import Styled from 'styled-components';
 
-export const Styled_ProfilePage = Styled.div`
+export const Styled_ProfileBanner = Styled.div`
   width: 100%;
-  flex-grow: 1;
+  height: 30rem;
+
+  flex-grow: 0;
   flex-shrink: 0;
-  padding-left: 3.25rem;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 
-  background-color: var(--color-sub);
+  background-color: #44546A;
 `;
