@@ -6,5 +6,9 @@ import { Styled_Footer } from './style';
 
 export const Footer = () => {
   // -- Return
-  return <Styled_Footer className="footer outer"></Styled_Footer>;
+  return (
+    <Styled_Footer className="footer outer">
+      <div>로고</div>
+    </Styled_Footer>
+  );
 };
