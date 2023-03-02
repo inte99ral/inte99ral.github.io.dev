@@ -2,7 +2,6 @@
 import Styled from 'styled-components';
 
 export const Styled_SidebarMenu = Styled.div`
-  position: relative;
   height: 3rem;
   padding: 0.5rem;
 

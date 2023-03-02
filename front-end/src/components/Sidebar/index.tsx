@@ -1,5 +1,5 @@
 // -- API & Library
-import React, { useState } from 'react';
+import React, { MouseEvent, useState } from 'react';
 import { AiFillHome, AiFillGithub, AiFillFolder, AiFillSetting } from 'react-icons/ai';
 import { BsPersonCircle, BsFillPersonFill } from 'react-icons/bs';
 
@@ -14,20 +14,33 @@ import {
 
 // -- Components
 import { SidebarMenu } from './components/SidebarMenu';
+import { SidebarOption } from './components/SidebarOption';
 
 export const Sidebar = () => {
   // -- Init
   const [isActive, setIsActive] = useState(false);
 
+  // Methods
+  const closeSidebar = (e: MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsActive(false);
+  };
+
+  const openSidebar = (e: MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsActive(true);
+  };
+
   // -- Return
   return (
-    <Styled_SidebarBackground className="sidebar-background blur outer" isActive={isActive}>
-      <Styled_Sidebar
-        className="sidebar"
-        isActive={isActive}
-        onMouseOver={() => setIsActive(true)}
-        onMouseLeave={() => setIsActive(false)}
-      >
+    <Styled_SidebarBackground
+      className="sidebar-background blur outer"
+      isActive={isActive}
+      onMouseOver={closeSidebar}
+    >
+      <Styled_Sidebar className="sidebar" isActive={isActive} onMouseOver={openSidebar}>
         <SidebarMenu link="/profile" icon={<Styled_Icon />} title={<div>INTEGRAL</div>} />
 
         <Styled_SidebarLine className="sidebar-line inner" />
@@ -39,7 +52,7 @@ export const Sidebar = () => {
 
         <Styled_SidebarBlank />
 
-        <SidebarMenu link="/option" icon={<AiFillSetting />} title={<div>Settings</div>} />
+        <SidebarOption icon={<AiFillSetting />} title={<div>Settings</div>} />
       </Styled_Sidebar>
     </Styled_SidebarBackground>
   );
