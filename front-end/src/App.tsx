@@ -1,5 +1,5 @@
 // -- API & Library
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { scroll, isDark } from 'api/recoil/store';

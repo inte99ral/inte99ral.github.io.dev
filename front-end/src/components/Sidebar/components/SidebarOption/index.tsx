@@ -15,7 +15,7 @@ interface props {
 
 export const SidebarOption = ({ icon, title }: props) => {
   // -- Init
-  const [isModel, setIsModel] = useState<boolean>(true);
+  const [isModel, setIsModel] = useState<boolean>(false);
 
   // -- Methods
   const handleClick = (e: MouseEvent) => {

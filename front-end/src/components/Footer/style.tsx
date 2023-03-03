@@ -1,3 +1,7 @@
+/**
+ * TODO: [ ] 로고 박기
+ */
+
 // -- API & Library
 import Styled from 'styled-components';
 
@@ -10,6 +14,7 @@ export const Styled_Footer = Styled.div`
   width: 100%;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -19,14 +24,21 @@ export const Styled_Footer = Styled.div`
 `;
 
 export const Styled_Footer_LogoLight = Styled.div`
-  height: 10rem;
-  width: 10rem;
+  height: 4rem;
+  width: 20rem;
 
-  background-color: purple;
+  background-image: url(${LogoBlack});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 `;
 
 export const Styled_Footer_LogoDark = Styled.div`
-  height: 10rem;
-  width: 10rem;
-  background-color: yellow;
+  height: 4rem;
+  width: 20rem;
+
+  background-image: url(${LogoWhite});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 `;
