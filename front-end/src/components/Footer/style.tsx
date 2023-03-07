@@ -1,7 +1,3 @@
-/**
- * TODO: [ ] 로고 박기
- */
-
 // -- API & Library
 import Styled from 'styled-components';
 
