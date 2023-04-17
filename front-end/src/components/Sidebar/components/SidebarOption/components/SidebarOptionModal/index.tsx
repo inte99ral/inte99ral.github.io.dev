@@ -1,5 +1,5 @@
 /**
- * TODO: 옵션 모달에 라이트/다크 모드 채우기
+ * TODO: 옵션 모달에 라이트/다크 모드 채우기 https://www.youtube.com/watch?v=gzCUq_VQ7Y8&t=29s
  */
 
 // -- API & Library

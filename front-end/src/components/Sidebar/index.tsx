@@ -1,7 +1,6 @@
 // -- API & Library
 import React, { MouseEvent, useState } from 'react';
-import { AiFillHome, AiFillGithub, AiFillFolder, AiFillSetting } from 'react-icons/ai';
-import { BsPersonCircle, BsFillPersonFill } from 'react-icons/bs';
+import { AiFillHome, AiFillSetting } from 'react-icons/ai';
 
 // -- Styles
 import {
@@ -46,9 +45,6 @@ export const Sidebar = () => {
         <Styled_SidebarLine className="sidebar-line inner" />
 
         <SidebarMenu link="/home" icon={<AiFillHome />} title={<div>Home</div>} />
-        <SidebarMenu link="/blog" icon={<BsFillPersonFill />} title={<div>Blog</div>} />
-        <SidebarMenu link="/project" icon={<AiFillFolder />} title={<div>Project</div>} />
-        <SidebarMenu link="/error" icon={<AiFillGithub />} title={<div>Come On Max</div>} />
 
         <Styled_SidebarBlank />
 

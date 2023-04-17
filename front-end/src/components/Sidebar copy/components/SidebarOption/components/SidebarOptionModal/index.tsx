@@ -1,7 +1,3 @@
-/**
- * TODO: 옵션 모달에 라이트/다크 모드 채우기
- */
-
 // -- API & Library
 import React, { MouseEvent } from 'react';
 
