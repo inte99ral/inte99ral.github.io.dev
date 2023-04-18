@@ -32,7 +32,7 @@ const App = () => {
   // -- Hooks
   useEffect(() => {
     console.log('[VERSION]: ', process.env.REACT_APP_VERSION);
-    setIsDark(!!localStorage.getItem('isDark'));
+    setIsDark(localStorage.getItem('isDark') == '1');
     app.current?.addEventListener('scroll', handleScroll, true);
     return () => app.current?.removeEventListener('scroll', handleScroll, true);
   }, []);

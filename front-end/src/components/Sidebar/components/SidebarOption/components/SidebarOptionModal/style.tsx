@@ -60,7 +60,6 @@ export const Styled_SidebarOptionModalBlock = Styled.div`
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  background-color: red;
 
   & * {
     font-family: eurof;
