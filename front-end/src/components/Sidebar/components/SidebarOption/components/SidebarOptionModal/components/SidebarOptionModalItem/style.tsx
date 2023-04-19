@@ -1,6 +1,13 @@
 // -- API & Library
 import Styled from 'styled-components';
 
+export const Styled_SidebarOptionModalItem = Styled.div`
+  height: 30px;
+  width: 30px;
+
+  background-color: green;
+`;
+
 export const Styled_SidebarOptionModalSelector = Styled.div<{ isTrue: boolean }>`
   height: 30px;
   width: 60px;

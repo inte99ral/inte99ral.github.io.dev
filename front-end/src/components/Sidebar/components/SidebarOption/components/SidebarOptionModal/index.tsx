@@ -1,9 +1,11 @@
 /**
- * TODO: 옵션 모달에 라이트/다크 모드 채우기 https://www.youtube.com/watch?v=gzCUq_VQ7Y8&t=29s
+ * TODO: Test 용 함수,변수 지우기
  */
 
 // -- API & Library
 import React, { MouseEvent } from 'react';
+import { useRecoilState } from 'recoil';
+import { isDark } from 'api/recoil/store';
 
 // -- Styles
 import {
@@ -15,6 +17,7 @@ import {
 
 // -- Components
 import { SidebarOptionModalSelector } from './components/SidebarOptionModalSelector';
+import { SidebarOptionModalItem } from './components/SidebarOptionModalItem';
 
 // -- Interfaces & Types
 interface props {
@@ -22,10 +25,18 @@ interface props {
 }
 
 export const SidebarOptionModal = ({ handleClick }: props) => {
+  // -- Init
+  const [getIsDark, setIsDark] = useRecoilState(isDark);
+
   // -- Methods
   const preventClick = (e: MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+  };
+
+  const handleIsDark = (e: MouseEvent) => {
+    localStorage.setItem('isDark', localStorage.getItem('isDark') == '1' ? '0' : '1');
+    setIsDark(localStorage.getItem('isDark') == '1');
   };
 
   // -- Return
@@ -36,9 +47,15 @@ export const SidebarOptionModal = ({ handleClick }: props) => {
         onClick={handleClick}
       />
       <Styled_SidebarOptionModal className="sidebar-option-modal" onClick={preventClick}>
+        <SidebarOptionModalItem
+          title="Dark Mode"
+          isTrue={getIsDark}
+          handleIsTrue={handleIsDark}
+        ></SidebarOptionModalItem>
+
         <Styled_SidebarOptionModalBlock className="sidebar-option-modal-block">
           <div>Dark Mode</div>
-          <SidebarOptionModalSelector />
+          <SidebarOptionModalSelector isTrue={getIsDark} handleIsTrue={handleIsDark} />
         </Styled_SidebarOptionModalBlock>
       </Styled_SidebarOptionModal>
     </Styled_SidebarOptionModalContainer>

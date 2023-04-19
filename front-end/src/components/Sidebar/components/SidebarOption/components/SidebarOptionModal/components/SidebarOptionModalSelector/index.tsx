@@ -1,7 +1,5 @@
 // -- API & Library
-import React, { useState, MouseEvent } from 'react';
-import { useRecoilState } from 'recoil';
-import { isDark } from 'api/recoil/store';
+import React, { MouseEvent } from 'react';
 
 // -- Styles
 import {
@@ -9,26 +7,23 @@ import {
   Styled_SidebarOptionModalSelectorIndicator,
 } from './style';
 
-export const SidebarOptionModalSelector = () => {
-  // -- Init
-  const [getIsDark, setIsDark] = useRecoilState(isDark);
+// -- Interface & Types
+interface props {
+  isTrue: boolean;
+  handleIsTrue: (e: MouseEvent) => void;
+}
 
-  // -- Methods
-  const handleIsDark = (e: MouseEvent) => {
-    localStorage.setItem('isDark', localStorage.getItem('isDark') == '1' ? '0' : '1');
-    setIsDark(localStorage.getItem('isDark') == '1');
-    console.log('click isdark');
-  };
-
+export const SidebarOptionModalSelector = ({ isTrue, handleIsTrue }: props) => {
   // -- Return
   return (
     <Styled_SidebarOptionModalSelector
       className="sidebar-option-modal-container"
-      onClick={handleIsDark}
+      onClick={handleIsTrue}
+      isTrue={isTrue}
     >
       <Styled_SidebarOptionModalSelectorIndicator
         className="sidebar-option-modal-container-indicator"
-        isTrue={getIsDark}
+        isTrue={isTrue}
       />
     </Styled_SidebarOptionModalSelector>
   );
