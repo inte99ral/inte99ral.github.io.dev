@@ -55,14 +55,3 @@ export const Styled_SidebarOptionModal = Styled.div`
   animation: ${popUp} 0.2s;
   background-color: var(--color-main);
 `;
-
-export const Styled_SidebarOptionModalBlock = Styled.div`
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-
-  & * {
-    font-family: eurof;
-    font-size: 1.5rem;
-  }
-`;

@@ -1,9 +1,5 @@
-/**
- * TODO: Test 용 함수,변수 지우기
- */
-
 // -- API & Library
-import React, { MouseEvent } from 'react';
+import React, { MouseEvent, useState } from 'react';
 import { useRecoilState } from 'recoil';
 import { isDark } from 'api/recoil/store';
 
@@ -12,11 +8,9 @@ import {
   Styled_SidebarOptionModalContainer,
   Styled_SidebarOptionModalBackground,
   Styled_SidebarOptionModal,
-  Styled_SidebarOptionModalBlock,
 } from './style';
 
 // -- Components
-import { SidebarOptionModalSelector } from './components/SidebarOptionModalSelector';
 import { SidebarOptionModalItem } from './components/SidebarOptionModalItem';
 
 // -- Interfaces & Types
@@ -26,6 +20,7 @@ interface props {
 
 export const SidebarOptionModal = ({ handleClick }: props) => {
   // -- Init
+  const [getIsTest, setIsTest] = useState(false);
   const [getIsDark, setIsDark] = useRecoilState(isDark);
 
   // -- Methods
@@ -35,8 +30,16 @@ export const SidebarOptionModal = ({ handleClick }: props) => {
   };
 
   const handleIsDark = (e: MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     localStorage.setItem('isDark', localStorage.getItem('isDark') == '1' ? '0' : '1');
     setIsDark(localStorage.getItem('isDark') == '1');
+  };
+
+  const handleIsTest = (e: MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsTest(!getIsTest);
   };
 
   // -- Return
@@ -53,10 +56,11 @@ export const SidebarOptionModal = ({ handleClick }: props) => {
           handleIsTrue={handleIsDark}
         ></SidebarOptionModalItem>
 
-        <Styled_SidebarOptionModalBlock className="sidebar-option-modal-block">
-          <div>Dark Mode</div>
-          <SidebarOptionModalSelector isTrue={getIsDark} handleIsTrue={handleIsDark} />
-        </Styled_SidebarOptionModalBlock>
+        <SidebarOptionModalItem
+          title="Test Mode"
+          isTrue={getIsTest}
+          handleIsTrue={handleIsTest}
+        ></SidebarOptionModalItem>
       </Styled_SidebarOptionModal>
     </Styled_SidebarOptionModalContainer>
   );

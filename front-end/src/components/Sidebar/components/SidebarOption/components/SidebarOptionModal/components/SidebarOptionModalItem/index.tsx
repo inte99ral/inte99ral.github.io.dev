@@ -2,11 +2,10 @@
 import React, { MouseEvent } from 'react';
 
 // -- Styles
-import {
-  Styled_SidebarOptionModalItem,
-  Styled_SidebarOptionModalSelector,
-  Styled_SidebarOptionModalSelectorIndicator,
-} from './style';
+import { Styled_SidebarOptionModalItem } from './style';
+
+// -- Components
+import { SidebarOptionModalItemSelector } from './components/SidebarOptionModalItemSelector';
 
 // -- Interface & Types
 interface props {
@@ -15,9 +14,15 @@ interface props {
   handleIsTrue: (e: MouseEvent) => void;
 }
 
-export const SidebarOptionModalItem = ({ isTrue, handleIsTrue }: props) => {
+export const SidebarOptionModalItem = ({ title, isTrue, handleIsTrue }: props) => {
   // -- Return
   return (
-    <Styled_SidebarOptionModalItem className="sidebar-option-modal-item"></Styled_SidebarOptionModalItem>
+    <Styled_SidebarOptionModalItem className="sidebar-option-modal-item">
+      <div>{title}</div>
+      <SidebarOptionModalItemSelector
+        isTrue={isTrue}
+        handleIsTrue={handleIsTrue}
+      ></SidebarOptionModalItemSelector>
+    </Styled_SidebarOptionModalItem>
   );
 };
