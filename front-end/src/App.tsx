@@ -42,7 +42,7 @@ const App = () => {
     <div className={`app ${getIsDark ? 'dark' : 'light'}`} ref={app}>
       <Sidebar />
       <Routes>
-        <Route path="/" element={<Navigate replace to="/home" />} />
+        <Route path="/" element={<Navigate replace to="/profile" />} />
         <Route path="/profile/*" element={<ProfilePage />} />
         <Route path="/home/*" element={<HomePage />} />
         <Route path="/blog/*" element={<BlogPage />} />

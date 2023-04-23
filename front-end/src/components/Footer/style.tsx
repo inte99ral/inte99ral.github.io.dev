@@ -20,8 +20,8 @@ export const Styled_Footer = Styled.div`
 `;
 
 export const Styled_Footer_LogoLight = Styled.div`
-  height: 4rem;
-  width: 20rem;
+  height: 3rem;
+  width: 15rem;
 
   background-image: url(${LogoBlack});
   background-position: center;
@@ -30,8 +30,8 @@ export const Styled_Footer_LogoLight = Styled.div`
 `;
 
 export const Styled_Footer_LogoDark = Styled.div`
-  height: 4rem;
-  width: 20rem;
+  height: 3rem;
+  width: 15rem;
 
   background-image: url(${LogoWhite});
   background-position: center;

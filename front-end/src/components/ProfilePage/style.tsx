@@ -2,6 +2,7 @@
 import Styled from 'styled-components';
 
 export const Styled_ProfilePage = Styled.div`
+  min-height: 100vh;
   width: 100%;
   flex-grow: 1;
   flex-shrink: 0;

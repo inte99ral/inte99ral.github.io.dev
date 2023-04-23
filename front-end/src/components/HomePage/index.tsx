@@ -1,23 +1,23 @@
-//-- API & Library
+// -- API & Library
 import React from 'react';
-import { useRecoilValue } from 'recoil';
-import { scroll } from 'api/recoil/store';
 
-//-- Styles
-import { Styled_HomePage } from './style';
+// -- Styles
+import { Styled_HomePage, Styled_HomePageSign, Styled_HomePageSignIcon } from './style';
 
-//-- Components
-import { HomeBanner } from './components/HomeBanner';
-import { HomeMain } from './components/HomeMain';
+// -- Components
+// import { HomeBanner } from './components/HomeBanner';
+// import { HomeMain } from './components/HomeMain';
 
 export const HomePage = () => {
-  //-- init
-  const getScroll = useRecoilValue(scroll);
-  //-- Return
+  // -- Return
   return (
     <Styled_HomePage className="home-page">
-      <HomeBanner />
-      <HomeMain />
+      {/* <HomeBanner />
+      <HomeMain /> */}
+      <Styled_HomePageSign className="outer">
+        <Styled_HomePageSignIcon />
+        <div>😢 개선 중 입니다</div>
+      </Styled_HomePageSign>
     </Styled_HomePage>
   );
 };
