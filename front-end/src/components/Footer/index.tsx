@@ -4,7 +4,12 @@ import { useRecoilValue } from 'recoil';
 import { isDark } from 'api/recoil/store';
 
 // -- Styles
-import { Styled_Footer, Styled_Footer_LogoDark, Styled_Footer_LogoLight } from './style';
+import {
+  Styled_Footer,
+  Styled_FooterLogoDark,
+  Styled_FooterLogoLight,
+  Styled_FooterLogoAnnotation,
+} from './style';
 
 export const Footer = () => {
   // -- Init
@@ -13,8 +18,8 @@ export const Footer = () => {
   // -- Return
   return (
     <Styled_Footer className="footer outer">
-      {getIsDark ? <Styled_Footer_LogoDark /> : <Styled_Footer_LogoLight />}
-      <div>ⓒ Scalar Studio. All Rights Reserved.</div>
+      {getIsDark ? <Styled_FooterLogoDark /> : <Styled_FooterLogoLight />}
+      <Styled_FooterLogoAnnotation>There&#39;s no vector in life</Styled_FooterLogoAnnotation>
     </Styled_Footer>
   );
 };

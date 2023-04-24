@@ -8,6 +8,7 @@ import LogoWhite from './assets/images/LogoWhite.png';
 export const Styled_Footer = Styled.div`
   height: 20rem;
   width: 100%;
+  padding-left: 3.25rem;
 
   display: flex;
   flex-direction: column;
@@ -19,7 +20,7 @@ export const Styled_Footer = Styled.div`
   background-color: var(--color-main);
 `;
 
-export const Styled_Footer_LogoLight = Styled.div`
+export const Styled_FooterLogoLight = Styled.div`
   height: 3rem;
   width: 15rem;
 
@@ -29,12 +30,17 @@ export const Styled_Footer_LogoLight = Styled.div`
   background-size: contain;
 `;
 
-export const Styled_Footer_LogoDark = Styled.div`
-  height: 3rem;
-  width: 15rem;
+export const Styled_FooterLogoDark = Styled.div`
+  height: 2rem;
+  width: 10rem;
 
   background-image: url(${LogoWhite});
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+`;
+
+export const Styled_FooterLogoAnnotation = Styled.div`
+  font-size: 1.2rem;
+  font-family: Eurof;
 `;
