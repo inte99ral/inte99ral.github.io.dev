@@ -12,5 +12,7 @@ export const Styled_ProfilePage = Styled.div`
   flex-direction: column;
   align-items: center;
 
+  overflow: hidden;
+
   background-color: var(--color-sub);
 `;

@@ -29,9 +29,8 @@ export const Styled_HomePageSign = Styled.div`
   justify-content: center;
   align-items: center;
 
-  /* border: 1px solid red; */
-  /* box-shadow: inset 0 2px 2px var(--color-main); */
   border-radius: 50%;
+  background-color: var(--color-main);
 `;
 
 export const Styled_HomePageSignIcon = Styled.div`
