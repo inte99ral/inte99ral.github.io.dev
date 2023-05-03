@@ -4,13 +4,21 @@ import Styled from 'styled-components';
 export const Styled_ProfileBackground3Dtest = Styled.div`
     width: 200px;
     height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     background-color: #bee9b4;
 
     & section {
+        margin-bottom: 2rem;
         width: 100px;
         height: 100px;
         transform-style: preserve-3d;
         transform: rotate3d(1, 1, 1, 30deg);
+        transition: 0.2s;
 
         & .face {
             display: flex;

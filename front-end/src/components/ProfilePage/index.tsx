@@ -7,7 +7,6 @@ import { Styled_ProfilePage } from './style';
 // -- Components
 import { ProfileBackground } from './components/ProfileBackground';
 import { ProfileBanner } from './components/ProfileBanner';
-import { ProfileTest } from './components/ProfileTest';
 
 export const ProfilePage = () => {
   // -- Return

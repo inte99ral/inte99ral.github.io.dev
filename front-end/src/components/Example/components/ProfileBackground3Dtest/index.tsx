@@ -1,20 +1,23 @@
 // -- API & Library
 import React, { useRef, useEffect } from 'react';
 
-// Styles
+// -- Styles
 import { Styled_ProfileBackground3Dtest } from './style';
 
 export const ProfileBackground3Dtest = () => {
-  // -- init
+  // -- Init
   const checkbox = useRef<HTMLInputElement>(null);
   const section = useRef<HTMLDivElement>(null);
 
   // -- Hooks
   useEffect(() => {
-    // checkbox.current &&
-    checkbox.current?.addEventListener('click', () => {
-      section.current && section.current.style.width = "12";
-      //  = checkbox.current?.checked ? '' : '';
+    checkbox.current?.addEventListener('change', () => {
+      if (section.current) {
+        section.current.style.transformStyle = checkbox.current?.checked ? 'preserve-3d' : 'flat';
+        section.current.style.transform = checkbox.current?.checked
+          ? 'rotate3d(1, 1, 1, 30deg)'
+          : 'rotate3d(1, 1, 1, 0deg)';
+      }
     });
     return;
   });
@@ -35,7 +38,7 @@ export const ProfileBackground3Dtest = () => {
         <label htmlFor="preserve">
           <code>preserve-3d</code>
         </label>
-        <input type="checkbox" id="preserve" defaultChecked={true} />
+        <input type="checkbox" ref={checkbox} defaultChecked={true} />
       </div>
     </Styled_ProfileBackground3Dtest>
   );
