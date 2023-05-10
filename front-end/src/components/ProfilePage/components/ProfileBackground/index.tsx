@@ -9,8 +9,11 @@ export const ProfileBackground = () => {
   return (
     <Styled_ProfileBackground className="profile-background">
       <h2>JS Animation</h2>
+
+      <div className="test"></div>
+
       <div className="banner">
-        <div className="block"></div>
+        <div className="blocks"></div>
       </div>
     </Styled_ProfileBackground>
   );
