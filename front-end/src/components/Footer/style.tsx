@@ -14,6 +14,7 @@ export const Styled_Footer = Styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.25);
 
   flex-shrink: 0;
 

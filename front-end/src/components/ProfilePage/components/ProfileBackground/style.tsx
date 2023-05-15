@@ -3,19 +3,14 @@ import Styled, { keyframes } from 'styled-components';
 
 export const animate = keyframes`
   0% {
-    transform: translateZ(2000px);
+    transform: translateZ(0px) rotate( 20deg );
+  }
+  50% {
+    transform: translateZ(5px) rotate( 20deg );
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
   }
   100% {
-    transform: translateZ(0px);
-  }
-`;
-
-export const animate2 = keyframes`
-  0% {
-    transform: scale(0.2);
-  }
-  100% {
-    transform: scale(2);
+    transform: translateZ(0px) rotate( 20deg );
   }
 `;
 
@@ -24,51 +19,31 @@ export const Styled_ProfileBackground = Styled.div`
   top: 0;
   right: 0;
   height: 100vh;
-  width: 100%;
-
-  transform-style: preserve-3d;
-  perspective: 500px;
-
-  & h2 {
-    height: 100vh;
-    text-align: center;
-    line-height: 100vh;
-  }
-
-  & .test {
-    height: 100px;
-    width: 100px
-    background-color: blue;
-  }
+  width: 100vw;
 
   & .banner {
     position: absolute;
-    top: 500px;
-    left: 500px;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
-    background-color: red;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    background-color: var(--color-sub);
 
     transform-style: preserve-3d;
     perspective: 500px;
 
-    /* & .blocks {
+    & .blocks {
       position: relative;
-      height: 5vh;
-      width: 5vw;
-      background-color: gray;
-      animation: ${animate} 2s ease-in-out forwards;
-    } */
-  }
-
-  & .banner .blocks {
-      position: relative;
-      height: 5vh;
-      width: 5vw;
-      background-color: gray;
-      animation: ${animate} 2s ease-in-out forwards;
+      height: 200vh;
+      min-width: 10%;
+      background-color: var(--color-sub);
+      animation: ${animate} 5s linear infinite;
+      transition: background-image 0.2s ease-in-out;
     }
+  }
 `;

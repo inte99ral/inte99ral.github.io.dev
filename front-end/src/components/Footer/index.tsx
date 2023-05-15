@@ -17,7 +17,7 @@ export const Footer = () => {
 
   // -- Return
   return (
-    <Styled_Footer className="footer outer">
+    <Styled_Footer className="footer">
       {getIsDark ? <Styled_FooterLogoDark /> : <Styled_FooterLogoLight />}
       <Styled_FooterLogoAnnotation>There&#39;s no vector in life</Styled_FooterLogoAnnotation>
     </Styled_Footer>
