@@ -6,6 +6,8 @@
 - [x] 옵션 모달 셀렉트 인디케이터 내부 변수 상단으로 이동
 - [x] 홈페이지 수리중 박기 | 2023/4/23
 - [x] 푸터 로고 크기 휴대폰을 감안하여 축소 | 2023/4/24
+- [x] 프로필 배경 생성하기 | 2023/5/18
+- [x] 보안 취약점 해결
 
 <br />
 
@@ -13,7 +15,7 @@
 
 ## TODO: 해야할 목록
 
-- [ ] [프로필 배경 생성하기](front-end\src\components\ProfilePage\components\ProfileBackground\index.tsx)
+- [ ] 서버연결
 
 <br />
 
