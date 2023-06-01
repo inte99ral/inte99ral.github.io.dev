@@ -7,6 +7,7 @@
 - ESLint
 - Prettier
 - vscode-styled-components
+- TODO Highlight
 
 <br />
 
