@@ -1,63 +1,42 @@
 import axios, { AxiosInstance } from 'axios';
 
-const customAxiosArr: AxiosInstance[] = [];
+export class AxiosApi {
+  private static instance: AxiosApi;
+  private axiosObj: AxiosInstance;
 
-/**
- * @description
- * Custom Axios 를 생성하여 배열에 저장하고 리턴한다.
- * 생성된 시점에 로컬스토리지를 확인하고 access token 이 존재할 경우 헤더에 넣는다.
- *
- * @author inte
- */
-const createAxiosApi = (url?: string) => {
-  const AxiosApi = axios.create({
-    baseURL: process.env.REACT_APP_SERVER + (url ? url : ''),
-    headers: {
-      'Content-Type': 'application/json; charset=UTF-8',
-    },
-  });
-
-  customAxiosArr.push(AxiosApi);
-  if (localStorage.getItem('Authorization')) {
-    AxiosApi.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem(
-      'Authorization',
-    )}`;
-  }
-  return AxiosApi;
-};
-
-/**
- * @description
- * 생성된 Custom Axios 들에 accessToken 정보를 기입한다.
- *
- * @author inte
- */
-const setAccessToken = (accessToken?: string) => {
-  if (accessToken) {
-    customAxiosArr.map((customAxios: AxiosInstance) => {
-      customAxios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+  private constructor() {
+    this.axiosObj = axios.create({
+      baseURL: process.env.REACT_APP_SERVER,
+      headers: {
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
     });
   }
-};
 
-/**
- * @description
- * 생성된 Custom Axios 들에 Intercept 조건을 기입한다.
- *
- * @author inte
- */
-const setInterceptor = () => {
-  customAxiosArr.map((customAxios: AxiosInstance) => {
-    customAxios.interceptors.request.use(
-      config => {
-        // if 문에 조건 집어넣기
+  public getAxios() {
+    return this.axiosObj;
+  }
+
+  public setToken(token: string) {
+    this.axiosObj.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    return;
+  }
+
+  public setInterceptor() {
+    this.axiosObj.interceptors.request.use(
+      (config) => {
+        // if intercept 조건
         return config;
       },
-      error => {
+      (error) => {
         Promise.reject(error);
       },
     );
-  });
-};
+    return;
+  }
 
-export { createAxiosApi, setAccessToken, setInterceptor };
+  public static getInstance() {
+    if (!AxiosApi.instance) AxiosApi.instance = new AxiosApi();
+    return AxiosApi.instance;
+  }
+}
