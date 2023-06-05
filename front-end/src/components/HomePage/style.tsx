@@ -42,3 +42,13 @@ export const Styled_HomePageSignIcon = Styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 `;
+
+export const Styled_HomePageButton = Styled.button`
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  height: 10rem;
+  width: 10rem;
+
+  background-color: red;
+`;
