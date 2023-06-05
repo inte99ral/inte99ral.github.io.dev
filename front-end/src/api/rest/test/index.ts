@@ -5,10 +5,10 @@ import { AxiosApi } from 'api/axios';
 const axios = AxiosApi.getInstance().getAxios();
 
 export default {
-  getTestData: async (testId: string, auth: string) => {
+  getTestData: async (testId?: string, auth?: string) => {
     try {
       const res = await axios.get('', {
-        headers: { Authorization: `Bearer ${auth}` },
+        headers: auth ? { Authorization: `Bearer ${auth}` } : {},
         params: { path: 'test', testId: 1234 },
       });
       console.log('[get test data]');
