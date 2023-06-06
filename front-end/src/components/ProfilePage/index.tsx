@@ -11,7 +11,7 @@ export const ProfilePage = () => {
   // -- Return
   return (
     <Styled_ProfilePage className="profile-page">
-      {/* <ProfileBanner /> */}
+      <ProfileBanner />
       {/* <ProfileTest></ProfileTest> */}
     </Styled_ProfilePage>
   );
