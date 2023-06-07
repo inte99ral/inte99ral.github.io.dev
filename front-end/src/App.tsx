@@ -1,7 +1,7 @@
 // -- API & Library
 import React, { useEffect, useRef } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { useRecoilState, useSetRecoilState } from 'recoil';
+import { useRecoilState } from 'recoil';
 import { scroll, isDark } from 'api/recoil/store';
 
 // -- Styles
@@ -19,7 +19,7 @@ import { ErrorPage } from 'components/ErrorPage';
 const App = () => {
   // -- Init
   const app = useRef<HTMLDivElement>(null);
-  const setScroll = useSetRecoilState(scroll);
+  const [getScroll, setScroll] = useRecoilState(scroll);
   const [getIsDark, setIsDark] = useRecoilState(isDark);
 
   // -- Methods
@@ -36,6 +36,10 @@ const App = () => {
     app.current?.addEventListener('scroll', handleScroll, true);
     return () => app.current?.removeEventListener('scroll', handleScroll, true);
   }, []);
+
+  useEffect(() => {
+    if (app.current) app.current.scrollTop = getScroll;
+  }, [getScroll]);
 
   // -- Return
   return (
