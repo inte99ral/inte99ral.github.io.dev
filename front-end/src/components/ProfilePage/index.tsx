@@ -1,6 +1,6 @@
 // -- API & Library
 import React, { MouseEvent, useEffect } from 'react';
-import { useSetRecoilState } from 'recoil';
+import { useRecoilState } from 'recoil';
 import { scroll } from 'api/recoil/store';
 
 // -- Styles
@@ -12,7 +12,7 @@ import { ProfileSection02 } from './components/ProfileSection02';
 
 export const ProfilePage = () => {
   // -- Init
-  const setScroll = useSetRecoilState(scroll);
+  const [getScroll, setScroll] = useRecoilState(scroll);
 
   // -- Methods
   const handleClick = (e: MouseEvent) => {
@@ -21,14 +21,19 @@ export const ProfilePage = () => {
     setScroll(0);
   };
 
+  const handleClick2 = (e: MouseEvent) => {
+    console.log(window.innerHeight);
+    setScroll(window.innerHeight);
+  };
+
   // -- Hooks
   useEffect(() => {
-    return;
-  }, []);
+    // console.log('[SCROLL]: ' + getScroll);
+  }, [getScroll]);
 
   // -- Return
   return (
-    <Styled_ProfilePage className="profile-page" onClick={handleClick}>
+    <Styled_ProfilePage className="profile-page" onClick={handleClick2}>
       <ProfileSection01 />
       <ProfileSection02 />
     </Styled_ProfilePage>
