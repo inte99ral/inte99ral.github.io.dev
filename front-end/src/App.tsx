@@ -53,7 +53,7 @@ const App = () => {
         <Route path="/error/*" element={<ErrorPage />} />
         <Route path="/*" element={<Navigate replace to="/error" />} />
       </Routes>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };
