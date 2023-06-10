@@ -16,6 +16,7 @@
 - [x] 서버 POST 로 테이블 수정처리 | 2023/5/31
 - [x] axios 라이브러리구축 | 2023/6/2
 - [x] rest api 라이브러리구축 | 2023/6/4
+- [x] 스크롤 액션 디버깅 | 2023/6/11
 
 <br />
 
@@ -23,7 +24,7 @@
 
 ## TODO: 해야할 목록
 
-- [ ]
+- [ ] [스크롤 액션 적용](front-end\src\components\ProfilePage\index.tsx)
 
 <br />
 
