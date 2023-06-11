@@ -1,8 +1,8 @@
 // -- API & Library
 import React, { useEffect, useRef } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { useRecoilState } from 'recoil';
-import { scroll, isDark } from 'api/recoil/store';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { scroll, isDark, isSmooth } from 'api/recoil/store';
 
 // -- Styles
 import './theme.scss';
@@ -21,6 +21,7 @@ const App = () => {
   const app = useRef<HTMLDivElement>(null);
   const [getScroll, setScroll] = useRecoilState(scroll);
   const [getIsDark, setIsDark] = useRecoilState(isDark);
+  const getIsSmooth = useRecoilValue(isSmooth);
 
   // -- Methods
   const handleScroll = (e: Event) => {
@@ -38,15 +39,13 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    if (app.current && Math.abs(app.current.scrollTop - getScroll) > 10) {
-      console.log('scroll jump');
+    if (app.current && Math.abs(app.current.scrollTop - getScroll) > 10)
       app.current.scrollTop = getScroll;
-    }
   }, [getScroll]);
 
   // -- Return
   return (
-    <div className={`app ${getIsDark ? 'dark' : 'light'}`} ref={app}>
+    <div className={`app ${getIsDark ? 'dark' : 'light'} ${getIsSmooth ? 'smooth' : ''}`} ref={app}>
       <Sidebar />
       <Routes>
         <Route path="/" element={<Navigate replace to="/profile" />} />
