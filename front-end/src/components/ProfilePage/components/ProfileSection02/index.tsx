@@ -16,5 +16,5 @@ export const ProfileSection02 = () => {
   // -- Hooks
 
   // -- Return
-  return <Styled_ProfileSection02></Styled_ProfileSection02>;
+  return <Styled_ProfileSection02 className="profile-section"></Styled_ProfileSection02>;
 };

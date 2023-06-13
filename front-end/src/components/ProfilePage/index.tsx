@@ -14,7 +14,12 @@ export const ProfilePage = () => {
   // -- Init
   const [getScroll, setScroll] = useRecoilState(scroll);
   const [getIsSmooth, setIsSmooth] = useRecoilState(isSmooth);
-  const [getLastScroll, setLastScroll] = useState(0);
+
+  const [getIsReady, setIsReady] = useState(false);
+  const [getSectionIndex, setSectionIndex] = useState(0);
+
+  const scrollArr = [0, 961, 2242];
+  const viewHeight = window.innerHeight;
 
   // -- Methods
   const handleClick = (e: MouseEvent) => {
@@ -26,34 +31,57 @@ export const ProfilePage = () => {
   const handleClick2 = (e: MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+
+    // const target = document.getElementsByClassName('profile-section')[0];
+    // console.log(target.scrollHeight);
     setScroll(window.innerHeight);
   };
 
   // -- Hooks
   useEffect(() => {
-    setScroll(0);
-    setLastScroll(0);
     setIsSmooth(true);
+    setScroll(0);
+    setSectionIndex(0);
+    return () => setIsSmooth(false);
   }, []);
 
   useEffect(() => {
-    if (!getIsSmooth) return;
+    if (getScroll == window.innerHeight) console.log('좆됬다');
 
-    const viewHeight = window.innerHeight;
-    if (getLastScroll % viewHeight == 0) {
-      // console.log('[confirm]');
-      if (getLastScroll < getScroll) {
-        // setScroll(Math.floor(getScroll / (viewHeight + 1) + 1) * viewHeight);
-        console.log('[DOWN] : ' + Math.floor(getScroll / (viewHeight + 1) + 1));
-      } else {
-        // setScroll(Math.floor(getScroll / (viewHeight + 1)) * viewHeight);
-        console.log('[UP] : ' + Math.floor(getScroll / (viewHeight + 1)));
-      }
-    } else {
-      // console.log('[reject]');
-    }
-    setLastScroll(getScroll);
-
+    // if (scrollArr.includes(getScroll)) setIsSmooth(false);
+    // if (getIsSmooth) return;
+    // if (getScroll < scrollArr[getSectionIndex]) {
+    //   setIsSmooth(true);
+    //   console.log('[up]');
+    //   setSectionIndex(getSectionIndex - 1);
+    //   setScroll(scrollArr[getSectionIndex - 1]);
+    // } else if (getScroll > scrollArr[getSectionIndex] - viewHeight) {
+    //   setIsSmooth(true);
+    //   console.log('[down]');
+    //   setSectionIndex(getSectionIndex + 1);
+    //   setScroll(scrollArr[getSectionIndex + 1]);
+    // }
+    // if (!getIsReady || getIsSmooth) return;
+    // const viewHeight = window.innerHeight;
+    // if (getLastScroll % viewHeight == 0) {
+    //   setIsSmooth(true);
+    //   console.log('[STATUS] : ' + getIsSmooth);
+    //   // console.log('[confirm]');
+    //   if (getLastScroll < getScroll) {
+    //     // setScroll(Math.floor(getScroll / (viewHeight + 1) + 1) * viewHeight);
+    //     console.log('[Be] : ' + getLastScroll);
+    //     console.log('[Af] : ' + getScroll);
+    //     console.log('[DOWN] : ' + Math.floor(getScroll / (viewHeight + 1) + 1));
+    //   } else {
+    //     // setScroll(Math.floor(getScroll / (viewHeight + 1)) * viewHeight);
+    //     console.log('[Be] : ' + getLastScroll);
+    //     console.log('[Af] : ' + getScroll);
+    //     console.log('[UP] : ' + Math.floor(getScroll / (viewHeight + 1)));
+    //   }
+    // } else {
+    //   // console.log('[reject]');
+    // }
+    // setLastScroll(getScroll);
     // if (getLastScroll < getScroll) {
     //   setScroll(Math.floor(getScroll / (viewHeight + 1) + 1) * viewHeight);
     //   // console.log('[DOWN] : ' + Math.floor(getScroll / (viewHeight + 1) + 1));
@@ -62,7 +90,6 @@ export const ProfilePage = () => {
     //   // console.log('[UP] : ' + Math.floor(getScroll / (viewHeight + 1)));
     // }
     // setLastScroll(getScroll);
-
     // if (Math.abs(lastScroll - getScroll) > 100) {
     //   console.log('skip');
     //   return;

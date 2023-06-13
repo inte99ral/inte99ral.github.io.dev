@@ -39,8 +39,7 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    if (app.current && Math.abs(app.current.scrollTop - getScroll) > 10)
-      app.current.scrollTop = getScroll;
+    if (app.current && app.current.scrollTop == getScroll) app.current.scrollTop = getScroll;
   }, [getScroll]);
 
   // -- Return
