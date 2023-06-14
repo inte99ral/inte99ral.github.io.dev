@@ -1,5 +1,4 @@
 import { atom } from 'recoil';
 
-export const isDark = atom<boolean>({ key: 'IsDark', default: false });
-export const isSmooth = atom<boolean>({ key: 'IsSmooth', default: false });
-export const scroll = atom<number>({ key: 'Scroll', default: 0 });
+export const isDarkState = atom<boolean>({ key: 'IsDarkState', default: false });
+export const isSmoothState = atom<boolean>({ key: 'IsSmoothState', default: false });

@@ -1,7 +1,7 @@
 // -- API & Library
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { isDark } from 'api/recoil/store';
+import { isDarkState } from 'api/recoil/store';
 
 // -- Styles
 import {
@@ -13,12 +13,12 @@ import {
 
 export const Footer = () => {
   // -- Init
-  const getIsDark = useRecoilValue<boolean>(isDark);
+  const isDark = useRecoilValue<boolean>(isDarkState);
 
   // -- Return
   return (
     <Styled_Footer className="footer">
-      {getIsDark ? <Styled_FooterLogoDark /> : <Styled_FooterLogoLight />}
+      {isDark ? <Styled_FooterLogoDark /> : <Styled_FooterLogoLight />}
       <Styled_FooterLogoAnnotation>There&#39;s no vector in life</Styled_FooterLogoAnnotation>
     </Styled_Footer>
   );

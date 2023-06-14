@@ -1,7 +1,7 @@
 // -- API & Library
 import React, { MouseEvent, useState } from 'react';
 import { useRecoilState } from 'recoil';
-import { isDark } from 'api/recoil/store';
+import { isDarkState } from 'api/recoil/store';
 
 // -- Styles
 import {
@@ -20,8 +20,8 @@ interface props {
 
 export const SidebarOptionModal = ({ handleClick }: props) => {
   // -- Init
-  const [getIsTest, setIsTest] = useState(false);
-  const [getIsDark, setIsDark] = useRecoilState(isDark);
+  const [isTest, setIsTest] = useState(false);
+  const [isDark, setIsDark] = useRecoilState(isDarkState);
 
   // -- Methods
   const preventClick = (e: MouseEvent) => {
@@ -39,7 +39,7 @@ export const SidebarOptionModal = ({ handleClick }: props) => {
   const handleIsTest = (e: MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    setIsTest(!getIsTest);
+    setIsTest(!isTest);
   };
 
   // -- Return
@@ -52,13 +52,13 @@ export const SidebarOptionModal = ({ handleClick }: props) => {
       <Styled_SidebarOptionModal className="sidebar-option-modal" onClick={preventClick}>
         <SidebarOptionModalItem
           title="Dark Mode"
-          isTrue={getIsDark}
+          isTrue={isDark}
           handleIsTrue={handleIsDark}
         ></SidebarOptionModalItem>
 
         <SidebarOptionModalItem
           title="Test Mode"
-          isTrue={getIsTest}
+          isTrue={isTest}
           handleIsTrue={handleIsTest}
         ></SidebarOptionModalItem>
       </Styled_SidebarOptionModal>

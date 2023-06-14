@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { scroll, isDark, isSmooth } from 'api/recoil/store';
+import { isDarkState, isSmoothState } from 'api/recoil/store';
 
 // -- Styles
 import './theme.scss';
@@ -19,32 +19,23 @@ import { ErrorPage } from 'components/ErrorPage';
 const App = () => {
   // -- Init
   const app = useRef<HTMLDivElement>(null);
-  const [getScroll, setScroll] = useRecoilState(scroll);
-  const [getIsDark, setIsDark] = useRecoilState(isDark);
-  const getIsSmooth = useRecoilValue(isSmooth);
-
-  // -- Methods
-  const handleScroll = (e: Event) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setScroll(app.current ? app.current.scrollTop : 0);
-  };
+  const [isDark, setIsDark] = useRecoilState(isDarkState);
+  const isSmooth = useRecoilValue(isSmoothState);
 
   // -- Hooks
   useEffect(() => {
     console.log('[VERSION]: ', process.env.REACT_APP_VERSION);
     setIsDark(localStorage.getItem('isDark') == '1');
-    app.current?.addEventListener('scroll', handleScroll, true);
-    return () => app.current?.removeEventListener('scroll', handleScroll, true);
+    return;
   }, []);
-
-  useEffect(() => {
-    if (app.current && app.current.scrollTop == getScroll) app.current.scrollTop = getScroll;
-  }, [getScroll]);
 
   // -- Return
   return (
-    <div className={`app ${getIsDark ? 'dark' : 'light'} ${getIsSmooth ? 'smooth' : ''}`} ref={app}>
+    <div
+      id="app"
+      className={`app ${isDark ? 'dark' : 'light'} ${isSmooth ? 'smooth' : ''}`}
+      ref={app}
+    >
       <Sidebar />
       <Routes>
         <Route path="/" element={<Navigate replace to="/profile" />} />
