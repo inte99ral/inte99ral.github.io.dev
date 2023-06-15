@@ -14,11 +14,10 @@ import { ProfileSection03 } from './components/ProfileSection03';
 export const ProfilePage = () => {
   // -- Init
   const [isSmooth, setIsSmooth] = useRecoilState(isSmoothState);
-
   const scrollArr = [0, 961, 2242];
-  const viewHeight = window.innerHeight;
-
-  const [prevScroll, setPrevScroll] = useState(0);
+  let prevScroll = 0;
+  let nextScroll = 0;
+  // let scrollIndex = 0;
 
   const app = document.getElementById('app') as HTMLDivElement;
 
@@ -32,14 +31,20 @@ export const ProfilePage = () => {
     e.preventDefault();
     e.stopPropagation();
 
-    // const target = document.getElementsByClassName('app')[0];
-    // console.log(window.pageYOffset);
-    // setScroll(window.innerHeight);
+    console.log(prevScroll);
   };
 
   const handleScroll = (e: Event) => {
-    const nextScroll = app.scrollTop;
-    console.log('예아');
+    nextScroll = app.scrollTop;
+    if (nextScroll < prevScroll) {
+      console.log(`[UP] next: ${nextScroll} prev: ${prevScroll}`);
+      // app.scrollTop = scrollArr[--scrollIndex];
+      app.scrollTop = scrollArr[0];
+    } else {
+      console.log(`[DOWN] next: ${nextScroll} prev: ${prevScroll}`);
+      // app.scrollTop = scrollArr[++scrollIndex];
+    }
+    prevScroll = nextScroll;
   };
 
   // -- Hooks
@@ -47,7 +52,7 @@ export const ProfilePage = () => {
     setIsSmooth(false);
     app.scrollTop = 0;
     app.addEventListener('scroll', handleScroll);
-
+    setIsSmooth(true);
     return () => {
       setIsSmooth(false);
       app.removeEventListener('scroll', handleScroll);
