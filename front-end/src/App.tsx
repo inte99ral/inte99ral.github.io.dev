@@ -18,14 +18,19 @@ import { ErrorPage } from 'components/ErrorPage';
 
 const App = () => {
   // -- Init
-  const setApp = useSetRecoilState(appState);
+  const [app, setApp] = useRecoilState(appState);
   const [isDark, setIsDark] = useRecoilState(isDarkState);
-  const isSmooth = useRecoilValue(isSmoothState);
+  const [isSmooth, setIsSmooth] = useRecoilState(isSmoothState);
 
   // -- Hooks
   useEffect(() => {
     console.log('[VERSION]: ', process.env.REACT_APP_VERSION);
-    setApp(document.getElementById('app') as HTMLDivElement);
+    // setApp(document.getElementById('app0') as HTMLDivElement);
+    // setApp(document.getElementById('app') as HTMLDivElement);
+    // setApp(document.getElementById('app2') as HTMLDivElement);
+    // setIsSmooth(true);
+    // setIsSmooth(false);
+    // setIsSmooth(true);
     setIsDark(localStorage.getItem('isDark') == '1');
     return;
   }, []);

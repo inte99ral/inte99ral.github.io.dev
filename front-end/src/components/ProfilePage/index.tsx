@@ -2,6 +2,7 @@
 import React, { MouseEvent, useState, useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { isSmoothState, appState } from 'api/recoil/store';
+import { useEffectAfterMount } from 'api/react/hooks';
 
 // -- Styles
 import { Styled_ProfilePage } from './style';
@@ -27,8 +28,6 @@ export const ProfilePage = () => {
   // -- Methods
   const initializeApp = () => {
     // const app = document.getElementById('app');
-    setApp(document.getElementById('app') as HTMLDivElement);
-    console.log(app);
   };
 
   const handleClick = (e: MouseEvent) => {
@@ -39,6 +38,12 @@ export const ProfilePage = () => {
   const handleClick2 = (e: MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    // setApp(document.getElementById('app2') as HTMLDivElement);
+    // setIsSmooth(true);
+    // setIsSmooth(false);
+    // setIsSmooth(true);
+    console.log(isSmooth);
+    // console.log(document.documentElement.scrollTop);
     // if (app == undefined) console.log(app);
     // else app.scrollTop = 0;
     // app.scrollTop = 0;
@@ -62,20 +67,30 @@ export const ProfilePage = () => {
   };
 
   // -- Hooks
-  useEffect(() => {
-    setIsSmooth(false);
-    console.log(app);
+  // useEffect(() => {
+  //   setIsSmooth(false);
+  //   console.log(document.documentElement.scrollTop);
+  //   // setTimeout(() => {
+  //   //   console.log(app);
+  //   // }, 5000);
+  //   // console.log(app);
 
-    // setApp(document.getElementById('id') as HTMLDivElement);
-    // if (app == undefined) return;
-    // app.scrollTop = 0;
-    // app.addEventListener('scroll', handleScroll);
-    setIsSmooth(true);
-    return () => {
-      setIsSmooth(false);
-      // app.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   // setApp(document.getElementById('id') as HTMLDivElement);
+  //   // if (app == undefined) return;
+  //   // app.scrollTop = 0;
+  //   // app.addEventListener('scroll', handleScroll);
+  //   setIsSmooth(true);
+  //   return () => {
+  //     setIsSmooth(false);
+  //     // app.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
+  useEffectAfterMount(() => {
+    // console.log(document.getElementsByClassName('profile-page')[0] as HTMLDivElement);
+    console.log('wa!');
+    return;
+  }, [isSmooth]);
 
   // -- Return
   return (
