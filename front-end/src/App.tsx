@@ -1,8 +1,8 @@
 // -- API & Library
 import React, { useEffect, useRef } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { useRecoilState, useRecoilValue } from 'recoil';
-import { isDarkState, isSmoothState } from 'api/recoil/store';
+import { useSetRecoilState, useRecoilState, useRecoilValue } from 'recoil';
+import { appState, isDarkState, isSmoothState } from 'api/recoil/store';
 
 // -- Styles
 import './theme.scss';
@@ -18,24 +18,21 @@ import { ErrorPage } from 'components/ErrorPage';
 
 const App = () => {
   // -- Init
-  const app = useRef<HTMLDivElement>(null);
+  const setApp = useSetRecoilState(appState);
   const [isDark, setIsDark] = useRecoilState(isDarkState);
   const isSmooth = useRecoilValue(isSmoothState);
 
   // -- Hooks
   useEffect(() => {
     console.log('[VERSION]: ', process.env.REACT_APP_VERSION);
+    setApp(document.getElementById('app') as HTMLDivElement);
     setIsDark(localStorage.getItem('isDark') == '1');
     return;
   }, []);
 
   // -- Return
   return (
-    <div
-      id="app"
-      className={`app ${isDark ? 'dark' : 'light'} ${isSmooth ? 'smooth' : ''}`}
-      ref={app}
-    >
+    <div id="app" className={`app ${isDark ? 'dark' : 'light'} ${isSmooth ? 'smooth' : ''}`}>
       <Sidebar />
       <Routes>
         <Route path="/" element={<Navigate replace to="/profile" />} />
