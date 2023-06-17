@@ -18,6 +18,9 @@
 - [x] rest api 라이브러리구축 | 2023/6/4
 - [x] 스크롤 액션 디버깅 | 2023/6/10
 - [x] 스크롤 액션 대변경 | 2023/6/16
+- [x] API useEffectAfterMount 디버그 | 2023/6/17
+- [x] API rest 에 server 코드 추가 | 2023/6/17
+- [x] API webVitals 에 백엔드 정보 추가 | 2023/6/17
 
 <br />
 
