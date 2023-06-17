@@ -27,6 +27,7 @@ export const ProfilePage = () => {
 
   // -- Methods
   const initializeApp = () => {
+    console.log('wa!');
     // const app = document.getElementById('app');
   };
 
@@ -41,8 +42,7 @@ export const ProfilePage = () => {
     // setApp(document.getElementById('app2') as HTMLDivElement);
     // setIsSmooth(true);
     // setIsSmooth(false);
-    // setIsSmooth(true);
-    console.log(isSmooth);
+    setIsSmooth(!isSmooth);
     // console.log(document.documentElement.scrollTop);
     // if (app == undefined) console.log(app);
     // else app.scrollTop = 0;
