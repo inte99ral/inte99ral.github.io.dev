@@ -24,7 +24,6 @@ const App = () => {
 
   // -- Hooks
   useEffect(() => {
-    console.log('[VERSION]: ', process.env.REACT_APP_VERSION);
     // setApp(document.getElementById('app0') as HTMLDivElement);
     // setApp(document.getElementById('app') as HTMLDivElement);
     // setApp(document.getElementById('app2') as HTMLDivElement);
