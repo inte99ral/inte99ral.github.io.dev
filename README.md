@@ -31,7 +31,7 @@
 
   <br/>
 
-  - package.json 확인
+  - <div style="color:orange">package.json 확인 🚨</div>
 
     - warning 이 뜨고 npm audit (npm 에서 코드 취약점을 파악하는 명령어) 를 쳤을 시에 nth-check 가 나온다면 걱정하지 말자.
     - 경고하자면 `npm audit fix --force` 로는 해결할 수 없다. 오히려 다른 패키지들이 깨질 수 있으니 주의
@@ -200,6 +200,42 @@
       ```
 
     이후에 `process.env.REACT_APP_VERSION` 의 예시처럼 이름으로 불러와 사용할 수 있음.
+
+    <br />
+
+    - <div style="color:orange">React.StrictMode 확인 🚨</div>
+
+      - `index.tsx` 파일 최상단 인덱스 파일은 다음과 같을 것이다.
+
+        ```typescript
+        // -- API & Library
+        import React from "react";
+        import ReactDOM from "react-dom/client";
+        import { BrowserRouter } from "react-router-dom";
+        import { RecoilRoot } from "recoil";
+        import { reportWebVitals } from "api/webVitals";
+
+        // -- Components
+        import App from "./App";
+
+        const root = ReactDOM.createRoot(
+          document.getElementById("root") as HTMLElement
+        );
+
+        root.render(
+          <React.StrictMode>
+            <BrowserRouter>
+              <RecoilRoot>
+                <App />
+              </RecoilRoot>
+            </BrowserRouter>
+          </React.StrictMode>
+        );
+
+        reportWebVitals(console.log);
+        ```
+
+      - React StrictMode 는 리액트에서 제공하는 검사도구이다. 개발모드 시 디버그를 시행하면서 이상한 생명주기를 가진 컴포넌트나 권장하지 않는 부분을 점검해준다. 따라서 useEffect 함수가 두 번 실행되는 것을 볼 수 있으니 불필요하다면 제거해도 된다.
 
 <br />
 

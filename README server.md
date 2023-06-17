@@ -35,3 +35,5 @@
   - 앱 스크립트 작성
   - 프로젝트 설정에에서 편집기에 appsscript.json 매니페스트 파일 표시 선택
   - npm install axios
+
+  - 가격 https://developers.google.com/apps-script/guides/services/quotas?hl=ko
