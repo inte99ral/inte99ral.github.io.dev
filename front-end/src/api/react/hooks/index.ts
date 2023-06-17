@@ -5,6 +5,6 @@ export const useEffectAfterMount = (func: any, deps: any) => {
 
   useEffect(() => {
     if (afterMount.current) func();
-    else afterMount.current = false;
+    else afterMount.current = true;
   }, deps);
 };
