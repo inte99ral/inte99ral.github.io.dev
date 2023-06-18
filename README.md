@@ -44,6 +44,13 @@
     - package.json 안의 "dependencies" 안에 있는 "react-scripts" 을 "devDependencies" 로 이동시킨다.
     - 그 후, npm audit 대신 `npm audit --production` 을 사용하면된다.
 
+  <br/>
+
+  - <div style="color:orange">node-sass 에러 🚨</div>
+
+    - 개발을 하다보면 `node_modules\node-sass` 가 말썽을 일으킬 때가 있을 수 있다. <br/> 이는 sass 문법을 css 에 적용시켜주는 node-sass가 노드 버전에 의존적이어서 노드 버전이 바뀌면 오류를 일으키곤 한다. 버전에 맞춰서 package.json 를 수정해주던가 dart sass 를 사용하면된다.
+    - 이 개발에선 dart sass 를 사용하겠다 node-sass 문항을 삭제하고 `"sass": "^1.32.12"` 로 대체한다.
+
 <br/>
 
 - ### eslint & prettier 세팅
