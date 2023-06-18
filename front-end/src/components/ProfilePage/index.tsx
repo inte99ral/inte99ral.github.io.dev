@@ -61,24 +61,9 @@ export const ProfilePage = () => {
   };
 
   // -- Hooks
-  // useEffect(() => {
-  //   setIsSmooth(false);
-  //   console.log(document.documentElement.scrollTop);
-  //   // setTimeout(() => {
-  //   //   console.log(app);
-  //   // }, 5000);
-  //   // console.log(app);
-
-  //   // setApp(document.getElementById('id') as HTMLDivElement);
-  //   // if (app == undefined) return;
-  //   // app.scrollTop = 0;
-  //   // app.addEventListener('scroll', handleScroll);
-  //   setIsSmooth(true);
-  //   return () => {
-  //     setIsSmooth(false);
-  //     // app.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
+  useEffect(() => {
+    console.log('error debug 1');
+  }, []);
 
   useEffect(() => {
     if (!app) return;

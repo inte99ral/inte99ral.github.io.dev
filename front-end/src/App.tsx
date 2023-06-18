@@ -1,7 +1,7 @@
 // -- API & Library
 import React, { useEffect, useRef, MutableRefObject } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 import { appState, isDarkState } from 'api/recoil/store';
 
 // -- Styles
@@ -20,18 +20,19 @@ const App = () => {
   // -- Init
   const appRef = useRef() as MutableRefObject<HTMLDivElement>;
 
-  const [app, setApp] = useRecoilState(appState);
+  const setApp = useSetRecoilState(appState);
   const [isDark, setIsDark] = useRecoilState(isDarkState);
 
   // -- Hooks
   useEffect(() => {
+    console.log('error debug 2');
     setIsDark(localStorage.getItem('isDark') == '1');
     return;
   }, []);
 
-  useEffect(() => {
-    setApp(appRef.current);
-  }, [appRef]);
+  // useEffect(() => {
+  //   setApp(appRef.current);
+  // }, [appRef]);
 
   // -- Return
   return (
