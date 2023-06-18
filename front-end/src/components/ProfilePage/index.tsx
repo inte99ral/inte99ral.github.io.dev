@@ -1,8 +1,7 @@
 // -- API & Library
-import React, { MouseEvent, useState, useEffect } from 'react';
+import React, { MouseEvent, useEffect } from 'react';
 import { useRecoilState } from 'recoil';
-import { isSmoothState, appState } from 'api/recoil/store';
-import { useEffectAfterMount } from 'api/react/hooks';
+import { appState } from 'api/recoil/store';
 
 // -- Styles
 import { Styled_ProfilePage } from './style';
@@ -14,23 +13,10 @@ import { ProfileSection03 } from './components/ProfileSection03';
 
 export const ProfilePage = () => {
   // -- Init
-  const [isSmooth, setIsSmooth] = useRecoilState(isSmoothState);
   const [app, setApp] = useRecoilState(appState);
-  // const [app, setApp] = useState(document.getElementById('app') as HTMLDivElement);
-  // const [app, setApp] = useState<HTMLDivElement>();
   const scrollArr = [0, 961, 2242];
-  // let prevScroll = 0;
-  // let nextScroll = 0;
-  // let scrollIndex = 0;
-
-  // const app = document.getElementById('app') as HTMLDivElement;
 
   // -- Methods
-  const initializeApp = () => {
-    console.log('wa!');
-    // const app = document.getElementById('app');
-  };
-
   const handleClick = (e: MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -39,10 +25,13 @@ export const ProfilePage = () => {
   const handleClick2 = (e: MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+
+    app.classList.add('smooth');
+    app.scrollTop = 0;
+
     // setApp(document.getElementById('app2') as HTMLDivElement);
     // setIsSmooth(true);
     // setIsSmooth(false);
-    setIsSmooth(!isSmooth);
     // console.log(document.documentElement.scrollTop);
     // if (app == undefined) console.log(app);
     // else app.scrollTop = 0;
@@ -51,6 +40,11 @@ export const ProfilePage = () => {
   };
 
   const handleScroll = (e: Event) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (app.scrollTop == 0) console.log('[ 0 ]');
+
     // if (app == undefined) return;
     // if (!scrollArr.includes(app.scrollTop)) return;
     // if (!scrollArr.includes(app.scrollTop)) return;
@@ -86,11 +80,15 @@ export const ProfilePage = () => {
   //   };
   // }, []);
 
-  useEffectAfterMount(() => {
-    // console.log(document.getElementsByClassName('profile-page')[0] as HTMLDivElement);
-    console.log('wa!');
-    return;
-  }, [isSmooth]);
+  useEffect(() => {
+    if (!app) return;
+
+    app.classList.remove('smooth');
+    app.scrollTop = 0;
+    app.addEventListener('scroll', handleScroll);
+
+    return () => app.removeEventListener('scroll', handleScroll);
+  }, [app]);
 
   // -- Return
   return (

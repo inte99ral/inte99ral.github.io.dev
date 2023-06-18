@@ -1,8 +1,8 @@
 // -- API & Library
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, MutableRefObject } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { useSetRecoilState, useRecoilState, useRecoilValue } from 'recoil';
-import { appState, isDarkState, isSmoothState } from 'api/recoil/store';
+import { useRecoilState } from 'recoil';
+import { appState, isDarkState } from 'api/recoil/store';
 
 // -- Styles
 import './theme.scss';
@@ -18,25 +18,24 @@ import { ErrorPage } from 'components/ErrorPage';
 
 const App = () => {
   // -- Init
+  const appRef = useRef() as MutableRefObject<HTMLDivElement>;
+
   const [app, setApp] = useRecoilState(appState);
   const [isDark, setIsDark] = useRecoilState(isDarkState);
-  const [isSmooth, setIsSmooth] = useRecoilState(isSmoothState);
 
   // -- Hooks
   useEffect(() => {
-    // setApp(document.getElementById('app0') as HTMLDivElement);
-    // setApp(document.getElementById('app') as HTMLDivElement);
-    // setApp(document.getElementById('app2') as HTMLDivElement);
-    // setIsSmooth(true);
-    // setIsSmooth(false);
-    // setIsSmooth(true);
     setIsDark(localStorage.getItem('isDark') == '1');
     return;
   }, []);
 
+  useEffect(() => {
+    setApp(appRef.current);
+  }, [appRef]);
+
   // -- Return
   return (
-    <div id="app" className={`app ${isDark ? 'dark' : 'light'} ${isSmooth ? 'smooth' : ''}`}>
+    <div ref={appRef} id="app" className={`app ${isDark ? 'dark' : 'light'}`}>
       <Sidebar />
       <Routes>
         <Route path="/" element={<Navigate replace to="/profile" />} />
