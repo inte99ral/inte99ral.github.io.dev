@@ -21,6 +21,7 @@
 - [x] API useEffectAfterMount 디버그 | 2023/6/17
 - [x] API rest 에 server 코드 추가 | 2023/6/17
 - [x] API webVitals 에 백엔드 정보 추가 | 2023/6/17
+- [x] app 컴포넌트 데이터 recoil atom 에 등록 | 2023/6/18
 
 <br />
 
