@@ -25,21 +25,21 @@ const App = () => {
 
   // -- Hooks
   useEffect(() => {
-    console.log('error debug 2');
     setIsDark(localStorage.getItem('isDark') == '1');
     return;
   }, []);
 
-  // useEffect(() => {
-  //   setApp(appRef.current);
-  // }, [appRef]);
+  useEffect(() => {
+    setApp(appRef.current);
+  }, [appRef]);
 
   // -- Return
   return (
     <div ref={appRef} id="app" className={`app ${isDark ? 'dark' : 'light'}`}>
       <Sidebar />
       <Routes>
-        <Route path="/" element={<Navigate replace to="/profile" />} />
+        {/* <Route path="/" element={<Navigate replace to="/profile" />} /> */}
+        <Route path="/" element={<ProfilePage />} />
         <Route path="/profile/*" element={<ProfilePage />} />
         <Route path="/home/*" element={<HomePage />} />
         <Route path="/blog/*" element={<BlogPage />} />
