@@ -447,7 +447,9 @@
 
   <hr />
 
-  - sass 적용 `npm install node-sass`
+  - 둘 중 택 1
+    - node-sass 적용 `npm install node-sass`
+    - dart sass 적용 `npm install -g sass`
 
   <br />
 
