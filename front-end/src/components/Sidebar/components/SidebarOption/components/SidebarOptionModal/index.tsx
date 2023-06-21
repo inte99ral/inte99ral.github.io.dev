@@ -15,10 +15,11 @@ import { SidebarOptionModalItem } from './components/SidebarOptionModalItem';
 
 // -- Interfaces & Types
 interface props {
+  isModel: boolean;
   handleClick: (e: MouseEvent) => void;
 }
 
-export const SidebarOptionModal = ({ handleClick }: props) => {
+export const SidebarOptionModal = ({ isModel, handleClick }: props) => {
   // -- Init
   const [isTest, setIsTest] = useState(false);
   const [isDark, setIsDark] = useRecoilState(isDarkState);
@@ -50,6 +51,7 @@ export const SidebarOptionModal = ({ handleClick }: props) => {
         onClick={handleClick}
       />
       <Styled_SidebarOptionModal className="sidebar-option-modal" onClick={preventClick}>
+        <div>이얍</div>
         <SidebarOptionModalItem
           title="Dark Mode"
           isTrue={isDark}

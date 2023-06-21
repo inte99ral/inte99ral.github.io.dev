@@ -27,7 +27,7 @@ export const SidebarOption = ({ icon, title }: props) => {
   // -- Return
   return (
     <Styled_SidebarOption className="sidebar-menu" onClick={handleClick}>
-      {isModel ? <SidebarOptionModal handleClick={handleClick} /> : ''}
+      {isModel ? <SidebarOptionModal isModel={isModel} handleClick={handleClick} /> : ''}
       <Styled_SidebarOptionIcon className="sidebar-menu-icon">{icon}</Styled_SidebarOptionIcon>
       <Styled_SidebarOptionTitle className="sidebar-menu-title">{title}</Styled_SidebarOptionTitle>
     </Styled_SidebarOption>

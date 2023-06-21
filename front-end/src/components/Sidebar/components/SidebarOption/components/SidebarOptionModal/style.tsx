@@ -10,6 +10,15 @@ export const fadeIn = keyframes`
   }
 `;
 
+export const fadeOut = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
 export const popUp = keyframes`
   0% {
     opacity: 0;
@@ -18,6 +27,17 @@ export const popUp = keyframes`
   100% {
     opacity: 1;
     scale: 1;
+  }
+`;
+
+export const popOut = keyframes`
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
   }
 `;
 

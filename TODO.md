@@ -22,6 +22,8 @@
 - [x] API rest 에 server 코드 추가 | 2023/6/17
 - [x] API webVitals 에 백엔드 정보 추가 | 2023/6/17
 - [x] app 컴포넌트 데이터 recoil atom 에 등록 | 2023/6/18
+- [x] a component suspended while responding to synchronous input 이슈 디버깅 | 2023/6/19
+- [x] 스크롤 액션 최종완성 | 2023/6/20
 
 <br />
 
@@ -29,7 +31,7 @@
 
 ## TODO: 해야할 목록
 
-- [ ] [스크롤 액션 적용](front-end\src\components\ProfilePage\index.tsx)
+- [ ]
 
 <br />
 

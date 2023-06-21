@@ -14,10 +14,9 @@ import { ProfileSection03 } from './components/ProfileSection03';
 export const ProfilePage = () => {
   // -- Init
   const app = useRecoilValue(appState);
-  const scrollArr = [0, 961, 2242];
-
-  let prevScroll = 0;
-  let nextScroll = 0;
+  const viewHeight = window.innerHeight;
+  const scrollArr = [0, viewHeight * 1, viewHeight * 1.5];
+  let scrollIndex = 0;
 
   // -- Methods
   const handleClick = (e: MouseEvent) => {
@@ -48,29 +47,24 @@ export const ProfilePage = () => {
     e.stopPropagation();
     if (!app) return;
 
-    if (scrollArr.includes(app.scrollTop)) console.log('[TRIGGER]');
-    else {
-      nextScroll = app.scrollTop;
-
-      if (prevScroll > nextScroll) console.log('[UP]');
-      else console.log('[DOWN]');
-
-      prevScroll = nextScroll;
+    if (scrollArr.includes(app.scrollTop)) {
+      app.classList.remove('smooth');
+      return;
     }
 
-    // if (app == undefined) return;
-    // if (!scrollArr.includes(app.scrollTop)) return;
-    // if (!scrollArr.includes(app.scrollTop)) return;
-    // nextScroll = app.scrollTop;
-    // if (nextScroll < prevScroll) {
-    //   console.log(`[UP] next: ${nextScroll} prev: ${prevScroll}`);
-    //   // app.scrollTop = scrollArr[--scrollIndex];
-    //   app.scrollTop = scrollArr[0];
-    // } else {
-    //   console.log(`[DOWN] next: ${nextScroll} prev: ${prevScroll}`);
-    //   // app.scrollTop = scrollArr[++scrollIndex];
-    // }
-    // prevScroll = nextScroll;
+    if (app.classList.contains('smooth')) return;
+
+    if (app.scrollTop < scrollArr[scrollIndex]) {
+      app.classList.add('smooth');
+      app.scrollTop = scrollArr[--scrollIndex];
+      return;
+    }
+
+    if (app.scrollTop > scrollArr[scrollIndex + 1] - viewHeight) {
+      app.classList.add('smooth');
+      app.scrollTop = scrollArr[++scrollIndex];
+      return;
+    }
   };
 
   // -- Hooks
@@ -79,9 +73,13 @@ export const ProfilePage = () => {
 
     app.classList.remove('smooth');
     app.scrollTop = 0;
+    scrollIndex = 0;
     app.addEventListener('scroll', handleScroll);
 
-    return () => app.removeEventListener('scroll', handleScroll);
+    return () => {
+      app.removeEventListener('scroll', handleScroll);
+      app.classList.remove('smooth');
+    };
   }, [app]);
 
   // -- Return
