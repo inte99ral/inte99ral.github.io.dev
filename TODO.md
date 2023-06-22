@@ -25,6 +25,7 @@
 - [x] a component suspended while responding to synchronous input 이슈 디버깅 | 2023/6/19
 - [x] 스크롤 액션 최종완성 | 2023/6/20
 - [x] 버튼 스타일 삭제 | 2023/6/22
+- [x] 스크롤 액션 화면크기 변화 디버깅 | 2023/6/22
 
 <br />
 
