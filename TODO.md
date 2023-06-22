@@ -24,6 +24,7 @@
 - [x] app 컴포넌트 데이터 recoil atom 에 등록 | 2023/6/18
 - [x] a component suspended while responding to synchronous input 이슈 디버깅 | 2023/6/19
 - [x] 스크롤 액션 최종완성 | 2023/6/20
+- [x] 버튼 스타일 삭제 | 2023/6/22
 
 <br />
 
@@ -31,7 +32,7 @@
 
 ## TODO: 해야할 목록
 
-- [ ]
+- [ ] [프로필 페이지 섹션 1](front-end\src\components\ProfilePage\components\ProfileSection01\index.tsx)
 
 <br />
 
