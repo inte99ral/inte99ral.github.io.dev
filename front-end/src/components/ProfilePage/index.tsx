@@ -24,24 +24,6 @@ export const ProfilePage = () => {
     e.stopPropagation();
   };
 
-  const handleClick2 = (e: MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!app) return;
-
-    app.classList.add('smooth');
-    app.scrollTop = 961;
-
-    // setApp(document.getElementById('app2') as HTMLDivElement);
-    // setIsSmooth(true);
-    // setIsSmooth(false);
-    // console.log(document.documentElement.scrollTop);
-    // if (app == undefined) console.log(app);
-    // else app.scrollTop = 0;
-    // app.scrollTop = 0;
-    // console.log(prevScroll);
-  };
-
   const handleScroll = (e: Event) => {
     e.preventDefault();
     e.stopPropagation();
@@ -84,7 +66,7 @@ export const ProfilePage = () => {
 
   // -- Return
   return (
-    <Styled_ProfilePage className="profile-page" onClick={handleClick2}>
+    <Styled_ProfilePage className="profile-page" onClick={handleClick}>
       <ProfileSection01 />
       <ProfileSection02 />
       <ProfileSection03 />
