@@ -48,6 +48,11 @@
   --color-blur: #ffffff40;
 }
 
+// -- Default
+button {
+  all: unset;
+}
+
 // -- Styles
 * {
   position: relative;
