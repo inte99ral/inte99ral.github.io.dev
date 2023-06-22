@@ -14,8 +14,8 @@ import { ProfileSection03 } from './components/ProfileSection03';
 export const ProfilePage = () => {
   // -- Init
   const app = useRecoilValue(appState);
-  const viewHeight = window.innerHeight;
-  const scrollArr = [0, viewHeight * 1, viewHeight * 1.5];
+  let viewHeight = window.innerHeight;
+  let scrollArr = [0, viewHeight * 1, viewHeight * 1.5];
   let scrollIndex = 0;
 
   // -- Methods
@@ -49,6 +49,19 @@ export const ProfilePage = () => {
     }
   };
 
+  const handleResize = (e: Event) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!app) return;
+
+    viewHeight = window.innerHeight;
+    scrollArr = [0, viewHeight * 1, viewHeight * 1.5];
+    if (app.scrollTop != scrollArr[scrollIndex]) {
+      app.classList.add('smooth');
+      app.scrollTop = scrollArr[scrollIndex];
+    }
+  };
+
   // -- Hooks
   useEffect(() => {
     if (!app) return;
@@ -57,9 +70,11 @@ export const ProfilePage = () => {
     app.scrollTop = 0;
     scrollIndex = 0;
     app.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
 
     return () => {
       app.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
       app.classList.remove('smooth');
     };
   }, [app]);
