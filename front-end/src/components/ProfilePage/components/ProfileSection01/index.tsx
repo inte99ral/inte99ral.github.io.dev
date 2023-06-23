@@ -27,7 +27,7 @@ export const ProfileSection01 = () => {
     <Styled_ProfileSection01 className="profile-section">
       <Styled_ProfileSectionBackground className="profile-section-background" />
       <h1>안녕하세요!</h1>
-      <div>개발자 박준혁 입니다.</div>
+      <h2>full-stack 개발자 박준혁 입니다.</h2>
       <Styled_ProfileSectionButton onClick={handleClick} />
     </Styled_ProfileSection01>
   );

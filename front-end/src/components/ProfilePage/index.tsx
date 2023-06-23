@@ -1,5 +1,5 @@
 // -- API & Library
-import React, { MouseEvent, useEffect } from 'react';
+import React, { MouseEvent, useEffect, useRef } from 'react';
 import { useRecoilValue } from 'recoil';
 import { appState } from 'api/recoil/store';
 
@@ -10,6 +10,7 @@ import { Styled_ProfilePage } from './style';
 import { ProfileSection01 } from './components/ProfileSection01';
 import { ProfileSection02 } from './components/ProfileSection02';
 import { ProfileSection03 } from './components/ProfileSection03';
+import { ProfileSection04 } from './components/ProfileSection04';
 
 export const ProfilePage = () => {
   // -- Init
@@ -22,6 +23,8 @@ export const ProfilePage = () => {
   const handleClick = (e: MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+
+    console.log(ProfileSection01);
   };
 
   const handleScroll = (e: Event) => {
@@ -85,6 +88,7 @@ export const ProfilePage = () => {
       <ProfileSection01 />
       <ProfileSection02 />
       <ProfileSection03 />
+      <ProfileSection04 />
     </Styled_ProfilePage>
   );
 };

@@ -2,7 +2,7 @@
 import Styled from 'styled-components';
 
 export const Styled_ProfileSection02 = Styled.div`
-    min-height: 50vh;
-    width: 120%;
-    background-color: green;
+  min-height: 50vh;
+  width: 120%;
+  background: linear-gradient(-30deg, #feb683, #ff8993);
 `;
