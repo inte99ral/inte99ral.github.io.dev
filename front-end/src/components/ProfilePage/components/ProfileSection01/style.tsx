@@ -19,6 +19,7 @@ export const Styled_ProfileSection01 = Styled.div`
 `;
 
 export const Styled_ProfileSectionBackground = Styled.div`
+  z-index: 900;
   position: absolute;
   top: 0;
   left: 0;
@@ -29,6 +30,7 @@ export const Styled_ProfileSectionBackground = Styled.div`
 `;
 
 export const Styled_ProfileSectionButton = Styled.button`
+  z-index: 1000;
   height: 10rem;
   width: 10rem;
 

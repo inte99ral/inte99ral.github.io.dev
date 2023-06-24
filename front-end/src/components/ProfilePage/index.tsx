@@ -15,8 +15,9 @@ import { ProfileSection04 } from './components/ProfileSection04';
 export const ProfilePage = () => {
   // -- Init
   const app = useRecoilValue(appState);
-  let viewHeight = window.innerHeight;
-  let scrollArr = [0, viewHeight * 1, viewHeight * 1.5];
+  // let viewHeight = window.innerHeight;
+  // let scrollArr = [0, viewHeight * 1, viewHeight * 1.5];
+  let scrollArr = [0];
   let scrollIndex = 0;
 
   // -- Methods
@@ -24,7 +25,11 @@ export const ProfilePage = () => {
     e.preventDefault();
     e.stopPropagation();
 
-    console.log(ProfileSection01);
+    console.log(
+      Array.from(document.getElementsByClassName('profile-section')).map((item: Element) =>
+        Math.round(item.getBoundingClientRect().top + app.scrollTop),
+      ),
+    );
   };
 
   const handleScroll = (e: Event) => {
@@ -45,7 +50,7 @@ export const ProfilePage = () => {
       return;
     }
 
-    if (app.scrollTop > scrollArr[scrollIndex + 1] - viewHeight) {
+    if (app.scrollTop > scrollArr[scrollIndex + 1] - window.innerHeight) {
       app.classList.add('smooth');
       app.scrollTop = scrollArr[++scrollIndex];
       return;
@@ -57,8 +62,10 @@ export const ProfilePage = () => {
     e.stopPropagation();
     if (!app) return;
 
-    viewHeight = window.innerHeight;
-    scrollArr = [0, viewHeight * 1, viewHeight * 1.5];
+    scrollArr = Array.from(document.getElementsByClassName('profile-section')).map(
+      (item: Element) => item.getBoundingClientRect().top + app.scrollTop,
+    );
+    // scrollArr = [0, viewHeight * 1, viewHeight * 1.5];
     if (app.scrollTop != scrollArr[scrollIndex]) {
       app.classList.add('smooth');
       app.scrollTop = scrollArr[scrollIndex];
@@ -72,6 +79,10 @@ export const ProfilePage = () => {
     app.classList.remove('smooth');
     app.scrollTop = 0;
     scrollIndex = 0;
+    scrollArr = Array.from(document.getElementsByClassName('profile-section')).map(
+      (item: Element) => item.getBoundingClientRect().top,
+    );
+
     app.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
 
