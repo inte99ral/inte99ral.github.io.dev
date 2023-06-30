@@ -1,22 +1,23 @@
 // -- API & Library
 import React, { MouseEvent } from 'react';
 
-// -- Assets
+// -- Components
+import { ProfileSectionPortrait } from './components/ProfileSectionPortrait';
+import { ProfileSectionLabel } from './components/ProfileSectionLabel';
+
+// -- Styles
 import {
   Styled_ProfileSection01,
   Styled_ProfileSectionBackground,
+  Styled_ProfileSectionTitle,
   Styled_ProfileSectionButton,
 } from './style';
-
-// -- Components
-
-// -- Styles
 
 export const ProfileSection01 = () => {
   // -- Init
 
   // -- Methods
-  const handleClick = (e: MouseEvent) => {
+  const handleClick = () => {
     console.log('click');
   };
 
@@ -27,8 +28,14 @@ export const ProfileSection01 = () => {
     <Styled_ProfileSection01 className="profile-section">
       <Styled_ProfileSectionBackground className="profile-section-background" />
       <h1>안녕하세요!</h1>
-      <h2>full-stack 개발자 박준혁 입니다.</h2>
+      <Styled_ProfileSectionTitle>
+        <ProfileSectionLabel /> 개발자 박준혁 입니다.
+      </Styled_ProfileSectionTitle>
       <Styled_ProfileSectionButton onClick={handleClick} />
+      <div>
+        <span>sd</span>
+      </div>
+      <ProfileSectionPortrait />
     </Styled_ProfileSection01>
   );
 };

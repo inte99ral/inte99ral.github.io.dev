@@ -29,6 +29,16 @@ export const Styled_ProfileSectionBackground = Styled.div`
   background: linear-gradient(-30deg, #6aa5e3, #6866e9);
 `;
 
+export const Styled_ProfileSectionTitle = Styled.div`
+  height: 4rem;
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+
+  background: red;
+`;
+
 export const Styled_ProfileSectionButton = Styled.button`
   z-index: 1000;
   height: 10rem;
