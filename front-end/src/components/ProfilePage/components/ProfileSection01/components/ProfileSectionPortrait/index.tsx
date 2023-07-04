@@ -1,18 +1,14 @@
 // -- API & Library
 import React from 'react';
 
-// -- Assets
-// -- Components
 // -- Styles
-import { Styled_ProfileSectionPortrait } from './style';
+import { Styled_ProfileSectionPortrait, Styled_ProfileSectionPortraitDJ } from './style';
 
 export const ProfileSectionPortrait = () => {
-  // -- Init
-
-  // -- Methods
-
-  // -- Hooks
-
   // -- Return
-  return <></>;
+  return (
+    <Styled_ProfileSectionPortrait>
+      <Styled_ProfileSectionPortraitDJ />
+    </Styled_ProfileSectionPortrait>
+  );
 };
