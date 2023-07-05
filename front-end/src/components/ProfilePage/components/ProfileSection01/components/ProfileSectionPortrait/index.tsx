@@ -7,7 +7,7 @@ import { Styled_ProfileSectionPortrait, Styled_ProfileSectionPortraitDJ } from '
 export const ProfileSectionPortrait = () => {
   // -- Return
   return (
-    <Styled_ProfileSectionPortrait>
+    <Styled_ProfileSectionPortrait className="profile-section-portrait">
       <Styled_ProfileSectionPortraitDJ />
     </Styled_ProfileSectionPortrait>
   );
