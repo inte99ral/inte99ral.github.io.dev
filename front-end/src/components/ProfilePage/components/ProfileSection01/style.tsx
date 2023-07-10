@@ -13,19 +13,6 @@ export const Styled_ProfileSection01 = Styled.div`
   justify-content: center;
   align-items: center;
 
-  background-image: url(${BG});
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
-
-export const Styled_ProfileSectionBackground = Styled.div`
-  z-index: 900;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%; 
-  width: 100%;
-
   background: linear-gradient(-30deg, #6aa5e3, #6866e9);
 `;
 

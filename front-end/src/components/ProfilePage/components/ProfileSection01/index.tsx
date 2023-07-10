@@ -8,7 +8,6 @@ import { ProfileSectionLabel } from './components/ProfileSectionLabel';
 // -- Styles
 import {
   Styled_ProfileSection01,
-  Styled_ProfileSectionBackground,
   Styled_ProfileSectionTitle,
   Styled_ProfileSectionButton,
 } from './style';
@@ -26,7 +25,6 @@ export const ProfileSection01 = () => {
   // -- Return
   return (
     <Styled_ProfileSection01 className="profile-section">
-      <Styled_ProfileSectionBackground className="profile-section-background" />
       <h1>안녕하세요!</h1>
       <Styled_ProfileSectionTitle>
         <ProfileSectionLabel /> 개발자 박준혁 입니다.
