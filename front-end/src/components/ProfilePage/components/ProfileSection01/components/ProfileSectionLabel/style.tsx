@@ -3,10 +3,12 @@ import Styled from 'styled-components';
 
 export const Styled_ProfileSectionLabel = Styled.div`
   background-color: red;
-  transform-style: preserve-3d;
   height: 2rem;
   width: 8rem;
   margin-right: 1rem;
+
+  transform-style: preserve-3d;
+  transform: rotateY(30deg) rotateX(10deg);
 
   & span {
     position: absolute;
