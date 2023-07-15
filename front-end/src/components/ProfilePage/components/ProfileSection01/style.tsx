@@ -27,18 +27,7 @@ export const Styled_ProfileSectionLine = Styled.div`
   overflow: hidden;
 `;
 
-export const Styled_ProfileSectionHeadline = Styled.div`
-  height: 80vh;
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  background-color: red;
-  overflow: hidden;
-`;
-
-export const Styled_ProfileSectionTitle = Styled.div`
+export const Styled_ProfileSectionTitle = Styled.h1`
   height: 4rem;
   padding: 1rem;
 

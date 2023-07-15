@@ -32,6 +32,9 @@
 // -- Variable
 :root {
   --color-theme: #44546a;
+  --font-size-lg: clamp(2.5rem, 4vw, 3rem);
+  --font-size-md: clamp(1.5rem, 3vw, 2rem);
+  --font-size-sm: clamp(0.5rem, 2vw, 1rem);
 }
 
 .light {
@@ -54,7 +57,15 @@ button {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: var(--font-size-lg);
+}
+
+h2 {
+  font-size: var(--font-size-md);
+}
+
+h3 {
+  font-size: var(--font-size-sm);
 }
 
 // -- Styles
