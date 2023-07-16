@@ -9,6 +9,7 @@ export const Styled_ProfileSection01 = Styled.div`
   width: 120%;
 
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -16,23 +17,27 @@ export const Styled_ProfileSection01 = Styled.div`
   background: linear-gradient(-30deg, #6aa5e3, #6866e9);
 `;
 
-export const Styled_ProfileSectionLine = Styled.div`
+export const Styled_ProfileSectionLineBox = Styled.div`
   height: 80vh;
   width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  background-color: red;
+  /* background-color: red; */
   overflow: hidden;
 `;
 
-export const Styled_ProfileSectionTitle = Styled.h1`
-  height: 4rem;
-  padding: 1rem;
+export const Styled_ProfileSectionLine01 = Styled.h1`
+`;
 
+export const Styled_ProfileSectionLine02 = Styled.h1`
+margin-left: 1rem;
+  padding: 2rem 1rem 2rem 0;
   display: flex;
   align-items: center;
+`;
 
-  background: red;
+export const Styled_ProfileSectionLine03 = Styled.h1`
+  margin-left: calc(var(--size-font-lg) * 5);
 `;

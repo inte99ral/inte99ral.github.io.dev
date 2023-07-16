@@ -8,8 +8,10 @@ import { ProfileSectionLabel } from './components/ProfileSectionLabel';
 // -- Styles
 import {
   Styled_ProfileSection01,
-  Styled_ProfileSectionLine,
-  Styled_ProfileSectionTitle,
+  Styled_ProfileSectionLineBox,
+  Styled_ProfileSectionLine01,
+  Styled_ProfileSectionLine02,
+  Styled_ProfileSectionLine03,
 } from './style';
 
 export const ProfileSection01 = () => {
@@ -25,12 +27,17 @@ export const ProfileSection01 = () => {
   // -- Return
   return (
     <Styled_ProfileSection01 className="profile-section">
-      <Styled_ProfileSectionLine>
-        <h1>안녕하세요!</h1>
-        <Styled_ProfileSectionTitle>
-          <ProfileSectionLabel /> 개발자 박준혁 입니다.
-        </Styled_ProfileSectionTitle>
-      </Styled_ProfileSectionLine>
+      <Styled_ProfileSectionLineBox>
+        <Styled_ProfileSectionLine01 className="profile-section-line 01">
+          안녕하세요!
+        </Styled_ProfileSectionLine01>
+        <Styled_ProfileSectionLine02 className="profile-section-line 02">
+          <ProfileSectionLabel /> 개발자
+        </Styled_ProfileSectionLine02>
+        <Styled_ProfileSectionLine03 className="profile-section-line 03">
+          박준혁 입니다.
+        </Styled_ProfileSectionLine03>
+      </Styled_ProfileSectionLineBox>
       <ProfileSectionPortrait />
     </Styled_ProfileSection01>
   );
