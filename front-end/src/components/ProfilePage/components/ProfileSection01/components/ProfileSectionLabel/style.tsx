@@ -33,6 +33,9 @@ export const Styled_ProfileSectionLabel = Styled.div`
     transform-style: preserve-3d;
     transform: rotateX(calc(90deg * var(--deg))) translateZ(calc((var(--size-font-lg) + 1.5rem) / 2));
     backface-visibility: hidden;
-    background-color: green;
+    /* background: linear-gradient(left, #0000ff 0%, #ff0000 100%); */
+    background: linear-gradient(-30deg, #6aa5e399 0%, #6866e999 100%);
+    /* backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); */
   } 
 `;
