@@ -18,7 +18,9 @@ export const Styled_ProfileSectionLabel = Styled.div`
     /* transform: rotateY(90deg) translateZ(calc((var(--size-font-lg) + 1.5rem) / 2)); */
 
     transform: rotateY(90deg) translateZ(calc((0px - var(--size-font-lg) - 1.5rem) / 2));
-    background-color: red;
+    background: radial-gradient(#f4f5f700 30%, #f4f5f720 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   & span {
@@ -33,9 +35,8 @@ export const Styled_ProfileSectionLabel = Styled.div`
     transform-style: preserve-3d;
     transform: rotateX(calc(90deg * var(--deg))) translateZ(calc((var(--size-font-lg) + 1.5rem) / 2));
     backface-visibility: hidden;
-    /* background: linear-gradient(left, #0000ff 0%, #ff0000 100%); */
-    background: linear-gradient(-30deg, #6aa5e399 0%, #6866e999 100%);
-    /* backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); */
+    background: linear-gradient(-30deg, #f4f5f740 0%, #f4f5f700 70%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   } 
 `;
