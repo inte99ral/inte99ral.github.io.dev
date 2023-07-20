@@ -8,7 +8,12 @@ import { Styled_ProfileSection03 } from './style';
 
 // -- Styles
 
-export const ProfileSection03 = () => {
+// -- Interface & Type
+interface propsInf {
+  isActive: boolean;
+}
+
+export const ProfileSection03 = ({ isActive }: propsInf) => {
   // -- Init
 
   // -- Methods

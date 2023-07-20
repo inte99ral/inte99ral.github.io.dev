@@ -15,8 +15,8 @@ import { ProfileSection04 } from './components/ProfileSection04';
 
 export const ProfilePage = () => {
   // -- Init
+  const [a, getA] = useState(0);
   const app = useRecoilValue(appState);
-  const [scrollState, setScrollState] = useState(0);
   let scrollArr = [0];
   let scrollIndex = 0;
 
@@ -47,14 +47,12 @@ export const ProfilePage = () => {
     if (app.scrollTop < scrollArr[scrollIndex]) {
       app.classList.add('smooth');
       app.scrollTop = scrollArr[--scrollIndex];
-      setScrollState(scrollIndex);
       return;
     }
 
     if (app.scrollTop > scrollArr[scrollIndex + 1] - window.innerHeight) {
       app.classList.add('smooth');
       app.scrollTop = scrollArr[++scrollIndex];
-      setScrollState(scrollIndex);
       return;
     }
   };
@@ -99,10 +97,10 @@ export const ProfilePage = () => {
   return (
     <Styled_ProfilePage className="profile-page" onClick={handleClick}>
       <ProfileAside />
-      <ProfileSection01 isActive={scrollState == 0} />
-      <ProfileSection02 isActive={scrollState == 1} />
-      <ProfileSection03 isActive={scrollState == 2} />
-      <ProfileSection04 isActive={scrollState == 3} />
+      <ProfileSection01 isActive={scrollIndex == 0} />
+      <ProfileSection02 isActive={scrollIndex == 1} />
+      <ProfileSection03 isActive={scrollIndex == 2} />
+      <ProfileSection04 isActive={scrollIndex == 3} />
     </Styled_ProfilePage>
   );
 };

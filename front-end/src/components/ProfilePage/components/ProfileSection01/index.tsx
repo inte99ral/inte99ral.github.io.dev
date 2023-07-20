@@ -15,11 +15,11 @@ import {
 } from './style';
 
 // -- Interface & Type
-interface propsType {
+interface propsInf {
   isActive: boolean;
 }
 
-export const ProfileSection01 = ({ isActive }: propsType) => {
+export const ProfileSection01 = ({ isActive }: propsInf) => {
   // -- Init
 
   // -- Methods
