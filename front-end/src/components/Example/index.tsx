@@ -7,6 +7,8 @@ import React from 'react';
 
 // -- Styles
 
+// -- Interface & Type
+
 export const Example = () => {
   // -- Init
 
