@@ -29,6 +29,7 @@
 - [x] 화면크기 변화시 자동 조정 | 2023/6/24
 - [x] 프로필 페이지 섹션 1 | 2023/6/29
 - [x] 프로필 페이지 섹션 1 | 2023/6/30
+- [x] 프로필 페이지 섹션 1 3D 액션 | 2023/7/20
 
 <br />
 
@@ -44,4 +45,5 @@
 
 ## FIXME: 수정해야할 목록
 
+- [ ] [스크롤 이벤트 말고 휠로 바꿀 것. 한번에 많이 스크롤 시 고장남](front-end\src\components\ProfilePage\index.tsx)
 - [ ] [모달이 사라질 때, 애니메이션 없이 그냥 사라진다.](front-end\src\components\Sidebar\components\SidebarOption\components\SidebarOptionModal\style.tsx)
