@@ -14,15 +14,18 @@ import {
   Styled_ProfileSectionLine03,
 } from './style';
 
-export const ProfileSection01 = () => {
+// -- Interface & Type
+interface propsType {
+  isActive: boolean;
+}
+
+export const ProfileSection01 = ({ isActive }: propsType) => {
   // -- Init
 
   // -- Methods
   const handleClick = () => {
     console.log('click');
   };
-
-  // -- Hooks
 
   // -- Return
   return (

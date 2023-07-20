@@ -1,5 +1,5 @@
 // -- API & Library
-import React, { MouseEvent, useEffect, useRef } from 'react';
+import React, { MouseEvent, useEffect } from 'react';
 import { useRecoilValue } from 'recoil';
 import { appState } from 'api/recoil/store';
 
@@ -7,6 +7,7 @@ import { appState } from 'api/recoil/store';
 import { Styled_ProfilePage } from './style';
 
 // -- Components
+import { ProfileAside } from './components/ProfileAside';
 import { ProfileSection01 } from './components/ProfileSection01';
 import { ProfileSection02 } from './components/ProfileSection02';
 import { ProfileSection03 } from './components/ProfileSection03';
@@ -15,8 +16,6 @@ import { ProfileSection04 } from './components/ProfileSection04';
 export const ProfilePage = () => {
   // -- Init
   const app = useRecoilValue(appState);
-  // let viewHeight = window.innerHeight;
-  // let scrollArr = [0, viewHeight * 1, viewHeight * 1.5];
   let scrollArr = [0];
   let scrollIndex = 0;
 
@@ -65,7 +64,7 @@ export const ProfilePage = () => {
     scrollArr = Array.from(document.getElementsByClassName('profile-section')).map(
       (item: Element) => item.getBoundingClientRect().top + app.scrollTop,
     );
-    // scrollArr = [0, viewHeight * 1, viewHeight * 1.5];
+
     if (app.scrollTop != scrollArr[scrollIndex]) {
       app.classList.add('smooth');
       app.scrollTop = scrollArr[scrollIndex];
@@ -96,7 +95,8 @@ export const ProfilePage = () => {
   // -- Return
   return (
     <Styled_ProfilePage className="profile-page" onClick={handleClick}>
-      <ProfileSection01 />
+      <ProfileAside />
+      <ProfileSection01 isActive={false} />
       <ProfileSection02 />
       <ProfileSection03 />
       <ProfileSection04 />

@@ -1,5 +1,23 @@
 // -- API & Library
-import Styled from 'styled-components';
+import Styled, { keyframes } from 'styled-components';
+
+export const rollUp = keyframes`
+  0% {
+    transform: rotateY(30deg) rotateX(10deg);
+  }
+  25% {
+    transform: rotateY(30deg) rotateX(100deg);
+  }
+  50% {
+    transform: rotateY(30deg) rotateX(190deg);
+  }
+  75% {
+    transform: rotateY(30deg) rotateX(280deg);
+  }
+  100% {
+    transform: rotateY(30deg) rotateX(370deg);
+  }
+`;
 
 export const Styled_ProfileSectionLabel = Styled.div`
   height: calc(var(--size-font-lg) + 1.5rem);
@@ -8,14 +26,23 @@ export const Styled_ProfileSectionLabel = Styled.div`
 
   transform-style: preserve-3d;
   transform: rotateY(30deg) rotateX(10deg);
+  animation: ${rollUp} 8s infinite;
+  /* -webkit-animation: ${rollUp} 5.5s infinite;
+  -moz-animation: ${rollUp} 0.5s infinite;
+  -o-animation: ${rollUp} 0.5s infinite; */
+  /* transform: rotateY(30deg) rotateX(10deg);
+  transition: 0.5s ease-in-out;
 
-  &:before {
+  &:hover {
+    transform: rotateY(30deg) rotateX(100deg);
+  } */
+
+
+  &::before {
     content: '';
     position: absolute;
     height: 100%;
     aspect-ratio: 1;
-
-    /* transform: rotateY(90deg) translateZ(calc((var(--size-font-lg) + 1.5rem) / 2)); */
 
     transform: rotateY(90deg) translateZ(calc((0px - var(--size-font-lg) - 1.5rem) / 2));
     background: radial-gradient(#f4f5f700 30%, #f4f5f720 100%);
@@ -34,8 +61,8 @@ export const Styled_ProfileSectionLabel = Styled.div`
     text-align: center;
     transform-style: preserve-3d;
     transform: rotateX(calc(90deg * var(--deg))) translateZ(calc((var(--size-font-lg) + 1.5rem) / 2));
-    backface-visibility: hidden;
-    background: linear-gradient(-30deg, #f4f5f740 0%, #f4f5f700 70%);
+    /* backface-visibility: hidden; */
+    background: linear-gradient(-30deg, #f4f5f720 0%, #f4f5f700 70%);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   } 

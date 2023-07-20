@@ -15,6 +15,10 @@ export const Styled_ProfileSection01 = Styled.div`
   align-items: center;
 
   background: linear-gradient(-30deg, #6aa5e3, #6866e9);
+
+  & * {
+    color: white;
+  }
 `;
 
 export const Styled_ProfileSectionLineBox = Styled.div`
