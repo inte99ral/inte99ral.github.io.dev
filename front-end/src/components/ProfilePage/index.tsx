@@ -8,6 +8,7 @@ import { Styled_ProfilePage } from './style';
 
 // -- Components
 import { ProfileAside } from './components/ProfileAside';
+import { ProfileSection00 } from './components/ProfileSection00';
 import { ProfileSection01 } from './components/ProfileSection01';
 import { ProfileSection02 } from './components/ProfileSection02';
 import { ProfileSection03 } from './components/ProfileSection03';
@@ -99,10 +100,11 @@ export const ProfilePage = () => {
   return (
     <Styled_ProfilePage className="profile-page" onClick={handleClick}>
       <ProfileAside />
-      <ProfileSection01 isActive={scrollState == 0} />
-      <ProfileSection02 isActive={scrollState == 1} />
-      <ProfileSection03 isActive={scrollState == 2} />
-      <ProfileSection04 isActive={scrollState == 3} />
+      <ProfileSection00 isActive={scrollState == 0} />
+      <ProfileSection01 isActive={scrollState == 1} />
+      <ProfileSection02 isActive={scrollState == 2} />
+      <ProfileSection03 isActive={scrollState == 3} />
+      <ProfileSection04 isActive={scrollState == 4} />
     </Styled_ProfilePage>
   );
 };

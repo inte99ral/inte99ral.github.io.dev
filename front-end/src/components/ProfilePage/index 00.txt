@@ -15,8 +15,8 @@ import { ProfileSection04 } from './components/ProfileSection04';
 
 export const ProfilePage = () => {
   // -- Init
-  const [a, getA] = useState(0);
   const app = useRecoilValue(appState);
+  const [a, getA] = useState(0);
   let scrollArr = [0];
   let scrollIndex = 0;
 
