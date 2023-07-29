@@ -11,5 +11,9 @@ interface propsInf {
 
 export const ProfileSection01 = ({ isActive }: propsInf) => {
   // -- Return
-  return <Styled_ProfileSection className="profile-section"></Styled_ProfileSection>;
+  return (
+    <Styled_ProfileSection className="profile-section">
+      <div>{isActive ? 'true' : 'false'}</div>
+    </Styled_ProfileSection>
+  );
 };

@@ -1,7 +1,7 @@
 // -- API & Library
 import Styled from 'styled-components';
 
-export const Styled_ProfileSection03 = Styled.div`
+export const Styled_ProfileSection = Styled.div`
   min-height: 20vh;
   width: 120%;
   /* background: linear-gradient(-45deg, #8d42ff, #01e973); */

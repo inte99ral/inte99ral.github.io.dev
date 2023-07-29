@@ -2,7 +2,7 @@
 import React from 'react';
 
 // -- Assets
-import { Styled_ProfileSection02 } from './style';
+import { Styled_ProfileSection } from './style';
 
 // -- Components
 
@@ -14,8 +14,8 @@ interface propsInf {
 export const ProfileSection02 = ({ isActive }: propsInf) => {
   // -- Return
   return (
-    <Styled_ProfileSection02 className="profile-section">
+    <Styled_ProfileSection className="profile-section">
       <h1>{isActive ? 'true' : 'false'}</h1>
-    </Styled_ProfileSection02>
+    </Styled_ProfileSection>
   );
 };
