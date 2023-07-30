@@ -23,18 +23,22 @@ export const ProfileSection00 = ({ isActive }: propsInf) => {
   // -- Return
   return (
     <Styled_ProfileSection className="profile-section">
-      <Styled_ProfileSectionLineBox>
-        <Styled_ProfileSectionLine01 className="profile-section-line 01">
-          안녕하세요!{isActive ? 'true' : 'false'}
-        </Styled_ProfileSectionLine01>
-        <Styled_ProfileSectionLine02 className="profile-section-line 02">
-          <ProfileSectionLabel /> 개발자
-        </Styled_ProfileSectionLine02>
-        <Styled_ProfileSectionLine03 className="profile-section-line 03">
-          박준혁 입니다.
-        </Styled_ProfileSectionLine03>
-      </Styled_ProfileSectionLineBox>
-      <ProfileSectionPortrait />
+      {isActive ? (
+        <Styled_ProfileSectionLineBox>
+          <Styled_ProfileSectionLine01 className="profile-section-line 01">
+            안녕하세요!{isActive ? 'true' : 'false'}
+          </Styled_ProfileSectionLine01>
+          <Styled_ProfileSectionLine02 className="profile-section-line 02">
+            <ProfileSectionLabel /> 개발자
+          </Styled_ProfileSectionLine02>
+          <Styled_ProfileSectionLine03 className="profile-section-line 03">
+            박준혁 입니다.
+          </Styled_ProfileSectionLine03>
+        </Styled_ProfileSectionLineBox>
+      ) : (
+        <></>
+      )}
+      {isActive ? <ProfileSectionPortrait /> : <></>}
     </Styled_ProfileSection>
   );
 };
