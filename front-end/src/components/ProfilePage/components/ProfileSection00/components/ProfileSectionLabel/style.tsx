@@ -1,7 +1,8 @@
 // -- API & Library
 import Styled, { keyframes } from 'styled-components';
 
-export const rollUp = keyframes`
+// -- Init
+const rollUp = keyframes`
   0% {
     transform: rotateY(30deg) rotateX(10deg);
   }
@@ -19,6 +20,7 @@ export const rollUp = keyframes`
   }
 `;
 
+// -- Exports
 export const Styled_ProfileSectionLabel = Styled.div`
   height: calc(var(--size-font-lg) + 1.5rem);
   width: calc(var(--size-font-lg) * 6);

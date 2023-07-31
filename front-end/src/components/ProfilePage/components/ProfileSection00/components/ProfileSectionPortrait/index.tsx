@@ -1,5 +1,5 @@
 // -- API & Library
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
 // -- Styles
 import {
@@ -13,7 +13,7 @@ export const ProfileSectionPortrait = () => {
   // -- Return
   return (
     <Styled_ProfileSectionPortrait className="profile-section-portrait">
-      <Styled_ProfileSectionPortraitDJ />
+      <Styled_ProfileSectionPortraitDJ style={{ '--deg': 0 } as CSSProperties} />
       {/* <Styled_ProfileSectionPortraitRingfit /> */}
       {/* <Styled_ProfileSectionPortraitSuit /> */}
     </Styled_ProfileSectionPortrait>

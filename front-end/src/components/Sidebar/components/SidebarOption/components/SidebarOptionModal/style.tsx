@@ -1,7 +1,8 @@
 // -- API & Library
 import Styled, { keyframes } from 'styled-components';
 
-export const fadeIn = keyframes`
+// -- Init
+const fadeIn = keyframes`
   0% {
     opacity: 0;
   }
@@ -10,7 +11,7 @@ export const fadeIn = keyframes`
   }
 `;
 
-export const fadeOut = keyframes`
+const fadeOut = keyframes`
   0% {
     opacity: 0;
   }
@@ -19,6 +20,7 @@ export const fadeOut = keyframes`
   }
 `;
 
+// -- Export
 export const popUp = keyframes`
   0% {
     opacity: 0;
