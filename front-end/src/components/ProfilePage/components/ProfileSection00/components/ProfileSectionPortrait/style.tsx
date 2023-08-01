@@ -10,6 +10,9 @@ import Suit from './assets/PortraitSuit.png';
 const rollRight = keyframes`
   0% {
   }
+  100% {
+    background-color: red;
+  }
 `;
 
 // -- Exports

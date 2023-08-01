@@ -14,8 +14,9 @@ export const ProfileSectionPortrait = () => {
   return (
     <Styled_ProfileSectionPortrait className="profile-section-portrait">
       <Styled_ProfileSectionPortraitDJ style={{ '--deg': 0 } as CSSProperties} />
-      {/* <Styled_ProfileSectionPortraitRingfit /> */}
-      {/* <Styled_ProfileSectionPortraitSuit /> */}
+      {/* <Styled_ProfileSectionPortraitRingfit style={{ '--deg': 3 } as CSSProperties} />
+      <Styled_ProfileSectionPortraitSuit style={{ '--deg': 2 } as CSSProperties} />
+      <Styled_ProfileSectionPortraitDJ style={{ '--deg': 1 } as CSSProperties} /> */}
     </Styled_ProfileSectionPortrait>
   );
 };
