@@ -29,15 +29,15 @@ export const Styled_ProfileSectionLabel = Styled.div`
   transform-style: preserve-3d;
   transform: rotateY(30deg) rotateX(10deg);
   animation: ${rollUp} 8s infinite;
-  /* -webkit-animation: ${rollUp} 5.5s infinite;
+  /* 
+  
+  -webkit-animation: ${rollUp} 5.5s infinite;
   -moz-animation: ${rollUp} 0.5s infinite;
   -o-animation: ${rollUp} 0.5s infinite; */
   /* transform: rotateY(30deg) rotateX(10deg);
   transition: 0.5s ease-in-out;
 
-  &:hover {
-    transform: rotateY(30deg) rotateX(100deg);
-  } */
+  */
 
 
   &::before {
