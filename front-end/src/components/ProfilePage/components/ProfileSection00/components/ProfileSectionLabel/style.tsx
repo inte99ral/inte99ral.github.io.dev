@@ -34,8 +34,6 @@ export const Styled_ProfileSectionLabel = Styled.div`
   -webkit-animation: ${rollUp} 5.5s infinite;
   -moz-animation: ${rollUp} 0.5s infinite;
   -o-animation: ${rollUp} 0.5s infinite; */
-  /* transform: rotateY(30deg) rotateX(10deg);
-  transition: 0.5s ease-in-out;
 
   */
 

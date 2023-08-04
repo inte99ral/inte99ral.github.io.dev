@@ -34,6 +34,15 @@ export const Styled_ProfileSectionPortrait = Styled.div`
     position: absolute;
     top: 0;
     left: 0;
+
+    background-color: green;
+
+    /* background: linear-gradient(-30deg, #f4f5f720 0%, #f4f5f700 70%); */
+    /* backdrop-filter: blur(10px); */
+
+    transform-style: preserve-3d;
+    transform: rotateY(calc((90deg * var(--deg)) - 45deg)) translateZ(0px);
+    /* transform: rotateY(50deg); */
   }
 `;
 
@@ -48,9 +57,16 @@ export const Styled_ProfileSectionPortraitAvatar = Styled.div`
 export const Styled_ProfileSectionPortraitDJ = Styled.div`
   height: 100%;
   width: 100%;
-  background-image: url(${DJ});
+  /* background-image: url(${DJ}); */
   background-repeat: no-repeat;
   background-size: cover;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 export const Styled_ProfileSectionPortraitGame = Styled.div`
@@ -64,7 +80,7 @@ export const Styled_ProfileSectionPortraitGame = Styled.div`
 export const Styled_ProfileSectionPortraitRingfit = Styled.div`
   height: 100%;
   width: 100%;
-  background-image: url(${Ringfit});
+  /* background-image: url(${Ringfit}); */
   background-repeat: no-repeat;
   background-size: cover;
 `;
