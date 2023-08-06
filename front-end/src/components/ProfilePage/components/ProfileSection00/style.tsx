@@ -24,6 +24,7 @@ export const Styled_ProfileSectionLineBox = Styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 2000;
 
   /* background-color: red; */
   overflow: hidden;
