@@ -18,7 +18,7 @@ export const ProfileSectionPortrait = () => {
       <Styled_ProfileSectionPortraitSuit style={{ '--deg': 3 } as CSSProperties} />
       <Styled_ProfileSectionPortraitDJ style={{ '--deg': 0 } as CSSProperties} />
       <Styled_ProfileSectionPortraitRingfit style={{ '--deg': 1 } as CSSProperties} />
-      {/* <Styled_ProfileSectionPortraitGame style={{ '--deg': 2 } as CSSProperties} /> */}
+      <Styled_ProfileSectionPortraitGame style={{ '--deg': 2 } as CSSProperties} />
     </Styled_ProfileSectionPortrait>
   );
 };

@@ -26,7 +26,7 @@ export const ProfileSection00 = ({ isActive }: propsInf) => {
       {isActive ? (
         <Styled_ProfileSectionLineBox>
           <Styled_ProfileSectionLine01 className="profile-section-line 01">
-            안녕하세요!{isActive ? 'true' : 'false'}
+            안녕하세요!
           </Styled_ProfileSectionLine01>
           <Styled_ProfileSectionLine02 className="profile-section-line 02">
             <ProfileSectionLabel /> 개발자

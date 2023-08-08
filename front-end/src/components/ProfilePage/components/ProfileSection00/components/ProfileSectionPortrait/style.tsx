@@ -11,19 +11,19 @@ import Suit from './assets/PortraitSuit.png';
 // -- Init
 const rollRight = keyframes`
   0% {
-    transform: rotateX(10deg) rotateY(5deg);
+    transform: rotateX(10deg) rotateY(0deg);
   }
   25% {
-    transform: rotateX(10deg) rotateY(95deg);
+    transform: rotateX(10deg) rotateY(90deg);
   }
   50% {
-    transform: rotateX(10deg) rotateY(185deg);
+    transform: rotateX(10deg) rotateY(180deg);
   }
   75% {
-    transform: rotateX(10deg) rotateY(275deg);
+    transform: rotateX(10deg) rotateY(270deg);
   }
   100% {
-    transform: rotateX(10deg) rotateY(365deg);
+    transform: rotateX(10deg) rotateY(360deg);
   }
 `;
 
@@ -44,9 +44,9 @@ export const Styled_ProfileSectionPortrait = Styled.div`
     left: 0;
     height: 100%;
     width: 100%;
-    background: radial-gradient(#f4f5f700 50%, #f4f5f750 100%);
-    backdrop-filter: blur(10px);
-    /* backface-visibility: hidden; */
+    /* background: radial-gradient(#f4f5f700 50%, #f4f5f750 100%); */
+    /* backdrop-filter: blur(10px); */
+    backface-visibility: hidden;
 
     transform-style: preserve-3d;
     transform: rotateY(calc(90deg * var(--deg))) translateZ(40.5vh);
