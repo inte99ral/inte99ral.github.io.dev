@@ -19,7 +19,7 @@ export const Footer = () => {
   return (
     <Styled_Footer className="footer">
       {isDark ? <Styled_FooterLogoDark /> : <Styled_FooterLogoLight />}
-      <Styled_FooterLogoAnnotation>There&#39;s no vector in life</Styled_FooterLogoAnnotation>
+      <Styled_FooterLogoAnnotation>There&#39;s no vector in our lives</Styled_FooterLogoAnnotation>
     </Styled_Footer>
   );
 };
