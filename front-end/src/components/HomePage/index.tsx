@@ -6,8 +6,8 @@ import { test } from 'api/rest';
 import { Styled_HomePage, Styled_HomePageSign, Styled_HomePageSignIcon } from './style';
 
 // -- Components
-// import { HomeBanner } from './components/HomeBanner';
-// import { HomeMain } from './components/HomeMain';
+import { HomeBanner } from './components/HomeBanner';
+import { HomeMain } from './components/HomeMain';
 
 export const HomePage = () => {
   // -- Init
@@ -24,12 +24,8 @@ export const HomePage = () => {
   // -- Return
   return (
     <Styled_HomePage className="home-page">
-      {/* <HomeBanner />
-      <HomeMain /> */}
-      <Styled_HomePageSign className="outer" onClick={handleClick}>
-        <Styled_HomePageSignIcon />
-        <div>{getTest ? getTest : '😢 개선 중 입니다'}</div>
-      </Styled_HomePageSign>
+      <HomeBanner />
+      <HomeMain />
     </Styled_HomePage>
   );
 };
