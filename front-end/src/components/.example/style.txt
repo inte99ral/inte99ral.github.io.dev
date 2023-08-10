@@ -1,0 +1,12 @@
+// -- API & Library
+import Styled from 'styled-components';
+
+// -- Asset
+
+// -- Init
+
+// -- Export
+export const Styled_Example = Styled.div`
+    & div {
+    }
+`;

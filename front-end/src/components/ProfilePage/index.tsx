@@ -13,6 +13,7 @@ import { ProfileSection01 } from './components/ProfileSection01';
 import { ProfileSection02 } from './components/ProfileSection02';
 import { ProfileSection03 } from './components/ProfileSection03';
 import { ProfileSection04 } from './components/ProfileSection04';
+import { ProfileSection05 } from './components/ProfileSection05';
 
 export const ProfilePage = () => {
   // -- Init
@@ -105,6 +106,7 @@ export const ProfilePage = () => {
       <ProfileSection02 isActive={scrollState == 2} />
       <ProfileSection03 isActive={scrollState == 3} />
       <ProfileSection04 isActive={scrollState == 4} />
+      <ProfileSection05 isActive={scrollState == 5} />
     </Styled_ProfilePage>
   );
 };
