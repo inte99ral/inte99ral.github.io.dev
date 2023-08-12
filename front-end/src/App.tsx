@@ -11,6 +11,7 @@ import './theme.scss';
 import { Sidebar } from 'components/Sidebar';
 import { Footer } from 'components/Footer';
 
+import { Example } from 'components/.example';
 import { ProfilePage } from 'components/ProfilePage';
 import { HomePage } from 'components/HomePage';
 import { BlogPage } from 'components/BlogPage';

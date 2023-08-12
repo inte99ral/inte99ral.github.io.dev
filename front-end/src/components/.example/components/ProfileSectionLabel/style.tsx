@@ -46,7 +46,6 @@ export const Styled_ProfileSectionLabel = Styled.div`
 
     transform: rotateY(90deg) translateZ(calc((0px - var(--size-font-lg) - 1.5rem) / 2));
     background: radial-gradient(#f4f5f700 30%, #f4f5f720 100%);
-    /* background: radial-gradient(var(--color-blur) 30%, var(--color-blur) 100%); */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
@@ -62,8 +61,8 @@ export const Styled_ProfileSectionLabel = Styled.div`
     text-align: center;
     transform-style: preserve-3d;
     transform: rotateX(calc(90deg * var(--deg))) translateZ(calc((var(--size-font-lg) + 1.5rem) / 2));
+    /* backface-visibility: hidden; */
     background: linear-gradient(-30deg, #f4f5f720 0%, #f4f5f700 70%);
-    /* background: linear-gradient(-30deg, var(--color-blur) 0%, var(--color-blur) 70%); */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   } 
