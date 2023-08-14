@@ -7,7 +7,7 @@ import BG from './asset/image/LW001.jpg';
 // Export
 export const Styled_HomeBanner = Styled.div`
   min-height: 30rem;
-  width: 100%;
+  width: 120vw;
 
   display: flex;
   justify-content: center;
