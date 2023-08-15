@@ -2,11 +2,11 @@
 import Styled from 'styled-components';
 
 // Asset
-import BG from './asset/image/LW001.jpg';
+import BG from './asset/image/LowPolyPatternBG.jpg';
 
 // Export
 export const Styled_HomeBanner = Styled.div`
-  min-height: 30rem;
+  min-height: 20rem;
   width: 120vw;
 
   display: flex;
@@ -30,5 +30,33 @@ export const Styled_HomeBannerBG = Styled.div`
 
   mix-blend-mode: screen;
   filter: contrast(1.2);
-  opacity: 0.5;
+  opacity: 0.6;
+`;
+
+export const Styled_HomeBannerOuterHole = Styled.div`
+  height: 16rem;
+  width: 16rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background-color: var(--color-main);
+`;
+
+export const Styled_HomeBannerInnerHole = Styled.div`
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+  height: 14rem;
+  width: 14rem;
+
+  border-radius: 50%;
+
+  background-color: var(--color-sub);
+`;
+
+export const Styled_HomeBannerLogo = Styled.div`
+
 `;

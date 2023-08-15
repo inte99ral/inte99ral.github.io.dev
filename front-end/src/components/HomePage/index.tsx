@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { test } from 'api/rest';
 
 // -- Styles
-import { Styled_HomePage, Styled_HomePageSign, Styled_HomePageSignIcon } from './style';
+import { Styled_HomePage } from './style';
 
 // -- Components
 import { HomeBanner } from './components/HomeBanner';
