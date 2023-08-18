@@ -58,5 +58,8 @@ export const Styled_HomeBannerInnerHole = Styled.div`
 `;
 
 export const Styled_HomeBannerLogo = Styled.div`
+  height: 200px;
+  width: 200px;
 
+  background: red;
 `;
