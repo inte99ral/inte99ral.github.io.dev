@@ -1,7 +1,7 @@
 //>> API & Library
 import Styled from 'styled-components';
 
-export const Styled_HomeMain = Styled.div`
+export const Styled_Main = Styled.div`
   position: relative;
 
   margin-top: 4rem;

@@ -6,8 +6,8 @@ import { test } from 'api/rest';
 import { Styled_HomePage } from './style';
 
 // -- Components
-import { HomeBanner } from './components/HomeBanner';
-import { HomeMain } from './components/HomeMain';
+import { Banner } from './components/Banner';
+import { Main } from './components/Main';
 
 export const HomePage = () => {
   // -- Init
@@ -24,8 +24,8 @@ export const HomePage = () => {
   // -- Return
   return (
     <Styled_HomePage className="home-page">
-      <HomeBanner />
-      <HomeMain />
+      <Banner />
+      <Main />
     </Styled_HomePage>
   );
 };
