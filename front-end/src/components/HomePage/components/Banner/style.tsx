@@ -55,13 +55,8 @@ export const Styled_BannerInnerHole = Styled.div`
   border-radius: 50%;
 
   display: flex;
+  justify-content: center;
+  align-items: center;
 
   background-color: var(--color-sub);
-`;
-
-export const Styled_BannerLogo = Styled.div`
-  height: 200px;
-  width: 200px;
-
-  background: red;
 `;

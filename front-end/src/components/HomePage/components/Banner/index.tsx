@@ -10,7 +10,6 @@ import {
   Styled_BannerBG,
   Styled_BannerOuterHole,
   Styled_BannerInnerHole,
-  Styled_BannerLogo,
 } from './style';
 
 export const Banner = () => {
