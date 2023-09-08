@@ -32,9 +32,9 @@
 // -- Variable
 :root {
   --color-theme: #44546a;
-  --size-font-lg: clamp(1.5rem, 4vw, 3rem);
-  --size-font-md: clamp(1.5rem, 3vw, 2rem);
-  --size-font-sm: clamp(0.5rem, 2vw, 1rem);
+  --size-font-lg: clamp(1.6rem, 4vw, 4rem);
+  --size-font-md: clamp(1.3rem, 3vw, 3rem);
+  --size-font-sm: clamp(1rem, 2vw, 2rem);
 }
 
 .light {
@@ -61,11 +61,11 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-size-md);
+  font-size: var(--size-font-md);
 }
 
 h3 {
-  font-size: var(--font-size-sm);
+  font-size: var(--size-font-sm);
 }
 
 // -- Styles
