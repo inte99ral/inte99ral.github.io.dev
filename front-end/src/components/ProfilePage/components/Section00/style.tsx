@@ -7,11 +7,10 @@ export const Styled_Section = Styled.div`
   padding-left: 12%;
 
   display: flex;
-  // justify-content: center;
   align-items: center;
 
-  // background: var(--color-sub);
-  background: red;
+  background: var(--color-sub);
+  // background: red;
 `;
 
 export const Styled_SectionContent = Styled.div`
