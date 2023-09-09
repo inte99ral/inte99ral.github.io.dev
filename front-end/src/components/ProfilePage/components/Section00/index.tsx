@@ -4,7 +4,12 @@ import React from 'react';
 // -- Component
 
 // -- Style
-import { Styled_Section, Styled_SectionContent, Styled_SectionContentTextFX } from './style';
+import {
+  Styled_Section,
+  Styled_SectionContent,
+  Styled_SectionContentTextFX,
+  Styled_SectionContentBtnbox,
+} from './style';
 
 // -- Interface & Type
 interface propsInf {
@@ -30,14 +35,14 @@ export const Section00 = ({ isActive }: propsInf) => {
               dignissimos. Quo,
             </p>
 
-            <div className="btn-box">
+            <Styled_SectionContentBtnbox className="btn-box">
               <a href="#" className="btn">
                 Hire Me
               </a>
               <a href="#" className="btn">
                 Let&#39;s Talk
               </a>
-            </div>
+            </Styled_SectionContentBtnbox>
           </Styled_SectionContent>
         </Styled_Section>
       ) : (

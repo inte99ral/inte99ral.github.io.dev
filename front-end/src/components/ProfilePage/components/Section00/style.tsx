@@ -25,3 +25,7 @@ export const Styled_SectionContentTextFX = Styled.div`
     -webkit-text-stroke: .7px var(--color-reverse);
   }
 `;
+
+export const Styled_SectionContentBtnbox = Styled.div`
+  
+`;
