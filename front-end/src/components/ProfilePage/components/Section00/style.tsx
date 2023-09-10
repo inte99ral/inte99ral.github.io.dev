@@ -27,5 +27,9 @@ export const Styled_SectionContentTextFX = Styled.div`
 `;
 
 export const Styled_SectionContentBtnbox = Styled.div`
-  
+  height: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
 `;
