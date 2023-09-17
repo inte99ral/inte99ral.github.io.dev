@@ -445,19 +445,34 @@
 
 - ### react 디자인 준비
 
-  <hr />
+    <hr />
 
   - 둘 중 택 1
+
     - node-sass 적용 `npm install node-sass`
     - dart sass 적용 `npm install -g sass`
 
-  <br />
+    <br />
 
   - react-icons 적용 `npm install react-icons --save`
-    - [react-icons 사이트](https://react-icons.github.io/react-icons/)
-    - 아이콘을 직접써도 되나 어지간한건 리액트 아이콘에 다 있다.
 
-  <br />
+    - [react-icons 사이트](https://react-icons.github.io/react-icons/)
+    - 아이콘을 매번 직접 찾아서 써도 되나 어지간한건 리액트 아이콘에 다 있다.
+    - 사용 예시
+
+      ```javascript
+      import { AiFillSetting } from "react-icons/ai";
+
+      export const Sidebar = () => {
+        return (
+          <>
+            <AiFillSetting />
+          </>
+        );
+      };
+      ```
+
+    <br />
 
   - `src/theme.scss` 를 만들어 작성
 
@@ -518,7 +533,7 @@
       export default App;
       ```
 
-  <br />
+    <br />
 
   - 스타일 컴포넌트 적용하기
 
