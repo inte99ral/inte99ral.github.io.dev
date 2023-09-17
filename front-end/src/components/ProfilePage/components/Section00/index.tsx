@@ -9,6 +9,7 @@ import {
   Styled_SectionContent,
   Styled_SectionContentTextFX,
   Styled_SectionContentBtnbox,
+  Styled_SectionContentLinkbox,
 } from './style';
 
 // -- Interface & Type
@@ -43,6 +44,9 @@ export const Section00 = ({ isActive }: propsInf) => {
                 Let&#39;s Talk
               </a>
             </Styled_SectionContentBtnbox>
+            <Styled_SectionContentLinkbox>
+              <a href="#" className="btn"></a>
+            </Styled_SectionContentLinkbox>
           </Styled_SectionContent>
         </Styled_Section>
       ) : (
