@@ -3,7 +3,7 @@ import React, { MouseEvent, useState } from 'react';
 import { AiFillHome, AiFillGithub, AiFillFolder, AiFillSetting } from 'react-icons/ai';
 import { BsPersonCircle, BsFillPersonFill } from 'react-icons/bs';
 
-// -- Styles
+// -- Style
 import {
   Styled_SidebarBackground,
   Styled_Sidebar,
@@ -12,7 +12,7 @@ import {
   Styled_Icon,
 } from './style';
 
-// -- Components
+// -- Component
 import { SidebarMenu } from './components/SidebarMenu';
 import { SidebarOption } from './components/SidebarOption';
 
@@ -20,7 +20,7 @@ export const Sidebar = () => {
   // -- Init
   const [isActive, setIsActive] = useState(false);
 
-  // Methods
+  // -- Method
   const closeSidebar = (e: MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
