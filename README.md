@@ -453,7 +453,9 @@
 
   <br />
 
-  - react-icon 적용 `npm install react-icons --save`
+  - react-icons 적용 `npm install react-icons --save`
+    - [react-icons 사이트](https://react-icons.github.io/react-icons/)
+    - 아이콘을 직접써도 되나 어지간한건 리액트 아이콘에 다 있다.
 
   <br />
 
