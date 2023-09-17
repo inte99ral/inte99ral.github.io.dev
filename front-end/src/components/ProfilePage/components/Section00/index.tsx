@@ -1,5 +1,6 @@
 // -- API & Library
 import React from 'react';
+import { BsGithub } from 'react-icons/bs';
 
 // -- Component
 
@@ -41,13 +42,21 @@ export const Section00 = ({ isActive }: propsInf) => {
                 Hire Me
               </a>
               <a href="#" className="btn">
-                Let&#39;s Talk
+                &#39;Or Not
               </a>
             </Styled_SectionContentBtnbox>
-            <Styled_SectionContentLinkbox>
-              <a href="#" className="btn"></a>
-            </Styled_SectionContentLinkbox>
           </Styled_SectionContent>
+          <Styled_SectionContentLinkbox>
+            <a href="#" className="btn">
+              <BsGithub />
+            </a>
+            <a href="#" className="btn">
+              <BsGithub />
+            </a>
+            <a href="#" className="btn">
+              <BsGithub />
+            </a>
+          </Styled_SectionContentLinkbox>
         </Styled_Section>
       ) : (
         <Styled_Section className="section" />
