@@ -10,7 +10,8 @@ import {
   Styled_SectionContent,
   Styled_SectionContentTextFX,
   Styled_SectionContentBtnbox,
-  Styled_SectionContentLinkbox,
+  Styled_SectionLinkbox,
+  Styled_SectionImgbox,
 } from './style';
 
 // -- Interface & Type
@@ -37,26 +38,23 @@ export const Section00 = ({ isActive }: propsInf) => {
               dignissimos. Quo,
             </p>
 
-            <Styled_SectionContentBtnbox className="btn-box">
-              <a href="#" className="btn">
-                Hire Me
-              </a>
-              <a href="#" className="btn">
-                &#39;Or Not
-              </a>
+            <Styled_SectionContentBtnbox className="section-content-btn-box">
+              <a href="#">Hire Me</a>
+              <a href="#">&#39;Or Not</a>
             </Styled_SectionContentBtnbox>
           </Styled_SectionContent>
-          <Styled_SectionContentLinkbox>
-            <a href="#" className="btn">
+          <Styled_SectionLinkbox className="section-link-box">
+            <a href="#">
               <BsGithub />
             </a>
-            <a href="#" className="btn">
+            <a href="#">
               <BsGithub />
             </a>
-            <a href="#" className="btn">
+            <a href="#">
               <BsGithub />
             </a>
-          </Styled_SectionContentLinkbox>
+          </Styled_SectionLinkbox>
+          <Styled_SectionImgbox className="section-img-box"></Styled_SectionImgbox>
         </Styled_Section>
       ) : (
         <Styled_Section className="section" />

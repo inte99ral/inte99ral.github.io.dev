@@ -92,7 +92,7 @@ export const Styled_SectionContentBtnbox = Styled.div`
   }
 `;
 
-export const Styled_SectionContentLinkbox = Styled.div`
+export const Styled_SectionLinkbox = Styled.div`
   position: absolute;
   bottom: 1rem;
   
@@ -140,4 +140,16 @@ export const Styled_SectionContentLinkbox = Styled.div`
   & a:hover::before {
     width: 100%;
   }
+`;
+
+export const Styled_SectionImgbox = Styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 100%;
+  width: 45%;
+
+  background: transparent;
+  border: 2px solid red;
 `;
