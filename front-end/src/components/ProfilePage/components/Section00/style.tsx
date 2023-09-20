@@ -152,4 +152,6 @@ export const Styled_SectionImgbox = Styled.div`
 
   background: transparent;
   border: 2px solid red;
+
+  background: red;
 `;
