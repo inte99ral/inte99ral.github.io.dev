@@ -1,6 +1,9 @@
 // -- API & Library
 import Styled from 'styled-components';
 
+// -- Asset
+import PortraitSuit from './assets/images/PortraitSuit.png';
+
 export const Styled_Section = Styled.div`
   min-height: 100vh;
   width: 120%;
@@ -145,13 +148,24 @@ export const Styled_SectionLinkbox = Styled.div`
 export const Styled_SectionImgbox = Styled.div`
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10%;
 
   height: 100%;
-  width: 45%;
+  width: 40%;
 
   background: transparent;
-  border: 2px solid red;
 
-  background: red;
+  background-image: url(${PortraitSuit});
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  // border: 2px solid red;
+
+  transition: 0.5s;
+
+
+
+  &:hover {
+    opacity: 0.5;
+  }
 `;
