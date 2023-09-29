@@ -38,7 +38,7 @@
 
 ## TODO: 해야할 목록
 
-- [ ] [프로필 페이지 섹션 1](front-end\src\components\ProfilePage\components\ProfileSection01\index.tsx)
+- [ ] [프로필 페이지 섹션 1 카드 디자인](front-end\src\components\ProfilePage\components\Section01\components\sectionCard\index.tsx)
 
 <br />
 
