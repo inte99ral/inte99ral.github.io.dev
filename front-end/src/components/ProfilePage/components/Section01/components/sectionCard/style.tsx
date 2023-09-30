@@ -20,8 +20,14 @@ export const Styled_SectionCard = Styled.div`
   & .content {
     padding: 1rem;
     text-align: center;
-    // transform:
+    transform: translateY(100px);
+    opacity: 0;
     transition: 0.5s;
+  }
+
+  &:hover .content {
+    transform: translateY(0px);
+    opacity: 1;
   }
 
   & .content h2 {
