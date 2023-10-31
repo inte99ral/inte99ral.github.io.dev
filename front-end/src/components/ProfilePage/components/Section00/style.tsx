@@ -145,6 +145,45 @@ export const Styled_SectionLinkbox = Styled.div`
   }
 `;
 
+export const Styled_SectionCardbox = Styled.div`
+  position: absolute;
+  top: 0;
+  right: 8%;
+
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: red;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#f00, #f0f);
+    clip-path: circle(30% at right 70%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(20% at 100% 10%);
+  }
+`;
+
+// -- 삭제 예정
 export const Styled_SectionImgbox = Styled.div`
   position: absolute;
   top: 0;

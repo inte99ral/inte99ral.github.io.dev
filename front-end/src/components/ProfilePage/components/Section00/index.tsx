@@ -3,6 +3,7 @@ import React from 'react';
 import { BsGithub } from 'react-icons/bs';
 
 // -- Component
+import { SectionCard } from './components/sectionCard';
 
 // -- Style
 import {
@@ -11,6 +12,7 @@ import {
   Styled_SectionContentTextFX,
   Styled_SectionContentBtnbox,
   Styled_SectionLinkbox,
+  Styled_SectionCardbox,
   Styled_SectionImgbox,
 } from './style';
 
@@ -43,7 +45,7 @@ export const Section00 = ({ isActive }: propsInf) => {
               <a href="#">&#39;Or Not</a>
             </Styled_SectionContentBtnbox>
           </Styled_SectionContent>
-          <Styled_SectionLinkbox className="section-link-box">
+          <Styled_SectionLinkbox className="section-linkbox">
             <a href="#">
               <BsGithub />
             </a>
@@ -54,7 +56,21 @@ export const Section00 = ({ isActive }: propsInf) => {
               <BsGithub />
             </a>
           </Styled_SectionLinkbox>
-          <Styled_SectionImgbox className="section-img-box"></Styled_SectionImgbox>
+          <Styled_SectionCardbox className="section-cardbox">
+            <div>테스트</div>
+            {/* <SectionCard>
+              <div className="content">
+                <h2>02</h2>
+                <h3>Card Two</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae esse, quam
+                  asperiores accusantium doloribus id assumenda suscipit perferendis! Illum natus
+                  quam nisi fuga nesciunt maiores vitae expedita culpa soluta earum!
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </SectionCard> */}
+          </Styled_SectionCardbox>
         </Styled_Section>
       ) : (
         <Styled_Section className="section" />

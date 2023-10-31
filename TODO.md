@@ -32,6 +32,7 @@
 - [x] 프로필 페이지 섹션 1 3D 액션 | 2023/7/20
 - [x] 프로필 페이지 섹션 2 | 2023/9/27
 - [x] 프로필 페이지 섹션 1 카드 디자인 | 2023/9/30
+- [x] 2023-10-31 | 프로필 페이지 섹션 1 카드: 바닐라-틸트 적용
 
 <br />
 
@@ -39,7 +40,8 @@
 
 ## TODO: 해야할 목록
 
-- [ ] [프로필 페이지 섹션 1 카드: 바닐라-틸트 코드 ts 컨버팅](front-end\src\api\vanilla-tilt\index.ts)
+- [ ] [프로필 페이지 섹션 1 스타일 수정](front-end\src\components\ProfilePage\components\Section00\style.tsx)
+- [ ] [프로필 페이지 디자인](https://youtu.be/sQoiM7i5Nqc)
 
 <br />
 
