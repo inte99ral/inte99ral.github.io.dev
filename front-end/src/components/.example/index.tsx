@@ -9,8 +9,11 @@ import React from 'react';
 import { Styled_Example } from './style';
 
 // -- Interface & Type
+interface propsInf {
+  isActive: boolean;
+}
 
-export const Example = () => {
+export const Example = ({ isActive }: propsInf) => {
   // -- Init
 
   // -- Method

@@ -151,23 +151,27 @@ export const Styled_SectionCardbox = Styled.div`
   right: 8%;
 
   height: 100%;
-  width: 50%;
+  width: clamp(19.2rem,48vw,48rem);
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background: red;
+  // background: gray;
+  border: 0.1em red solid;
+  overflow: hidden;
 
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: -10%;
+    right: 10%;
 
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
     background: linear-gradient(#f00, #f0f);
-    clip-path: circle(30% at right 70%);
+    // clip-path: circle(30% at 60% 90%);
   }
 
   &::after {
@@ -179,8 +183,20 @@ export const Styled_SectionCardbox = Styled.div`
     height: 100%;
     width: 100%;
     background: linear-gradient(#2196f3, #e91e63);
-    clip-path: circle(20% at 100% 10%);
+    clip-path: circle(20% at 90% 60%);
   }
+`;
+
+export const Styled_SectionCardBubble0 = Styled.div`
+  position: absolute;
+  bottom: -10%;
+  right: 10%;
+
+  width: 50%;
+  aspect-ratio: 1 / 1;
+
+  border-radius: 50%;
+  background: linear-gradient(#f00, #f0f);
 `;
 
 // -- 삭제 예정

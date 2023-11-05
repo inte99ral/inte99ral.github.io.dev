@@ -6,6 +6,7 @@ import React from 'react';
 // -- Component
 
 // -- Style
+import { Styled_Example } from './style';
 
 // -- Interface & Type
 
@@ -17,5 +18,9 @@ export const Example = () => {
   // -- Hook
 
   // -- Return
-  return <></>;
+  return (
+    <Styled_Example>
+      <div>예시용 페이지 입니다.</div>
+    </Styled_Example>
+  );
 };
