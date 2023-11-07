@@ -3,7 +3,7 @@ import React from 'react';
 import { BsGithub } from 'react-icons/bs';
 
 // -- Component
-import { SectionCard } from './components/sectionCard';
+import { SectionCardbox } from './components/sectionCardbox';
 
 // -- Style
 import {
