@@ -1,9 +1,6 @@
 // -- API & Library
 import Styled from 'styled-components';
 
-// -- Asset
-import PortraitSuit from './assets/images/PortraitSuit.png';
-
 export const Styled_Section = Styled.div`
   min-height: 100vh;
   width: 120%;
@@ -145,6 +142,8 @@ export const Styled_SectionLinkbox = Styled.div`
   }
 `;
 
+// -- 삭제 예정
+
 export const Styled_SectionCardbox = Styled.div`
   position: absolute;
   top: 0;
@@ -199,7 +198,6 @@ export const Styled_SectionCardBubble0 = Styled.div`
   background: linear-gradient(#f00, #f0f);
 `;
 
-// -- 삭제 예정
 export const Styled_SectionImgbox = Styled.div`
   position: absolute;
   top: 0;
@@ -210,7 +208,7 @@ export const Styled_SectionImgbox = Styled.div`
 
   background: transparent;
 
-  background-image: url(${PortraitSuit});
+  // background-image: url();
   background-repeat: no-repeat;
   background-size: cover;
 

@@ -8,9 +8,9 @@ interface propsInf {
 }
 
 // -- Style
-import { Styled_SectionCard } from './style';
+import { Styled_Card } from './style';
 
-export const SectionCard = ({ children }: propsInf) => {
+export const Card = ({ children }: propsInf) => {
   // -- Hooks
   useEffect(() => {
     console.log('awake');
@@ -23,5 +23,5 @@ export const SectionCard = ({ children }: propsInf) => {
   }, []);
 
   // -- Return
-  return <Styled_SectionCard className="section-card">{children}</Styled_SectionCard>;
+  return <Styled_Card className="section-card">{children}</Styled_Card>;
 };

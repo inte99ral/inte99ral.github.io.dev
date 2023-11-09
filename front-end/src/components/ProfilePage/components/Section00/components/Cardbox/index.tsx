@@ -4,14 +4,14 @@ import React from 'react';
 // -- Asset
 
 // -- Component
-import { SectionCard } from './components/Card';
+import { Card } from './components/Card';
 
 // -- Style
-import { Styled_Example } from './style';
+import { Styled_Cardbox, Styled_CardboxBubble0, Styled_CardboxBubble1 } from './style';
 
 // -- Interface & Type
 
-export const SectionCardbox = () => {
+export const Cardbox = () => {
   // -- Init
 
   // -- Method
@@ -20,8 +20,21 @@ export const SectionCardbox = () => {
 
   // -- Return
   return (
-    <Styled_Example>
-      <div>예시용 페이지 입니다.</div>
-    </Styled_Example>
+    <Styled_Cardbox className="profile-section-00-cardbox">
+      <Styled_CardboxBubble0 />
+      <Styled_CardboxBubble1 />
+      <Card>
+        <div className="content">
+          <h2>02</h2>
+          <h3>Card Two</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae esse, quam asperiores
+            accusantium doloribus id assumenda suscipit perferendis! Illum natus quam nisi fuga
+            nesciunt maiores vitae expedita culpa soluta earum!
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </Card>
+    </Styled_Cardbox>
   );
 };
