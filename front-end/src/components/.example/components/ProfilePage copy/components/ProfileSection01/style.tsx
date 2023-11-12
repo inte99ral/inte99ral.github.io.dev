@@ -1,9 +1,6 @@
 // -- API & Library
 import Styled from 'styled-components';
 
-// -- Assets
-import BG from './assets/image/BG.jpg';
-
 export const Styled_ProfileSection = Styled.div`
   min-height: 100vh;
   width: 120%;

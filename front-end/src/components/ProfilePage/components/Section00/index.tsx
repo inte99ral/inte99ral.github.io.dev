@@ -26,9 +26,9 @@ export const Section00 = ({ isActive }: propsInf) => {
   return (
     <>
       {isActive ? (
-        <Styled_Section className="section">
+        <Styled_Section className="profile-section">
           <Cardbox />
-          <Styled_SectionContent className="section-content">
+          <Styled_SectionContent className="profile-section-content">
             <h1>
               안녕하세요, <span>박준혁</span>입니다.
             </h1>
@@ -46,7 +46,7 @@ export const Section00 = ({ isActive }: propsInf) => {
               <a href="#">&#39;Or Not</a>
             </Styled_SectionContentBtnbox>
           </Styled_SectionContent>
-          <Styled_SectionLinkbox className="section-linkbox">
+          <Styled_SectionLinkbox className="profile-section-linkbox">
             <a href="#">
               <BsGithub />
             </a>
