@@ -6,7 +6,7 @@ import Styled from 'styled-components';
 // -- Init
 
 // -- Export
-export const Styled_ProfilePage = Styled.div`
+export const Styled_Example = Styled.div`
   min-height: 100vh;
   width: 100%;
   flex-grow: 1;

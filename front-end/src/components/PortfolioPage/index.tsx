@@ -1,19 +1,21 @@
 // -- API & Library
-import React from 'react';
+import React, { MouseEvent, useEffect, useState } from 'react';
+import { useRecoilValue } from 'recoil';
+import { appState } from 'api/recoil/store';
 
 // -- Asset
 
 // -- Component
 
 // -- Style
-import { Styled_Example } from './style';
+import { Styled_ProfilePage } from './style';
 
 // -- Interface & Type
 interface propsInf {
   isActive: boolean;
 }
 
-export const Example = ({ isActive }: propsInf) => {
+export const PortfolioPage = ({ isActive }: propsInf) => {
   // -- Init
 
   // -- Method
@@ -22,8 +24,8 @@ export const Example = ({ isActive }: propsInf) => {
 
   // -- Return
   return (
-    <Styled_Example>
+    <Styled_ProfilePage>
       <div>예시용 페이지 입니다.</div>
-    </Styled_Example>
+    </Styled_ProfilePage>
   );
 };
