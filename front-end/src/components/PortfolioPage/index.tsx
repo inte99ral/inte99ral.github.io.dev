@@ -10,12 +10,7 @@ import { appState } from 'api/recoil/store';
 // -- Style
 import { Styled_ProfilePage } from './style';
 
-// -- Interface & Type
-interface propsInf {
-  isActive: boolean;
-}
-
-export const PortfolioPage = ({ isActive }: propsInf) => {
+export const PortfolioPage = () => {
   // -- Init
 
   // -- Method

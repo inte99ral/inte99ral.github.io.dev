@@ -11,7 +11,7 @@ import './theme.scss';
 import { Sidebar } from 'components/Sidebar';
 import { Footer } from 'components/Footer';
 
-import { Example } from 'components/.example';
+import { PortfolioPage } from 'components/PortfolioPage';
 import { ProfilePage } from 'components/ProfilePage';
 import { HomePage } from 'components/HomePage';
 import { BlogPage } from 'components/BlogPage';
@@ -39,8 +39,8 @@ const App = () => {
     <div ref={appRef} id="app" className={`app ${isDark ? 'dark' : 'light'}`}>
       <Sidebar />
       <Routes>
-        <Route path="/" element={<Navigate replace to="/profile" />} />
-        <Route path="/profile/*" element={<ProfilePage />} />
+        <Route path="/" element={<Navigate replace to="/profolio" />} />
+        <Route path="/profolio/*" element={<PortfolioPage />} />
         <Route path="/home/*" element={<HomePage />} />
         <Route path="/blog/*" element={<BlogPage />} />
         <Route path="/error/*" element={<ErrorPage />} />
