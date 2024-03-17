@@ -9,12 +9,9 @@ import './theme.scss';
 
 // -- Components
 import { Sidebar } from 'components/Sidebar';
-import { Footer } from 'components/Footer';
 
 import { PortfolioPage } from 'components/PortfolioPage';
 import { ProfilePage } from 'components/ProfilePage';
-import { HomePage } from 'components/HomePage';
-import { BlogPage } from 'components/BlogPage';
 import { ErrorPage } from 'components/ErrorPage';
 
 const App = () => {
@@ -39,14 +36,12 @@ const App = () => {
     <div ref={appRef} id="app" className={`app ${isDark ? 'dark' : 'light'}`}>
       <Sidebar />
       <Routes>
-        <Route path="/" element={<Navigate replace to="/profolio" />} />
-        <Route path="/profolio/*" element={<PortfolioPage />} />
-        <Route path="/home/*" element={<HomePage />} />
-        <Route path="/blog/*" element={<BlogPage />} />
+        <Route path="/" element={<Navigate replace to="/portfolio" />} />
+        <Route path="/portfolio/*" element={<PortfolioPage />} />
+        <Route path="/home/*" element={<ProfilePage />} />
         <Route path="/error/*" element={<ErrorPage />} />
         <Route path="/*" element={<Navigate replace to="/error" />} />
       </Routes>
-      <Footer />
     </div>
   );
 };
