@@ -13,6 +13,7 @@ import { Sidebar } from 'components/Sidebar';
 import { PortfolioPage } from 'components/PortfolioPage';
 import { ProfilePage } from 'components/ProfilePage';
 import { ErrorPage } from 'components/ErrorPage';
+import { PrivacyPage } from 'components/PrivacyPage';
 
 const App = () => {
   // -- Init
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/portfolio/*" element={<PortfolioPage />} />
         <Route path="/home/*" element={<ProfilePage />} />
         <Route path="/error/*" element={<ErrorPage />} />
+        <Route path="/privacy/*" element={<PrivacyPage />} />
         <Route path="/*" element={<Navigate replace to="/error" />} />
       </Routes>
     </div>
