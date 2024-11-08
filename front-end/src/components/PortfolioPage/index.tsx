@@ -8,7 +8,7 @@ import { appState } from 'api/recoil/store';
 // -- Component
 
 // -- Style
-import { Styled_ProfilePage } from './style';
+import { Styled_ProfilePage, Styled_ProfileMain } from './style';
 
 export const PortfolioPage = () => {
   // -- Init
@@ -20,7 +20,7 @@ export const PortfolioPage = () => {
   // -- Return
   return (
     <Styled_ProfilePage>
-      <div>예시용 페이지 입니다.</div>
+      <Styled_ProfileMain href="https://github.com/inte99ral" />
     </Styled_ProfilePage>
   );
 };

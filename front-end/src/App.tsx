@@ -35,14 +35,14 @@ const App = () => {
   // -- Return
   return (
     <div ref={appRef} id="app" className={`app ${isDark ? 'dark' : 'light'}`}>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Routes>
         <Route path="/" element={<Navigate replace to="/portfolio" />} />
         <Route path="/portfolio/*" element={<PortfolioPage />} />
-        <Route path="/home/*" element={<ProfilePage />} />
+        {/* <Route path="/home/*" element={<ProfilePage />} />
         <Route path="/error/*" element={<ErrorPage />} />
-        <Route path="/privacy/*" element={<PrivacyPage />} />
-        <Route path="/*" element={<Navigate replace to="/error" />} />
+        <Route path="/privacy/*" element={<PrivacyPage />} /> */}
+        <Route path="/*" element={<Navigate replace to="/portfolio" />} />
       </Routes>
     </div>
   );
