@@ -1,4 +1,4 @@
-// # src/App.tsx
+// # src/component/HelloPage/HelloPage.tsx
 // ## API & Library ==================================================
 
 import React from 'react';
@@ -7,18 +7,17 @@ import React from 'react';
 // ## Style ==========================================================
 // ## Component ======================================================
 
-import HelloPage from 'component/HelloPage';
-
-const App = () => {
+const HelloPage = () => {
   // ## Hook ===========================================================
   // ## Method =========================================================
   // ## Return =========================================================
 
   return (
-    <div className="app">
-      <HelloPage></HelloPage>
-    </div>
+    <center>
+      <h1>Hello, world!</h1>
+      <h3>front-end : {process.env.REACT_APP_VERSION}</h3>
+    </center>
   );
 };
 
-export default App;
+export default HelloPage;

@@ -1,8 +1,9 @@
-import { ReportHandler } from "web-vitals";
+import { ReportHandler } from 'web-vitals';
 
 export const reportWebVitals = (onPerfEntry?: ReportHandler) => {
+  (async () => console.log(`front-end ${process.env.REACT_APP_VERSION}`))();
   if (onPerfEntry && onPerfEntry instanceof Function) {
-    import("web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       getCLS(onPerfEntry);
       getFID(onPerfEntry);
       getFCP(onPerfEntry);

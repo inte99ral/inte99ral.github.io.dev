@@ -1,0 +1,28 @@
+// # src/theme.scss
+// ## API & Library ==================================================
+// ## Asset ==========================================================
+// ### Font
+// ### Image
+
+// ## Default ========================================================
+// ### Variable
+// ### Animation
+
+// ## Styles =========================================================
+* {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
