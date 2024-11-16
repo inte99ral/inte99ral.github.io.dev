@@ -1,0 +1,46 @@
+/* # src/theme.css */
+
+/* ## font =================================================== */
+
+@font-face {
+  font-family: Koverwatch; /* <-- */
+  src: url(asset/font/koverwatch.ttf); /* <-- */
+}
+
+/* ## Variable =============================================== */
+
+.light {
+  --color-main: #ffffff;
+  --color-reverse: #000000;
+}
+
+.dark {
+  --color-main: #353839;
+  --color-reverse: #ffffff;
+}
+
+/* ## style ================================================== */
+
+* {
+  font-family: Koverwatch; /* <-- */
+  font-size: 64px; /* <-- */
+
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--color-reverse);
+  background-color: var(--color-main);
+}

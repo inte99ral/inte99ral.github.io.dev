@@ -1,166 +1,66 @@
-# 평소대로의 세팅
+- 스타일 컴포넌트 적용하기
 
-- ### react router 주소 세팅
+  - **_( 참고: css를 직접 적용하는 것이 더 편하다고 생각한다면 이 과정은 불필요하다. )_**
+  - 스타일 컴포넌트 `npm install --save styled-components`
+  - 스타일 컴포넌트 타입스크립트 명세서 `npm i --save-dev @types/styled-components`
+  - css 관리와 개발 편의성을 위하여 각 컴포넌트의 디렉토리 구조를 데이터 정보를 담은 `index.tsx` 와 스타일을 적용한 `style.tsx` 로 분리하려고 한다.
 
-  1. 빌드 후, 깃 페이지 링크에서 잘 작동하는 지 확인해보자. 그 외에도 직접 분해해서 필요한 데이터만 가져오는 방법, localstorage 를 쓰는 방법 등 본인에게 적합한 방법을 사용하자.
+  - ```typescript
+    // src/components/pages/HomePage/style.tsx
 
-<br />
+    // API & Library
+    import styled from "styled-components";
 
-- ### react 디자인 준비
+    // Asset
+    import test from "asset/image/test.png";
 
-    <hr />
+    export const StyledPage = styled.div`
+      height: 100vh;
+      width: 100vw;
 
-  - 둘 중 택 1
+      overflow-y: scroll;
 
-    - node-sass 적용 `npm install node-sass`
-    - dart sass 적용 `npm install -g sass`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: url(${test});
+      background-repeat: no-repeat;
+      background-size: cover;
 
-    <br />
-
-  - react-icons 적용 `npm install react-icons --save`
-
-    - [react-icons 사이트](https://react-icons.github.io/react-icons/)
-    - 아이콘을 매번 직접 찾아서 써도 되나 어지간한건 리액트 아이콘에 다 있다.
-    - 사용 예시
-
-      ```javascript
-      import { AiFillSetting } from "react-icons/ai";
-
-      export const Sidebar = () => {
-        return (
-          <>
-            <AiFillSetting />
-          </>
-        );
-      };
-      ```
-
-    <br />
-
-  - `src/theme.scss` 를 만들어 작성
-
-    - 후에 라이트 모드, 다크 모드를 상정하여 만드는 경우
-
-      ```scss
-      :root {
-        --color-theme: #009e73;
+      &::-webkit-scrollbar {
+        width: 10px;
       }
 
-      .light {
-        --color-main: #000000;
-        --color-sub: #000000;
-        --color-reverse: #000000;
+      &::-webkit-scrollbar-thumb {
+        background-color: #000000;
+        background-clip: padding-box;
+        border-radius: 100px;
+
+        border: 2px solid transparent;
       }
+    `;
+    ```
 
-      .dark {
-        --color-main: #000000;
-        --color-sub: #000000;
-        --color-reverse: #000000;
-      }
-      ```
+  - ```typescript
+    // src/components/pages/HomePage/index.tsx
 
-    - 그 후, 해당 class 나 , id 가 적용되도록 app.tsx 나 그 밑의 컴포넌트에서 사용하면 된다. <br />
-      **(예시 : app.tsx 이하에선 라이트모드 다크모드를 적용하기)**
+    // API & Library
+    import React from "react";
 
-      ```typescript
-      // src/App.tsx
+    // Styles
+    import { StyledPage } from "./style";
 
-      // API & Library
-      import React, { useState, useEffect } from "react";
-
-      // Styles
-      import "./theme.scss";
-
-      // Components
-      import { SideBar } from "components/commons/SideBar";
-      import { AppRouter } from "AppRouter";
-
-      function App() {
-        // Init
-        const [isDark, setIsDark] = useState(localStorage.getItem("isDark"));
-
-        // LifeCycle
-        useEffect(() => {
-          console.log("[VERSION]: ", process.env.REACT_APP_VERSION);
-        }, []);
-
-        // Return
-        return (
-          <div className={`App ${isDark ? "dark" : "light"}`}>
-            <SideBar />
-            <AppRouter />
-          </div>
-        );
-      }
-
-      export default App;
-      ```
-
-    <br />
-
-  - 스타일 컴포넌트 적용하기
-
-    - **_( 참고: css를 직접 적용하는 것이 더 편하다고 생각한다면 이 과정은 불필요하다. )_**
-    - 스타일 컴포넌트 `npm install --save styled-components`
-    - 스타일 컴포넌트 타입스크립트 명세서 `npm i --save-dev @types/styled-components`
-    - css 관리와 개발 편의성을 위하여 각 컴포넌트의 디렉토리 구조를 데이터 정보를 담은 `index.tsx` 와 스타일을 적용한 `style.tsx` 로 분리하려고 한다.
-
-    - ```typescript
-      // src/components/pages/HomePage/style.tsx
-
-      // API & Library
-      import styled from "styled-components";
-
-      // Asset
-      import test from "asset/image/test.png";
-
-      export const StyledPage = styled.div`
-        height: 100vh;
-        width: 100vw;
-
-        overflow-y: scroll;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-image: url(${test});
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        &::-webkit-scrollbar {
-          width: 10px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-          background-color: #000000;
-          background-clip: padding-box;
-          border-radius: 100px;
-
-          border: 2px solid transparent;
-        }
-      `;
-      ```
-
-    - ```typescript
-      // src/components/pages/HomePage/index.tsx
-
-      // API & Library
-      import React from "react";
-
-      // Styles
-      import { StyledPage } from "./style";
-
-      export const HomePage = () => {
-        // Return
-        return (
-          <>
-            <StyledPage className="home-page">
-              <h1>홈페이지</h1>
-            </StyledPage>
-          </>
-        );
-      };
-      ```
+    export const HomePage = () => {
+      // Return
+      return (
+        <>
+          <StyledPage className="home-page">
+            <h1>홈페이지</h1>
+          </StyledPage>
+        </>
+      );
+    };
+    ```
 
 <br />
 

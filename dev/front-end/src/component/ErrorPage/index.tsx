@@ -1,23 +1,23 @@
-// # src/component/HelloPage/HelloPage.tsx
+// # src/component/ErrorPage/index.tsx
 // ## API & Library ==================================================
 
 import React from 'react';
 
 // ## Asset ==========================================================
 // ## Style ==========================================================
+
+import { Styled_ErrorPage } from './style';
+
 // ## Component ======================================================
 
-const HelloPage = () => {
+export const ErrorPage = () => {
   // ## Hook ===========================================================
   // ## Method =========================================================
   // ## Return =========================================================
 
   return (
-    <center>
-      <h1>Hello, world!</h1>
-      <h3>front-end : {process.env.REACT_APP_VERSION}</h3>
-    </center>
+    <Styled_ErrorPage>
+      <h1>에러 페이지입니다.</h1>
+    </Styled_ErrorPage>
   );
 };
-
-export default HelloPage;
