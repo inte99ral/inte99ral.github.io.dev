@@ -8,9 +8,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 // ## Style ==========================================================
 // ## Component ======================================================
 
-import { BlogPage } from 'component/BlogPage';
-import { ErrorPage } from 'component/ErrorPage';
-import { HomePage } from 'component/HomePage';
+import { PortfolioPage } from 'component/PortfolioPage';
 
 const App = () => {
   // ## Default ========================================================
@@ -23,11 +21,9 @@ const App = () => {
   return (
     <div className={`app ${isDark ? 'dark' : 'light'}`}>
       <Routes>
-        <Route path="/" element={<Navigate replace to="/home" />} />
-        <Route path="/home/*" element={<HomePage />} />
-        <Route path="/blog/*" element={<BlogPage />} />
-        <Route path="/error/*" element={<ErrorPage />} />
-        <Route path="/*" element={<Navigate replace to="/error" />} />
+        <Route path="/" element={<Navigate replace to="/portfolio" />} />
+        <Route path="/portfolio/*" element={<PortfolioPage />} />
+        <Route path="/*" element={<Navigate replace to="/portfolio" />} />
       </Routes>
     </div>
   );
