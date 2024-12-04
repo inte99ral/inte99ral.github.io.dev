@@ -14,9 +14,15 @@ import { Styled_PortfolioPage } from './style';
 export const PortfolioPage = () => {
   // ## Hook ===========================================================
   useEffect(() => {
-    console.log('처리된 JSON 데이터 1:', (async () => await test.testLocal())());
+    const test10 = (async () => await test.test10())();
 
-    console.log('처리된 JSON 데이터 2:', (async () => await test.testOn())());
+    try {
+    } catch (e) {}
+
+    console.log('test10 :', test10);
+    console.log('test11 :', (async () => await test.test11())());
+
+    // console.log('처리된 JSON 데이터 2:', (async () => await test.testOn())());
   }, []);
 
   // ## Method =========================================================

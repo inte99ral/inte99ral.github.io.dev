@@ -42,14 +42,13 @@ export class AxiosApi {
   public getInstance = (url: string = 'default', isBaseUrl: boolean = true) => {
     if (!this.axiosMap.has(url)) {
       this.axiosMap.set(
-        'url',
+        url,
         axios.create({
           baseURL: (isBaseUrl ? process.env.REACT_APP_SERVER : '') + url,
           headers: { 'Content-Type': 'application/json; charset=UTF-8' },
         }),
       );
     }
-
     return this.axiosMap.get(url);
   };
 
