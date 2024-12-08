@@ -6,6 +6,8 @@ import Styled from 'styled-components';
 // ## Asset ==========================================================
 // ### Image
 
+import S from './asset/image/error.png';
+
 // ## Default ========================================================
 // ### Variable
 // ### Animation

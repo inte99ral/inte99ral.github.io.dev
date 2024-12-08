@@ -3,50 +3,24 @@
 
 import { AxiosApi } from 'api/axios';
 
+// ## Interface & Type ===============================================
+
+export interface TestData {
+  [key: string]: string | number | boolean; // 인덱스 시그니처 - 동적 키 접근 허용
+  id: number;
+  name: string;
+}
+
 // ## Variable & Constant ============================================
 
 const testAxios = AxiosApi.getAPI().getInstance('test');
 
 // ## Function =======================================================
 
-const test1 = () => {
-  interface responseType {
-    one: number;
-    two: number;
-  }
-
-  return new Promise<responseType[]>((resolve, reject) => {
+export const getTestData = () => {
+  return new Promise<TestData[]>((resolve, reject) => {
     testAxios
-      ?.get(`/data.json`)
-      .then((response) => {
-        // console.log('테스트 3:', response.data);
-        resolve(response.data);
-      })
-      .catch((error) => {
-        // console.error('에러 4:', error);
-        reject(error);
-      });
-  });
-};
-
-/**
- * @description
- *
- *  123/n
- *
- *  123
- *
- * @author Bell
- */
-const test10 = () => {
-  interface responseType {
-    id: number;
-    name: string;
-  }
-
-  return new Promise<responseType[]>((resolve, reject) => {
-    testAxios!
-      .get('')
+      ?.get(`/test-data.json`)
       .then((response) => {
         resolve(response.data);
       })
@@ -56,26 +30,7 @@ const test10 = () => {
   });
 };
 
-const test11 = async () => {
-  interface responseType {
-    id: number;
-    name: string;
-  }
-
-  return await new Promise<responseType[]>((resolve, reject) => {
-    testAxios!
-      .get('/data.json')
-      .then((response) => {
-        console.log('test11-0 :', response.data);
-        resolve(response.data);
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
-};
-
-const test0 = async () => {
+export const test0 = async () => {
   return new Promise((resolve, reject) => {
     // fetch 옵션의 상세 설명 https://developer.mozilla.org/ko/docs/Web/API/Window/fetch
     fetch('server/test/data.json', {
@@ -90,11 +45,11 @@ const test0 = async () => {
         return response.json();
       })
       .then((data) => {
-        console.log('JSON 데이터 로드 완료:', data);
+        // console.log('JSON 데이터 로드 완료:', data);
         resolve(data);
       })
       .catch((error) => {
-        console.error('JSON 파일 로드 중 오류 발생:', error);
+        // console.error('JSON 파일 로드 중 오류 발생:', error);
         reject(error);
       });
   });
@@ -102,4 +57,4 @@ const test0 = async () => {
 
 // ## Output =========================================================
 
-export default { test0, test1, test10, test11 };
+// export default { getData, Data: {} as Data };
