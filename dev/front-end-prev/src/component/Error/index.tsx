@@ -6,18 +6,18 @@ import React from 'react';
 // ## Asset ==========================================================
 // ## Style ==========================================================
 
-import { Styled_ErrorPage } from './style';
+import { Styled_Error } from './style';
 
 // ## Component ======================================================
 
-export const ErrorPage = () => {
+export const Error = () => {
   // ## Hook ===========================================================
   // ## Method =========================================================
   // ## Return =========================================================
 
   return (
-    <Styled_ErrorPage>
+    <Styled_Error>
       <h1>에러 페이지입니다.</h1>
-    </Styled_ErrorPage>
+    </Styled_Error>
   );
 };

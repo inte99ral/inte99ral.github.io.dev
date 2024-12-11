@@ -8,7 +8,11 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 // ## Style ==========================================================
 // ## Component ======================================================
 
-import { PortfolioPage } from 'component/PortfolioPage';
+import { Home } from 'component/Home';
+// import { Error } from 'component/Error';
+// import { Blog } from 'component/Blog';
+// import { Example } from 'component/_EXAMPLE_';
+// import { PortfolioPage } from 'component/PortfolioPage';
 
 const App = () => {
   // ## Default ========================================================
@@ -21,9 +25,11 @@ const App = () => {
   return (
     <div className={`app ${isDark ? 'dark' : 'light'}`}>
       <Routes>
-        <Route path="/" element={<Navigate replace to="/portfolio" />} />
-        <Route path="/portfolio/*" element={<PortfolioPage />} />
-        <Route path="/*" element={<Navigate replace to="/portfolio" />} />
+        <Route path="/" element={<Navigate replace to="/home" />} />
+        <Route path="/home/*" element={<Home />} />
+        {/* <Route path="/blog/*" element={<Blog />} />
+      <Route path="/error/*" element={<Error />} /> */}
+        <Route path="/*" element={<Navigate replace to="/error" />} />
       </Routes>
     </div>
   );

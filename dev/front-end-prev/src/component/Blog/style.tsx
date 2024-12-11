@@ -12,7 +12,7 @@ import Styled from 'styled-components';
 
 // ## Style ==========================================================
 
-export const Styled_BlogPage = Styled.div`
+export const Styled_Blog = Styled.div`
   width: 100vw;
   height: 100vh;
 

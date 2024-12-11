@@ -1,4 +1,4 @@
-// # src/component/ErrorPage/style.tsx
+// # src/component/Home/style.tsx
 // ## API & Library ==================================================
 
 import Styled from 'styled-components';
@@ -12,7 +12,7 @@ import Styled from 'styled-components';
 
 // ## Style ==========================================================
 
-export const Styled_ErrorPage = Styled.div`
+export const Styled_Home = Styled.div`
   width: 100vw;
   height: 100vh;
 
@@ -21,5 +21,5 @@ export const Styled_ErrorPage = Styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: green;
+  background-color: red;
 `;

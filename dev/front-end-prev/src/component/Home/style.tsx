@@ -1,4 +1,4 @@
-// # src/component/HomePage/style.tsx
+// # src/component/Home/style.tsx
 // ## API & Library ==================================================
 
 import Styled from 'styled-components';
@@ -12,7 +12,7 @@ import Styled from 'styled-components';
 
 // ## Style ==========================================================
 
-export const Styled_HomePage = Styled.div`
+export const Styled_Home = Styled.div`
   width: 100vw;
   height: 100vh;
 
