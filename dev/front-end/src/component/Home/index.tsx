@@ -13,17 +13,26 @@ export const Home = () => {
 
   return (
     <>
-      <h3>예시 유저들의 목록은 다음과 같습니다.</h3>
-
+      <h4>예시 유저들의 목록은 다음과 같습니다.</h4>
+      <br />
       {exampleUserList ? (
-        <table style={{}}>
+        <table style={{ borderCollapse: 'collapse' }}>
           <tr>
             {Object.keys(exampleUserList[0]).map((header, index) => (
-              <th key={index} style={{ border: '1px solid black' }}>
+              <th key={index} style={{ border: '1px solid black', padding: '14px' }}>
                 {header}
               </th>
             ))}
           </tr>
+          {exampleUserList.map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              {Object.keys(row).map((header, cellIndex) => (
+                <td key={cellIndex} style={{ border: '1px solid black', padding: '14px' }}>
+                  {row[header]}
+                </td>
+              ))}
+            </tr>
+          ))}
         </table>
       ) : (
         <></>

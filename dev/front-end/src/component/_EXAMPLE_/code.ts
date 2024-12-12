@@ -1,24 +1,55 @@
 // # src/component/HelloPage/index.tsx
 
-// ## API & Library ==================================================
+// ## Import Declaration =====================================================
+
+// ### API & Library:
 
 import {} from './index';
 
-// ## Asset ==========================================================
+// ### Component:
+
+// ### Style:
+
+// ### Asset:
 
 import img from './asset/image/error.png';
 
-// ## Interface & Type ===============================================
+// ## Interface & Class ======================================================
 
-export interface TestData {
+// ### ExampleType
+/**
+ * 『JS_DOC』
+ */
+export interface ExampleType {
   id: number;
   name: string;
 }
 
-// ## Style ==========================================================
+// ### ExampleClass
+/**
+ * 『JS_DOC』
+ */
+class ExampleClass {
+  // #### Private:
+  // ##### Private > Field
+  // ##### Private > Method
+  // #### Public:
+  // ##### Public > Field
+  // ##### Public > Method
+}
 
-// ## Component ======================================================
-// ## Variable & Constant ============================================
-// ## Method =========================================================
-// ## Hook ===========================================================
-// ## Return =========================================================
+// ## Variable & Constant ====================================================
+
+// ## Function ===============================================================
+
+// ### exampleFunc
+const exampleFunc = () => {
+  // #### Variable:
+  let foo = 0;
+
+  // #### Function:
+  (() => foo++)();
+
+  // #### Return:
+  return;
+};
