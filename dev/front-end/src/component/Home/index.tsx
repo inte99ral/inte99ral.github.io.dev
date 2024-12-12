@@ -1,27 +1,33 @@
 // # src/component/Home/index.tsx
-// ## API & Library ==================================================
 
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
-// ## Asset ==========================================================
-// ## Style ==========================================================
-
-import { Styled_Home } from './style';
-
-// ## Component ======================================================
+import { getExampleUserlist, ExampleUser } from 'api/rest/example';
 
 export const Home = () => {
-  // ## Hook ===========================================================
-  // ## Method =========================================================
-  // ## Return =========================================================
+  const [exampleUserList, setExampleUserList] = useState<ExampleUser[]>();
+
+  useEffect(() => {
+    (async () => setExampleUserList(await getExampleUserlist()))();
+  }, []);
 
   return (
-    <Styled_Home>
-      <h1>홈 페이지입니다.</h1>
-      <br />
-      <NavLink to="/blog">블로그 페이지로 가기</NavLink>
-      <NavLink to="/error">에러 페이지로 가기</NavLink>
-    </Styled_Home>
+    <>
+      <h3>예시 유저들의 목록은 다음과 같습니다.</h3>
+
+      {exampleUserList ? (
+        <table style={{}}>
+          <tr>
+            {Object.keys(exampleUserList[0]).map((header, index) => (
+              <th key={index} style={{ border: '1px solid black' }}>
+                {header}
+              </th>
+            ))}
+          </tr>
+        </table>
+      ) : (
+        <></>
+      )}
+    </>
   );
 };

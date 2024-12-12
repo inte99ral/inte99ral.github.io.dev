@@ -1,54 +1,54 @@
 // # src/component/HelloPage/index.tsx
-// ## API & Library ==================================================
 
+// ## API & Library ==========================================================
 import React, { useState, useEffect } from 'react';
-import { getTestData, TestData } from 'api/rest/test';
+import { getExampleUserlist, ExampleUser } from 'api/rest/example';
 import { AiFillSetting } from 'react-icons/ai';
 
-// ## Asset ==========================================================
+// ## Asset ==================================================================
 
-// ## Style ==========================================================
+// ## Style ==================================================================
 
 import { Styled_Example, Styled_ExampleTable } from './style';
 
-// ## Component ======================================================
+// ## Component ==============================================================
 
-// ## Rendering ======================================================
+// ## Rendering ==============================================================
+
 export const Example = () => {
-  // ### Variable ======================================================
+  // ### Variable:
+  const [exampleUserList, setExampleUserList] = useState<ExampleUser[]>();
 
-  const [testData, setTestData] = useState<TestData[]>();
+  // ### Function:
 
-  // ### Function ======================================================
-
-  // ### Hook ==========================================================
+  // ### Hook:
 
   useEffect(() => {
-    (async () => setTestData(await getTestData()))();
+    (async () => setExampleUserList(await getExampleUserlist()))();
   }, []);
 
-  // ### ⇩ Return ========================================================
+  // ### Return:
 
   return (
     <Styled_Example>
       <AiFillSetting />
       <h1>Hello, world!</h1>
 
-      {/* ### Read Environment Variable ===================================== */}
+      {/* #### Read Environment Variable */}
       <h3>front-end : {Number(process.env.REACT_APP_NUMBER) + 5}</h3>
 
-      {/* ### Read Server JSON ============================================== */}
-      {testData ? (
+      {/* #### Read Server JSON */}
+      {exampleUserList ? (
         <Styled_ExampleTable>
           <thead>
             <tr>
-              {Object.keys(testData[0]).map((header, index) => (
+              {Object.keys(exampleUserList[0]).map((header, index) => (
                 <th key={index}>{header}</th>
               ))}
             </tr>
           </thead>
           <tbody>
-            {testData.map((row, rowIndex) => (
+            {exampleUserList.map((row, rowIndex) => (
               <tr key={rowIndex}>
                 {Object.keys(row).map((header, cellIndex) => (
                   <td key={cellIndex}>{row[header]}</td>

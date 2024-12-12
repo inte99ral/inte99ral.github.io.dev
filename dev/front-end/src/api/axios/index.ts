@@ -1,26 +1,42 @@
-import axios, { AxiosInstance } from 'axios';
+// # src/api/axios/index.tsx
 
+// ## Documentation ==========================================================
 /**
  * @description
  * 모든 Axios 객체를 중앙통제하는 싱글턴 API 인스턴스 입니다.
+ *
  * 다른 api 주소에서 받아올 경우에는 Axios 객체를 새로 만들어 지정해줄 수 있습니다.
  *
  * @example
  * ```
- * // rest 라이브러리 임포트
- * import { auth } from 'api/rest'
+ * // * Axios API 임포트하여 사용합니다.
+ * import { AxiosApi } from 'api/axios';
  *
- * // IFFE 방식 또는 프라미스 객체를 활용하는 어떤 방법이던 상관없음
- * (async () => { await auth.login})();
+ * // * 다음과 같이 객체를 받아옵니다. base url 과 객체명을 통일하는 것을 권장합니다.
+ * const『AXIOS_INSTANCE_NAME』 = AxiosApi.getAPI().getInstance('『BASE_URL』');
+ *
+ * // * 엑시오스 인스턴스 객체에서는 다음과 같이 url 요청을 보낼 수 있습니다.
+ * 『AXIOS_INSTANCE_NAME』.get(`『REQUEST_URL』`)
  * ```
  *
  * @author inte99ral
  * @version 2024-11-18
  */
+
+// ## API & Library ==========================================================
+
+import axios, { AxiosInstance } from 'axios';
+
+// ## Interface & Class ======================================================
+
 export class AxiosApi {
-  // ## Private ==================================================
+  // ### Private:
+  // #### Private > Field
+
   private static apiInstance: AxiosApi;
   private axiosMap: Map<string, AxiosInstance>;
+
+  // #### Private > Method
 
   private constructor() {
     this.axiosMap = new Map<string, AxiosInstance>();
@@ -33,7 +49,8 @@ export class AxiosApi {
     );
   }
 
-  // ## Public ===================================================
+  // ### Public:
+
   public static getAPI = () => {
     if (!AxiosApi.apiInstance) AxiosApi.apiInstance = new AxiosApi();
     return AxiosApi.apiInstance;
