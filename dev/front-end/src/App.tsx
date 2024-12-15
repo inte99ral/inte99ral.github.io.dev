@@ -8,10 +8,10 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 // ## Style ==========================================================
 // ## Component ======================================================
 
-// import { Home } from 'component/Home';
+import { Home } from 'component/Home';
 // import { Error } from 'component/Error';
 // import { Blog } from 'component/Blog';
-import { Example } from 'component/_EXAMPLE_';
+// import { Example } from 'component/_EXAMPLE_';
 // import { PortfolioPage } from 'component/PortfolioPage';
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
     <div className={`app ${isDark ? 'dark' : 'light'}`}>
       <Routes>
         <Route path="/" element={<Navigate replace to="/home" />} />
-        <Route path="/home/*" element={<Example />} />
+        <Route path="/home/*" element={<Home />} />
         {/* <Route path="/blog/*" element={<Blog />} />
       <Route path="/error/*" element={<Error />} /> */}
         <Route path="/*" element={<Navigate replace to="/error" />} />

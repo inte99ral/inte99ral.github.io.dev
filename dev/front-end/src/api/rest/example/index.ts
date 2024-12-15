@@ -24,18 +24,25 @@
  * @version 2024-11-18
  */
 
-// ## API & Library ==========================================================
+// ## Import Declaration =====================================================
+
+// ### API & Library:
 
 import { AxiosApi } from 'api/axios';
 
 // ## Interface & Class ======================================================
 
+// ### ExampleUser
 /**
  * @description
  *
  * 응답 데이터의 Interface & Type 입니다.
  *
  * typescript 에서는 응답 데이터의 Type 을 반드시 알아야하는 경우가 있습니다.
+ *
+ * 일회성인 타입이면 Awaited&lt;ReturnType&lt;typeof 『RESTFUL_FUNCTION』>> 로 타입 추론을 하면되나
+ *
+ * 해당 타입을 여러 번 사용되야 할 경우, 명시하는 편이 더 나을 수 있습니다.
  *
  * @example
  * ```
@@ -44,6 +51,7 @@ import { AxiosApi } from 'api/axios';
  *
  * // * useState 에 대한 예시는 다음과 같습니다.
  * const [『SETTER』,『GETTER』] = useState<『RESPONCE_TYPE』[]>();
+ * const [『SETTER』,『GETTER』] = useState<Awaited<ReturnType<typeof 『RESTFUL_FUNCTION』>>[]>();
  *
  * (async () => {
  *  『GETTER』(await 『RESTFUL_FUNCTION』());
@@ -65,6 +73,11 @@ const exampleAxios = AxiosApi.getAPI().getInstance('example');
 
 // ## Function ===============================================================
 
+// ### getExampleUserlist
+/**
+ *
+ * @returns
+ */
 export const getExampleUserlist = () => {
   return new Promise<ExampleUser[]>((resolve, reject) => {
     exampleAxios
@@ -78,6 +91,7 @@ export const getExampleUserlist = () => {
   });
 };
 
+// ### getTestDataByFetch
 /**
  * @description Axios 객체가 아닌 fetch를 사용한 예시 입니다.
  * @author inte99ral

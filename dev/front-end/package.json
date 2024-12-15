@@ -10,18 +10,21 @@
     "@types/styled-components": "^5.1.34",
     "@typescript-eslint/eslint-plugin": "^8.15.0",
     "axios": "^1.7.7",
+    "github-markdown-css": "^5.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
+    "react-markdown": "^9.0.1",
     "react-router-dom": "^6.28.0",
+    "remark-gfm": "^4.0.0",
     "sass": "^1.80.7",
     "styled-components": "^6.1.13",
-    "typescript": "^5.6.3",
+    "typescript": "^5.7.2",
     "web-vitals": "^4.2.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
-    "eslint": "^9.14.0",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.2",
@@ -31,15 +34,10 @@
     "typescript-eslint": "^8.14.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
   },
   "browserslist": {
     "production": [

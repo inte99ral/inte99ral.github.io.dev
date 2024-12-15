@@ -1,67 +1,85 @@
-// # src/component/HelloPage/index.tsx
+// # src/component/_EXAMPLE_/index.tsx
 
-// ## API & Library ==========================================================
-import React, { useState, useEffect } from 'react';
-import { getExampleUserlist, ExampleUser } from 'api/rest/example';
-import { AiFillSetting } from 'react-icons/ai';
+// ## Documentation ==========================================================
+/**
+ * React Project 의 컨벤션과 형식에 대한 예제 파일입니다.
+ *
+ * @examples
+ * ```
+ * <Example><h1>Hello, world!</h1></Example>
+ * ```
+ */
 
-// ## Asset ==================================================================
+// ## Import Declaration =====================================================
 
-// ## Style ==================================================================
+// ### API & Library:
 
-import { Styled_Example, Styled_ExampleTable } from './style';
+import { ReactNode, useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
+// import { getExampleUserlist } from 'api/rest/example';
+import { getPost } from 'api/rest/post';
+// import { AiFillSetting } from 'react-icons/ai';
+
+// ### Component:
+
+// ### Style:
+
+import { Styled_Example, Styled_ExampleCard } from './style';
+
+// ### Asset:
+
+// ## Interface & Class ======================================================
+
+interface propsType {
+  children: ReactNode;
+}
 
 // ## Component ==============================================================
 
-// ## Rendering ==============================================================
+// ### Example
+/**
+ *
+ * @returns
+ */
+export const Example = ({ children }: propsType) => {
+  // #### Variable:
 
-// ## Export =================================================================
+  // const [exampleUserList, setExampleUserList] =
+  //   useState<Awaited<ReturnType<typeof getExampleUserlist>>>(); // 타입추론
 
-export const Example = () => {
-  // ### Variable:
-  const [exampleUserList, setExampleUserList] = useState<ExampleUser[]>();
+  const [post, setPost] = useState('');
 
-  // ### Function:
+  // #### Function:
 
-  // ### Hook:
+  // #### Hook:
 
   useEffect(() => {
-    (async () => setExampleUserList(await getExampleUserlist()))();
+    (async () => {
+      // setExampleUserList(await getExampleUserlist());
+      setPost(await getPost(0));
+    })();
   }, []);
 
-  // ### Return:
+  // #### Return:
 
   return (
     <Styled_Example>
-      <AiFillSetting />
-      <h1>Hello, world!</h1>
+      <Styled_ExampleCard>{children}</Styled_ExampleCard>
 
-      {/* #### Read Environment Variable */}
-      <h3>front-end : {Number(process.env.REACT_APP_NUMBER) + 5}</h3>
+      {/* ##### Read Environment Variable */}
+      <Styled_ExampleCard>
+        <h3>front-end : {Number(process.env.REACT_APP_NUMBER) + 5}</h3>
+      </Styled_ExampleCard>
 
-      {/* #### Read Server JSON */}
-      {exampleUserList ? (
-        <Styled_ExampleTable>
-          <thead>
-            <tr>
-              {Object.keys(exampleUserList[0]).map((header, index) => (
-                <th key={index}>{header}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {exampleUserList.map((row, rowIndex) => (
-              <tr key={rowIndex}>
-                {Object.keys(row).map((header, cellIndex) => (
-                  <td key={cellIndex}>{row[header]}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </Styled_ExampleTable>
-      ) : (
-        <></>
-      )}
+      {/* ##### Markdown Post */}
+      <Styled_ExampleCard>
+        <ReactMarkdown>{post}</ReactMarkdown>
+      </Styled_ExampleCard>
+
+      <Styled_ExampleCard>
+        <div>{post}</div>
+      </Styled_ExampleCard>
+      <br />
     </Styled_Example>
   );
 };
