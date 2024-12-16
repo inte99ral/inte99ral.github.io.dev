@@ -1,33 +1,15 @@
-// # src/index.tsx
-// ## API & Library ==================================================
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-// import { reportWebVitals } from 'api/webVitals';
-
-// ## Asset ==========================================================
-
-// ## Style ==========================================================
-
-import './theme.scss';
-
-// ## Component ======================================================
-
+import './theme.css';
 import App from './App';
+import { reportWebVitals } from 'api/webVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
-// ## Hook ===========================================================
-// ## Method =========================================================
-// ## Return =========================================================
-
 root.render(
-  // <React.StrictMode>
-  <BrowserRouter>
+  <React.StrictMode>
     <App />
-  </BrowserRouter>,
-  // </React.StrictMode>,
+  </React.StrictMode>,
 );
 
-// reportWebVitals(console.log);
+reportWebVitals(console.log);

@@ -1,33 +1,31 @@
-import { MetricType } from 'web-vitals';
+// # src/api/webVitals/index.ts
 
-export const reportWebVitals = (onPerfEntry?: (metric: MetricType) => void) => {
-  (async () => console.log(`front-end ${process.env.REACT_APP_VERSION}`))();
+// ## Import Declaration =====================================================
+
+// ### API & Library:
+
+import { ReportHandler } from 'web-vitals';
+
+// ## Function ===============================================================
+
+// ### reportWebVitals
+/**
+ * @description
+ *
+ * If you want to start measuring performance in your app, pass a function
+ *
+ * to log results (for example: reportWebVitals(console.log)) or send to an analytics endpoint.
+ *
+ * @see Learn more: https://bit.ly/CRA-vitals
+ */
+export const reportWebVitals = (onPerfEntry?: ReportHandler) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
-    import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
-      onCLS(onPerfEntry);
-      onINP(onPerfEntry);
-      onFCP(onPerfEntry);
-      onLCP(onPerfEntry);
-      onTTFB(onPerfEntry);
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(onPerfEntry);
+      getFID(onPerfEntry);
+      getFCP(onPerfEntry);
+      getLCP(onPerfEntry);
+      getTTFB(onPerfEntry);
     });
   }
 };
-
-// import { ReportHandler } from 'web-vitals';
-// import { server } from 'api/rest';
-
-// export const reportWebVitals = (onPerfEntry?: ReportHandler) => {
-//   (async () =>
-//     console.log(
-//       `front-end ${process.env.REACT_APP_VERSION}v \n back-end ${await server.getServerVersion()}v`,
-//     ))();
-//   if (onPerfEntry && onPerfEntry instanceof Function) {
-//     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-//       getCLS(onPerfEntry);
-//       getFID(onPerfEntry);
-//       getFCP(onPerfEntry);
-//       getLCP(onPerfEntry);
-//       getTTFB(onPerfEntry);
-//     });
-//   }
-// };
