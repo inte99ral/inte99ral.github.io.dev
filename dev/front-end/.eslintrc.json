@@ -17,7 +17,8 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "prettier/prettier": ["error"]
+    "prettier/prettier": ["error"],
+    "@typescript-eslint/no-empty-function": ["error", { "allow": [] }]
   },
   "ignorePatterns": ["build", "dist", "public"],
   "settings": {

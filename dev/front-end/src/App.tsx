@@ -1,23 +1,36 @@
-import React from 'react';
-import logo from 'asset/logo.svg';
+// # src/App.tsx
 
+// ## Documentation ==========================================================
+/** */
+
+// ## Import Declaration =====================================================
+
+// ### API & Library:
+
+import React from 'react';
+import { Route, Routes, Navigate } from 'react-router-dom';
+
+// ### Component:
+
+import { Home } from 'component/Home';
+
+// ## Component ==============================================================
+
+// ### App
 function App() {
+  // #### Variable:
+
+  const isDark = false;
+
+  // #### Return:
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`app ${isDark ? 'dark' : 'light'}`}>
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/home" />} />
+        <Route path="/home/*" element={<Home />} />
+        <Route path="/*" element={<Navigate replace to="/error" />} />
+      </Routes>
     </div>
   );
 }

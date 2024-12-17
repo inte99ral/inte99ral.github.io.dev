@@ -19,6 +19,7 @@ import { ReportHandler } from 'web-vitals';
  * @see Learn more: https://bit.ly/CRA-vitals
  */
 export const reportWebVitals = (onPerfEntry?: ReportHandler) => {
+  (async () => console.log(`front-end ${process.env.REACT_APP_VERSION}`))();
   if (onPerfEntry && onPerfEntry instanceof Function) {
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       getCLS(onPerfEntry);
