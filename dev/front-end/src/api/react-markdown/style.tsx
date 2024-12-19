@@ -1,7 +1,10 @@
 // # src/component/_EXAMPLE_/style.tsx
 
 // ## Documentation ==========================================================
-/** */
+/**
+ * @dependencies
+ * github-markdown-css
+ */
 
 // ## Import Declaration =====================================================
 

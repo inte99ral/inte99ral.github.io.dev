@@ -1,38 +1,188 @@
 // # src/component/Home/index.tsx
 
-import React, { useState, useEffect } from 'react';
+// ## Import Declaration =====================================================
 
-import RMarkdown from 'react-markdown';
-import { Markdown } from 'api/react-markdown';
-import { getPost } from 'api/rest/post';
+// ### API & Library:
+
+import React from 'react';
+
+// ### Component:
+
+import { Markdown_0 } from './component/Markdown_0';
+import { Markdown_1 } from './component/Markdown_1';
+
+// ### Style:
 
 import { Styled_Home, Styled_HomeCard } from './style';
 
+// ## Component ==============================================================
+
+// ### Home:
 export const Home = () => {
-  const [post, setPost] = useState('');
+  const post = `
+    # 마크다운：Markdown
 
-  // const post = `
-  // # 제목
+    ## 기본 문법
 
-  // ## 소제목
+    ### 인용
 
-  // 되는지 확인
-  // `;
+    - 블록 인용：\`>\` 사용
 
-  useEffect(() => {
-    (async () => setPost(await getPost(0)))();
-  }, []);
+      > 첫번째 블록
+      >
+      > > 두번째 블록
+      > >
+      > > > 세번째 블록
+
+    ### 코드 블럭
+
+    - 인라인 코드
+
+      - \`[](int x, int y) -> int { return x + y; };\`
+
+    - 펜스드 코드 블럭
+
+      \`\`\`cpp
+      [](int x, int y) -> int { return x + y; };
+      \`\`\`
+
+    ### 가운데 정렬：Align Center
+
+    <div align=left>
+    『LEFT_TEXT』
+    </div>
+
+    <center>
+    『CENTER_TEXT_0』
+    </center>
+
+    <div align=center>
+    『CENTER_TEXT_1』
+    </div>
+
+    <div align=right>
+    『RIGHT_TEXT』
+    </div>
+
+    ### 확장/축소：Accordion
+
+    <details>
+      <summary>
+
+    \`\`\`cpp
+    int main() {
+      ... 클릭하여 확장/축소 ...
+    \`\`\`
+
+      </summary>
+      
+    \`\`\`cpp
+      cout << "Hello, World!" << endl;
+    \`\`\`
+    </details>
+
+    \`\`\`cpp
+      return 0;
+    }
+    \`\`\`
+
+    ### 수평선
+
+    ---
+
+    <hr />
+
+    ### 공백：No Breaking Space
+
+    &nbsp;공백&nbsp;공백
+
+    ### 줄바꿈：Breaking Line
+
+    개행1  
+    개행1
+
+    개행2
+
+    개행2
+
+    개행3<br />개행3
+
+    ### 표：Table
+
+    #### Table > Markdown Native
+
+    | 첫번째(왼쪽정렬) | 두번째(가운데정렬) | 세번째(오른쪽정렬) |
+    | ---------------- | :----------------: | -----------------: |
+    | 왼쪽정렬         |     가운데정렬     |         오른쪽정렬 |
+
+    #### Table > HTML Tag
+
+    <table>
+    <tr>
+      <th align=left>첫번째(왼쪽정렬, 코드블럭)</th>
+      <th align=center>두번째(가운데정렬)</th>
+      <th align=right>세번째(오른쪽정렬)</th>
+    </tr>
+    <tr>
+      <td align=left>
+
+    \`\`\`cpp
+    #include <bits/stdc++.h>
+
+    int main() {
+      return 0;
+    }
+    \`\`\`
+
+      </td>
+      <td align=center>가운데정렬</td>
+      <td align=right>오른쪽정렬</td>
+    </tr>
+    </table>
+
+    ### 텍스트 서식
+
+    - _이탤릭체_
+    - **볼드체**
+    - ~~취소선~~
+    - <del>취소선</del>
+    - <u>밑줄</u>
+    - **_볼드+이탤릭_**
+    - **~~볼드+취소선~~**
+    - **_~~볼드+이탤릭+취소선~~_**
+
+    ### 목록
+
+    - 순서 없는 목록
+      - 목록1
+      - 목록2
+    - 순서 있는 목록
+      1. 목록1
+      2. 목록2
+    - 체크리스트
+      - [ ] 목록1
+      - [ ] 목록2
+
+    ### 참조
+
+    #### 참조 > Markdown Native
+
+    - [하이퍼 링크](./asset/1/0.png)
+    - ![대체 텍스트](./asset/1/0.png)
+
+    #### 참조 > HTML Tag
+
+    - <a href="./asset/1/0.png">이미지 링크</a>
+    - <img src="./asset/1/0.png" alt="0" width="200" height="200" />
+  `;
 
   return (
     <Styled_Home>
-      <h4>예시 유저들의 목록은 다음과 같습니다.</h4>
-      <br />
       <Styled_HomeCard>
-        <RMarkdown>{post}</RMarkdown>
+        <Markdown_0>{post}</Markdown_0>
       </Styled_HomeCard>
-
       <Styled_HomeCard>
-        <Markdown content={post} />
+        <Markdown_1>{post}</Markdown_1>
       </Styled_HomeCard>
     </Styled_Home>
   );

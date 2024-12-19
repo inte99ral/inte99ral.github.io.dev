@@ -8,8 +8,7 @@ export const Styled_Home = Styled.div`
   padding: 14px;
 
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: top;
 
   overflow: auto;
 

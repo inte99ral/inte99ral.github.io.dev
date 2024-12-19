@@ -14,7 +14,7 @@
 
 // ### API & Library:
 
-import { ReactNode, useState, useEffect } from 'react';
+import React, { FC, ReactNode, useState, useEffect } from 'react';
 // import ReactMarkdown from 'react-markdown';
 // import { getExampleUserlist } from 'api/rest/example';
 // import { getPost } from 'api/rest/post';
@@ -36,7 +36,28 @@ interface propsType {
 
 // ## Component ==============================================================
 
-// ### Example
+// ### Example_1
+/**
+ * @description PropsType Example
+ */
+export const Example_1 = ({ children = 'default text' }: propsType) => {
+  return <div style={{ color: 'blue' }}>{children}</div>;
+};
+
+// ### Example_2
+/**
+ * @description String Props Example
+ *
+ * @example
+ * ```
+ * <Example_1>『STRING』</Example_1>
+ * ```
+ */
+export const Example_2: FC<{ children: string }> = ({ children = 'default text' }) => {
+  return <div style={{ color: 'blue' }}>{children}</div>;
+};
+
+// ### Example_0
 /**
  *
  * @returns

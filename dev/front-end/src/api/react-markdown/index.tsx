@@ -6,6 +6,14 @@
  *
  * 마크다운 양식을 읽는 리액트 컴포넌트 API 입니다.
  *
+ * @dependencies
+ * - [x] react-markdown
+ * - [x] github-markdown-css
+ * - [x] remark-gfm
+ * - [x] rehype-raw
+ * - [x] rehype-sanitize
+ * - [x] react-syntax-highlighter
+ *
  * @author inte99ral
  * @version 2024-12-15
  */
