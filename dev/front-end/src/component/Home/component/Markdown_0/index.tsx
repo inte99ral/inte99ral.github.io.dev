@@ -1,4 +1,4 @@
-// # src/component/_EXAMPLE_/index.tsx
+// # src/component/Home/component/Markdown_0/index.tsx
 
 // ## Import Declaration =====================================================
 
@@ -9,5 +9,10 @@ import React, { FC } from 'react';
 // ## Component ==============================================================
 
 export const Markdown_0: FC<{ children: string }> = ({ children }) => {
-  return <>{children}</>;
+  return (
+    <>
+      <div>Markdown #0</div>
+      <div>{children}</div>
+    </>
+  );
 };

@@ -10,9 +10,12 @@
  * - [x] react-markdown
  * - [x] github-markdown-css
  * - [x] remark-gfm
+ * - [x] remark-math
  * - [x] rehype-raw
  * - [x] rehype-sanitize
+ * - [x] rehype-katex
  * - [x] react-syntax-highlighter
+ * - [x] @types/react-syntax-highlighter
  *
  * @author inte99ral
  * @version 2024-12-15
@@ -45,7 +48,6 @@ export const Markdown = ({ content }: propsType) => {
       <ReactMarkdown className={'markdown-body'} remarkPlugins={[gfm]}>
         {content}
       </ReactMarkdown>
-      ;
     </Styled_MarkDown>
   );
 };

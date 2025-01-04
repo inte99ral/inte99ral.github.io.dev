@@ -2,9 +2,29 @@
 
 ## 기본 문법
 
+### 수식
+
+- n<sup>r</sup>
+- A<sub>k</sub>
+
+- When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
+  $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
+$${\color{red}Red}$$
+
+- ${\color{lightgreen}Light \space Green}$
+
+- $\color{#FF9922} \footnotesize \textnormal{일반 텍스트}$
+
+<div align=center>
+
+$_{n}\mathrm{H}_{r} = C'(n, r) = \binom{n+r-1}{r} = \binom{n+r-1}{n-1}$
+
+</div>
+
 ### 인용
 
-- 블록 인용：`>` 사용
+- 블록 인용：\`>\` 사용
 
   > 첫번째 블록
   >
@@ -26,41 +46,42 @@
 
 ### 가운데 정렬：Align Center
 
-<div align=left>
-『LEFT_TEXT』
-</div>
+  <div align=left>
+  『LEFT_TEXT』
+  </div>
 
-<center>
-『CENTER_TEXT_0』
-</center>
+  <center>
+  『CENTER_TEXT_0』
+  </center>
 
-<div align=center>
-『CENTER_TEXT_1』
-</div>
+  <div align=center>
+  『CENTER_TEXT_1』
+  </div>
 
-<div align=right>
-『RIGHT_TEXT』
-</div>
+  <div align=right>
+  『RIGHT_TEXT』
+  </div>
 
 ### 확장/축소：Accordion
 
 <details>
-  <summary>
+<summary>
 
 ```cpp
 int main() {
-  ... 클릭하여 확장/축소 ...
+... 클릭하여 확장/축소 ...
 ```
 
-  </summary>
-  
+</summary>
+
 ```cpp
-  cout << "Hello, World!" << endl;
+cout << "Hello, World!" << endl;
 ```
+
 </details>
 
 ```cpp
-  return 0;
+return 0;
 }
 ```
 
@@ -68,7 +89,7 @@ int main() {
 
 ---
 
-<hr />
+  <hr />
 
 ### 공백：No Breaking Space
 
@@ -76,7 +97,7 @@ int main() {
 
 ### 줄바꿈：Breaking Line
 
-개행1  
+개행1
 개행1
 
 개행2
@@ -95,33 +116,34 @@ int main() {
 
 #### Table > HTML Tag
 
-<table>
-<tr>
+  <table>
+  <tr>
   <th align=left>첫번째(왼쪽정렬, 코드블럭)</th>
   <th align=center>두번째(가운데정렬)</th>
   <th align=right>세번째(오른쪽정렬)</th>
-</tr>
-<tr>
+  </tr>
+  <tr>
   <td align=left>
 
-```cpp
+\`\`\`cpp
 #include <bits/stdc++.h>
 
 int main() {
-  return 0;
+return 0;
 }
-```
+\`\`\`
 
   </td>
   <td align=center>가운데정렬</td>
   <td align=right>오른쪽정렬</td>
-</tr>
-</table>
+  </tr>
+  </table>
 
 ### 텍스트 서식
 
 - _이탤릭체_
 - **볼드체**
+- <b>볼드체</b>
 - ~~취소선~~
 - <del>취소선</del>
 - <u>밑줄</u>
@@ -145,10 +167,10 @@ int main() {
 
 #### 참조 > Markdown Native
 
-- [하이퍼 링크](./asset/1/0.png)
-- ![대체 텍스트](./asset/1/0.png)
+- [하이퍼 링크](./server/post/9/0.png)
+- ![대체 텍스트](./server/post/9/0.png)
 
 #### 참조 > HTML Tag
 
-- <a href="./asset/1/0.png">이미지 링크</a>
-- <img src="./asset/1/0.png" alt="0" width="200" height="200" />
+- <a href="./server/post/9/0.png">이미지 링크</a>
+- <img src="./server/post/9/0.png" alt="0" width="200" height="200" />

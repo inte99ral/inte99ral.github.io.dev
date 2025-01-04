@@ -4,12 +4,20 @@
 
 // ### API & Library:
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { getPost } from 'api/rest/post';
 
 // ### Component:
 
-import { Markdown_0 } from './component/Markdown_0';
-import { Markdown_1 } from './component/Markdown_1';
+// import { Markdown_0 } from './component/Markdown_0';
+// import { Markdown_1 } from './component/Markdown_1';
+// import { Markdown_2 } from './component/Markdown_2';
+// import { Markdown_3 } from './component/Markdown_3';
+// import { Markdown_4 } from './component/Markdown_4';
+// import { Markdown_5 } from './component/Markdown_5';
+// import { Markdown_6 } from './component/Markdown_6';
+import { Markdown_7 } from './component/Markdown_7';
+import { Markdown_8 } from './component/Markdown_8';
 
 // ### Style:
 
@@ -19,170 +27,24 @@ import { Styled_Home, Styled_HomeCard } from './style';
 
 // ### Home:
 export const Home = () => {
-  const post = `
-    # 마크다운：Markdown
+  // #### Variable:
+  const [post, setPost] = useState('');
 
-    ## 기본 문법
+  // #### Hook:
+  useEffect(() => {
+    (async () => {
+      setPost(await getPost(1));
+    })();
+  }, []);
 
-    ### 인용
-
-    - 블록 인용：\`>\` 사용
-
-      > 첫번째 블록
-      >
-      > > 두번째 블록
-      > >
-      > > > 세번째 블록
-
-    ### 코드 블럭
-
-    - 인라인 코드
-
-      - \`[](int x, int y) -> int { return x + y; };\`
-
-    - 펜스드 코드 블럭
-
-      \`\`\`cpp
-      [](int x, int y) -> int { return x + y; };
-      \`\`\`
-
-    ### 가운데 정렬：Align Center
-
-    <div align=left>
-    『LEFT_TEXT』
-    </div>
-
-    <center>
-    『CENTER_TEXT_0』
-    </center>
-
-    <div align=center>
-    『CENTER_TEXT_1』
-    </div>
-
-    <div align=right>
-    『RIGHT_TEXT』
-    </div>
-
-    ### 확장/축소：Accordion
-
-    <details>
-      <summary>
-
-    \`\`\`cpp
-    int main() {
-      ... 클릭하여 확장/축소 ...
-    \`\`\`
-
-      </summary>
-      
-    \`\`\`cpp
-      cout << "Hello, World!" << endl;
-    \`\`\`
-    </details>
-
-    \`\`\`cpp
-      return 0;
-    }
-    \`\`\`
-
-    ### 수평선
-
-    ---
-
-    <hr />
-
-    ### 공백：No Breaking Space
-
-    &nbsp;공백&nbsp;공백
-
-    ### 줄바꿈：Breaking Line
-
-    개행1  
-    개행1
-
-    개행2
-
-    개행2
-
-    개행3<br />개행3
-
-    ### 표：Table
-
-    #### Table > Markdown Native
-
-    | 첫번째(왼쪽정렬) | 두번째(가운데정렬) | 세번째(오른쪽정렬) |
-    | ---------------- | :----------------: | -----------------: |
-    | 왼쪽정렬         |     가운데정렬     |         오른쪽정렬 |
-
-    #### Table > HTML Tag
-
-    <table>
-    <tr>
-      <th align=left>첫번째(왼쪽정렬, 코드블럭)</th>
-      <th align=center>두번째(가운데정렬)</th>
-      <th align=right>세번째(오른쪽정렬)</th>
-    </tr>
-    <tr>
-      <td align=left>
-
-    \`\`\`cpp
-    #include <bits/stdc++.h>
-
-    int main() {
-      return 0;
-    }
-    \`\`\`
-
-      </td>
-      <td align=center>가운데정렬</td>
-      <td align=right>오른쪽정렬</td>
-    </tr>
-    </table>
-
-    ### 텍스트 서식
-
-    - _이탤릭체_
-    - **볼드체**
-    - ~~취소선~~
-    - <del>취소선</del>
-    - <u>밑줄</u>
-    - **_볼드+이탤릭_**
-    - **~~볼드+취소선~~**
-    - **_~~볼드+이탤릭+취소선~~_**
-
-    ### 목록
-
-    - 순서 없는 목록
-      - 목록1
-      - 목록2
-    - 순서 있는 목록
-      1. 목록1
-      2. 목록2
-    - 체크리스트
-      - [ ] 목록1
-      - [ ] 목록2
-
-    ### 참조
-
-    #### 참조 > Markdown Native
-
-    - [하이퍼 링크](./asset/1/0.png)
-    - ![대체 텍스트](./asset/1/0.png)
-
-    #### 참조 > HTML Tag
-
-    - <a href="./asset/1/0.png">이미지 링크</a>
-    - <img src="./asset/1/0.png" alt="0" width="200" height="200" />
-  `;
-
+  // #### Return:
   return (
     <Styled_Home>
       <Styled_HomeCard>
-        <Markdown_0>{post}</Markdown_0>
+        <Markdown_7>{post}</Markdown_7>
       </Styled_HomeCard>
       <Styled_HomeCard>
-        <Markdown_1>{post}</Markdown_1>
+        <Markdown_8>{post}</Markdown_8>
       </Styled_HomeCard>
     </Styled_Home>
   );

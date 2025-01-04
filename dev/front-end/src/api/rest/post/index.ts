@@ -25,7 +25,7 @@ const postAxios = AxiosApi.getAPI().getInstance('post');
 export const getPost = (id: number) => {
   return new Promise<string>((resolve, reject) => {
     postAxios
-      ?.get(`/${id}.md`, { responseType: 'text' })
+      ?.get(`/${id}/index.md`, { responseType: 'text' })
       .then((responce) => {
         resolve(responce.data);
       })
