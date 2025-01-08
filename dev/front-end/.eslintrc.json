@@ -18,7 +18,8 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "prettier/prettier": ["error"],
-    "@typescript-eslint/no-empty-function": ["error", { "allow": [] }]
+    "@typescript-eslint/no-empty-function": ["error", { "allow": [] }],
+    "no-useless-escape": "warn"
   },
   "ignorePatterns": ["build", "dist", "public"],
   "settings": {

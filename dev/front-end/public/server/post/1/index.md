@@ -2,6 +2,24 @@
 
 ## 코드 하이라이트
 
+### Latex
+
+- n<sup>r</sup>
+- A<sub>k</sub>
+
+- When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
+  $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
+- ${\color{lightgreen}Light \space Green}$
+
+- $\color{#FF9922} \footnotesize \textnormal{일반 텍스트}$
+
+<div align=center>
+
+$_{n}\mathrm{H}_{r} = C'(n, r) = \binom{n+r-1}{r} = \binom{n+r-1}{n-1}$
+
+</div>
+
 ### C++
 
 ```cpp
@@ -50,7 +68,7 @@ public class Main {
 
 ### JavaScript
 
-```js
+```javascript
 const reader = {
   fullLine: () => this.fullLine,
   hasMoreLines: () => !!this.fullLine[this.lineIndex],

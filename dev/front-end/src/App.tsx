@@ -12,6 +12,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 
 // ### Component:
 
+import { Sidebar } from 'component/Sidebar';
 import { Home } from 'component/Home';
 
 // ## Component ==============================================================
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <div className={`app ${isDark ? 'dark' : 'light'}`}>
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/home/*" element={<Home />} />
